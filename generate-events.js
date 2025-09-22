@@ -154,18 +154,17 @@ async function generateEventsWithAI(dateStr, month, day) {
                 const model = genAI.getGenerativeModel({ 
                     model: "gemini-2.0-flash",
                     generationConfig: {
-                        temperature: 0.6,  // 降低随机性，提高格式稳定性
-                        maxOutputTokens: 800,
-                        responseMimeType: "text/plain" // 明确要求纯文本输出
+                        temperature: 0.7,  // 降低随机性，提高格式稳定性
+                        maxOutputTokens: 1000,
                     }
                 });
 
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
                 // 带超时的API调用（30秒）
-                const result = await withTimeout(
-                    model.generateContent(prompts[lang]),
-                    30000
-                );
+                const result = await model.generateContent({
+                    contents: [{ parts: [{ text: prompt }] }],
+                    generationConfig: generationConfig
+                });
                 const response = await result.response;
                 const aiText = response.text().trim();
                 
