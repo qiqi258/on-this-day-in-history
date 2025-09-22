@@ -119,21 +119,28 @@ async function generateEventsWithAI(dateStr, month, day) {
             try {
                 const genAI = getGeminiClient();
                 const model = genAI.getGenerativeModel({ 
-                    model: "gemini-pro",  // 使用gemini-pro模型
-                    generationConfig: {
-                        temperature: 0.6,
-                        maxOutputTokens: 800
-                    }
+                    model: "gemini-pro"  // 使用gemini-pro模型
                 });
 
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
                 
                 // 生成提示词
                 const promptText = generatePrompt(lang, month, day);
+                console.log(`使用的提示词:\n${promptText}`); // 添加日志输出提示词
                 
+                // 创建生成配置
+                const generationConfig = {
+                    temperature: 0.6,
+                    maxOutputTokens: 800,
+                    stopSequences: ["Example", "示例"] // 防止返回示例部分
+                };
+
                 // 带超时的API调用（30秒）
                 const result = await withTimeout(
-                    model.generateContent([{ text: promptText }]),
+                    model.generateContent({
+                        contents: [{ role: 'user', parts: [{ text: promptText }] }],
+                        generationConfig
+                    }),
                     30000
                 );
                 
