@@ -20,7 +20,6 @@ jobs:
           
       - name: Install required packages
         run: |
-          # 同时安装google生成式AI库和axios
           npm install @google/generative-ai axios
           
       - name: Generate events
@@ -29,6 +28,13 @@ jobs:
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
         run: node generate-events.js
 
+      - name: Ensure last-updated.txt exists
+        run: |
+          # 如果文件不存在则创建它
+          if [ ! -f "last-updated.txt" ]; then
+            echo "Initial creation" > last-updated.txt
+          fi
+          
       - name: Commit changes
         run: |
           git config --global user.name 'GitHub Action'
