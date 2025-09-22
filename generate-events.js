@@ -92,32 +92,30 @@ function writeToCache(dateStr, data) {
     }
 }
 
+// 实现API调用超时控制
+function withTimeout(promise, timeoutMs = 30000) {
+    return Promise.race([
+        promise,
+        new Promise((_, reject) => 
+            setTimeout(() => reject(new Error(`API调用超时（${timeoutMs}ms）`)), timeoutMs)
+        )
+    ]);
+}
+
 // 调用Gemini API生成历史事件
 async function generateEventsWithAI(dateStr, month, day) {
     // 生成多语言提示词
     const prompts = {};
-    const currentYear = new Date().getFullYear();
     
     LANGUAGES.forEach(lang => {
         const isChinese = lang === 'zh';
         const categories = isChinese 
             ? CATEGORIES.zh.join('、')
             : CATEGORIES.en.join(', ');
-        
-        // 示例年份（根据当前日期动态生成类似格式）
-        const exampleYears = [
-            currentYear - 5,
-            currentYear - 10,
-            currentYear - 20,
-            currentYear - 30,
-            currentYear - 40,
-            currentYear - 50
-        ].map(y => `${y}年${month}月${day}日`);
             
         if (isChinese) {
-            // 中文提示词 - 生成7个左右事件，覆盖不同年份
-            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，每年${month}月${day}日发生的重要历史事件，共7个左右（不同年份）。` +
-                          `需要覆盖不同年代，例如：${exampleYears.slice(0,3).join('、')}等。` +
+            // 中文提示词（优化格式要求清晰度）
+            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，${month}月${day}日发生的3-5个重要历史事件（每年1个）。` +
                           `必须严格按以下格式返回，不允许任何额外文字、标题、解释：\n` +
                           `年份|事件简述（20字以内）|分类（从[${categories}]选一个）\n` +
                           `示例：\n` +
@@ -125,20 +123,19 @@ async function generateEventsWithAI(dateStr, month, day) {
                           `2015|巴黎气候协定签署|政治\n` +
                           `确保事件真实，分类准确，仅返回符合格式的内容。`;
         } else {
-            // 英文提示词 - 修复格式并明确年份分布要求
-            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list approximately 7 important historical events that occurred on ${month}/${day} over the past 50 years, each from a different year.` +
-                          `Cover different decades, for example: ${currentYear - 5}/${month}/${day}, ${currentYear - 15}/${month}/${day}, ${currentYear - 30}/${month}/${day}, etc.` +
+            // 英文提示词
+            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 3-5 important historical events that occurred on ${month}/${day} over the past 50 years (one per year).\n` +
                           `Return strictly in the following format without any additional text, titles, or explanations:\n` +
                           `Year|Event description (within 15 words)|Category (choose from [${categories}])\n` +
                           `Examples:\n` +
                           `2020|First COVID-19 vaccine trial|Technology\n` +
                           `2015|Paris Climate Agreement signed|Politics\n` +
-                          `Ensure events are factual, categorized correctly, and only return content matching the format.`;
+                          `Ensure events are true and accurate with appropriate categorization. Only return content that matches the format.`;
         }
     });
 
     const results = {};
-    const maxRetries = apiKeys.length;
+    const maxRetries = apiKeys.length * 2; // 每个密钥最多重试2次
     
     // 为每种语言生成内容
     for (const lang of LANGUAGES) {
@@ -148,19 +145,22 @@ async function generateEventsWithAI(dateStr, month, day) {
         while (retries < maxRetries && !success) {
             try {
                 const genAI = getGeminiClient();
+                // 使用 gemini-2.0-flash 模型
                 const model = genAI.getGenerativeModel({ 
                     model: "gemini-2.0-flash",
                     generationConfig: {
-                        temperature: 0.7,
-                        maxOutputTokens: 1000
-                        timeout: 30000 // 添加30秒超时
+                        temperature: 0.6,  // 降低随机性，提高格式稳定性
+                        maxOutputTokens: 800,
+                        responseMimeType: "text/plain" // 明确要求纯文本输出
                     }
                 });
-                // 增加最大重试次数
-                const maxRetries = Math.max(apiKeys.length * 2, 3); // 至少重试3次
 
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
-                const result = await model.generateContent(prompts[lang]);
+                // 带超时的API调用（30秒）
+                const result = await withTimeout(
+                    model.generateContent(prompts[lang]),
+                    30000
+                );
                 const response = await result.response;
                 const aiText = response.text().trim();
                 
@@ -220,18 +220,11 @@ function validateEvents(events, lang) {
     const currentYear = new Date().getFullYear();
     const validEvents = [];
     const validCategories = CATEGORIES[lang];
-    const usedYears = new Set(); // 确保年份不重复
     
     events.forEach(event => {
         // 检查年份是否在合理范围内（过去50年）
         if (isNaN(event.year) || event.year < currentYear - 50 || event.year > currentYear) {
             console.log(`过滤无效年份事件: ${event.year}年 ${event.title}`);
-            return;
-        }
-        
-        // 检查年份是否重复
-        if (usedYears.has(event.year)) {
-            console.log(`过滤重复年份事件: ${event.year}年 ${event.title}`);
             return;
         }
         
@@ -247,7 +240,6 @@ function validateEvents(events, lang) {
             return;
         }
         
-        usedYears.add(event.year);
         validEvents.push(event);
     });
     
@@ -300,23 +292,31 @@ async function generateAndUpdateEvents() {
         writeToCache(dateStr, eventsData);
         
         // 更新主事件文件
-        let mainEventsData = {};
+        let allEvents = {};
         try {
-            mainEventsData = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
+            allEvents = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
         } catch (error) {
-            console.error('读取主事件文件失败，重新初始化', error);
-            mainEventsData = {};
+            console.error('读取事件文件失败，重新初始化', error);
         }
         
-        mainEventsData[dateStr] = eventsData;
-        fs.writeFileSync(EVENTS_FILE, JSON.stringify(mainEventsData, null, 2), 'utf8');
+        allEvents[dateStr] = eventsData;
+        fs.writeFileSync(EVENTS_FILE, JSON.stringify(allEvents, null, 2), 'utf8');
         
         // 更新最后更新时间
-        fs.writeFileSync('last-updated.txt', new Date().toISOString(), 'utf8');
+        const now = new Date();
+        const lastUpdated = now.toLocaleString('zh-CN', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric', 
+            hour: '2-digit', 
+            minute: '2-digit' 
+        });
+        fs.writeFileSync('last-updated.txt', lastUpdated, 'utf8');
         
-        console.log(`成功更新 ${dateStr} 的历史事件`);
+        console.log(`事件生成成功: ${dateStr}`);
     } catch (error) {
-        console.error('生成事件失败:', error);
+        console.error(`生成事件失败: ${error.message}`);
+        console.error(error.stack);
         process.exit(1);
     }
 }
