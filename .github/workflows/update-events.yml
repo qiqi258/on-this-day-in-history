@@ -1,0 +1,38 @@
+name: Update Historical Events
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC 0点（北京时间8点）运行
+  workflow_dispatch:     # 允许手动触发
+
+jobs:
+  update-events:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate events
+        env:
+          # 配置两个Gemini API密钥
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+        run: node generate-events.js
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add events.json cache/ last-updated.txt
+          git commit -m "Update events: $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push

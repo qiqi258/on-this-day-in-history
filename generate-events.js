@@ -1,0 +1,197 @@
+const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
+const { existsSync, mkdirSync } = require('fs');
+
+// 确保缓存目录存在
+const CACHE_DIR = './cache';
+if (!existsSync(CACHE_DIR)) {
+    mkdirSync(CACHE_DIR);
+}
+
+// 事件数据文件路径
+const EVENTS_FILE = './events.json';
+// 支持的语言
+const LANGUAGES = ['zh', 'en'];
+// 事件分类
+const CATEGORIES = ['政治', '经济', '科技', '文化', '体育', '灾害', '其他'];
+
+// 初始化事件数据文件
+function initEventsFile() {
+    if (!existsSync(EVENTS_FILE)) {
+        fs.writeFileSync(EVENTS_FILE, JSON.stringify({}), 'utf8');
+    }
+}
+
+// 检查缓存是否存在且有效（30天内）
+function isCacheValid(dateStr) {
+    const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`);
+    if (!existsSync(cacheFile)) {
+        return false;
+    }
+    
+    const stats = fs.statSync(cacheFile);
+    const now = new Date();
+    const cacheTime = new Date(stats.mtime);
+    const daysDiff = (now - cacheTime) / (1000 * 60 * 60 * 24);
+    
+    return daysDiff < 30; // 缓存30天有效
+}
+
+// 从缓存获取数据
+function getFromCache(dateStr) {
+    const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`);
+    return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+}
+
+// 写入缓存
+function writeToCache(dateStr, data) {
+    const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`);
+    fs.writeFileSync(cacheFile, JSON.stringify(data, null, 2), 'utf8');
+}
+
+// 调用千文API生成历史事件
+async function generateEventsWithAI(dateStr, month, day) {
+    const apiKey = process.env.QIANWEN_API_KEY;
+    if (!apiKey) {
+        throw new Error('未配置千文API密钥');
+    }
+    
+    // 生成多语言提示词
+    const prompts = {};
+    LANGUAGES.forEach(lang => {
+        const langName = lang === 'zh' ? '中文' : '英文';
+        prompts[lang] = `请列出过去50年中，每年的${month}月${day}日发生的1-3个重要历史事件。` +
+                       `请按照以下格式返回，不要添加额外内容：` +
+                       `年份|事件简述|事件分类（从[${CATEGORIES.join('、')}]中选择）\n` +
+                       `用${langName}回答，确保事件真实准确，分类合理。`;
+    });
+    
+    const results = {};
+    
+    // 为每种语言生成内容
+    for (const lang of LANGUAGES) {
+        try {
+            const response = await axios.post('https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', {
+                prompt: prompts[lang],
+                max_tokens: 1000,
+                temperature: 0.7
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                }
+            });
+            
+            results[lang] = response.data.result;
+        } catch (error) {
+            console.error(`生成${lang}内容失败:`, error.message);
+            throw error;
+        }
+    }
+    
+    return results;
+}
+
+// 解析AI生成的内容
+function parseEvents(aiResponse, lang) {
+    const events = [];
+    const lines = aiResponse.split('\n');
+    
+    lines.forEach(line => {
+        if (line.trim() === '') return;
+        
+        const parts = line.split('|');
+        if (parts.length === 3) {
+            events.push({
+                year: parseInt(parts[0].trim()),
+                title: parts[1].trim(),
+                category: parts[2].trim()
+            });
+        }
+    });
+    
+    return events;
+}
+
+// 数据校验：检查事件有效性
+function validateEvents(events) {
+    const currentYear = new Date().getFullYear();
+    const validEvents = [];
+    
+    events.forEach(event => {
+        // 检查年份是否在合理范围内（过去50年）
+        if (event.year < currentYear - 50 || event.year > currentYear) {
+            console.log(`过滤无效年份事件: ${event.year}年 ${event.title}`);
+            return;
+        }
+        
+        // 检查分类是否有效
+        if (!CATEGORIES.includes(event.category) && !event.category) {
+            console.log(`修正无效分类事件: ${event.year}年 ${event.title}`);
+            event.category = '其他';
+        }
+        
+        // 检查标题是否为空
+        if (!event.title || event.title.trim() === '') {
+            console.log(`过滤空标题事件: ${event.year}年`);
+            return;
+        }
+        
+        validEvents.push(event);
+    });
+    
+    return validEvents;
+}
+
+// 主函数：生成并更新事件
+async function generateAndUpdateEvents() {
+    initEventsFile();
+    
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+    const dateStr = `${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    
+    // 检查缓存
+    if (isCacheValid(dateStr)) {
+        console.log(`使用缓存数据: ${dateStr}`);
+        const cachedData = getFromCache(dateStr);
+        
+        // 更新主事件文件
+        const eventsData = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
+        eventsData[dateStr] = cachedData;
+        fs.writeFileSync(EVENTS_FILE, JSON.stringify(eventsData, null, 2), 'utf8');
+        
+        return;
+    }
+    
+    try {
+        console.log(`生成新数据: ${dateStr}`);
+        // 调用AI生成事件
+        const aiResults = await generateEventsWithAI(dateStr, month, day);
+        
+        // 解析和校验每种语言的事件
+        const eventsData = {};
+        LANGUAGES.forEach(lang => {
+            const parsedEvents = parseEvents(aiResults[lang], lang);
+            eventsData[lang] = validateEvents(parsedEvents);
+        });
+        
+        // 写入缓存
+        writeToCache(dateStr, eventsData);
+        
+        // 更新主事件文件
+        const mainEventsData = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
+        mainEventsData[dateStr] = eventsData;
+        fs.writeFileSync(EVENTS_FILE, JSON.stringify(mainEventsData, null, 2), 'utf8');
+        
+        console.log(`成功更新 ${dateStr} 的历史事件`);
+    } catch (error) {
+        console.error('生成事件失败:', error);
+    }
+}
+
+// 执行主函数
+generateAndUpdateEvents();
+    

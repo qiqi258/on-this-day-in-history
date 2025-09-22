@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史上的今天 · 2024年10月05日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        /* 浅色主题变量 */
+        :root {
+            --bg-primary: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #7f8c8d;
+            --border-color: #eeeeee;
+            --shadow-light: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-card: 0 2px 6px rgba(0,0,0,0.04);
+            --link-color: #3498db;
+        }
+        /* 深色主题变量 */
+        .dark-theme {
+            --bg-primary: #1a1a2e;
+            --bg-card: #252941;
+            --text-primary: #f0f0f0;
+            --text-secondary: #b8b8c9;
+            --border-color: #333854;
+            --shadow-light: 0 2px 4px rgba(0,0,0,0.2);
+            --shadow-card: 0 2px 6px rgba(0,0,0,0.15);
+            --link-color: #64b5f6;
+        }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* 链接样式 */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* 顶部标题区 */
+        .header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .header h1 {
+            font-size: 28px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        .update-info {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+        .date-picker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card);
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+        .date-picker select {
+            border: none;
+            outline: none;
+            padding: 4px;
+            color: #3498db;
+            font-weight: 500;
+            background: transparent;
+            color: var(--text-primary);
+        }
+
+        /* 语言与主题切换容器 */
+        .top-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* 语言切换 */
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #3498db;
+            border-radius: 20px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        .lang-btn.active {
+            background: #3498db;
+            color: white;
+        }
+
+        /* 主题切换 */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .theme-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .theme-toggle {
+            position: relative;
+            width: 50px;
+            height: 24px;
+            background-color: #ccc;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .theme-toggle.dark {
+            background-color: #3498db;
+        }
+        .toggle-thumb {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+        .theme-toggle.dark .toggle-thumb {
+            transform: translateX(26px);
+        }
+        .toggle-icon {
+            position: absolute;
+            color: #ffd700;
+            font-size: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4px;
+        }
+        .toggle-icon.moon {
+            color: white;
+            right: 4px;
+            left: auto;
+        }
+
+        /* 分类筛选 */
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: var(--shadow-light);
+        }
+        .category-btn {
+            padding: 6px 14px;
+            border: none;
+            border-radius: 20px;
+            background: var(--border-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        .category-btn.active {
+            background: #2c3e50;
+            color: white;
+        }
+        .category-btn[data-type="政治"] { background: rgba(25, 118, 210, 0.1); color: #64b5f6; }
+        .category-btn[data-type="政治"].active { background: #1976d2; color: white; }
+        .category-btn[data-type="科技"] { background: rgba(46, 125, 50, 0.1); color: #81c784; }
+        .category-btn[data-type="科技"].active { background: #2e7d32; color: white; }
+        .category-btn[data-type="文化"] { background: rgba(230, 81, 0, 0.1); color: #ffb74d; }
+        .category-btn[data-type="文化"].active { background: #e65100; color: white; }
+        .category-btn[data-type="体育"] { background: rgba(142, 36, 170, 0.1); color: #ba68c8; }
+        .category-btn[data-type="体育"].active { background: #8e24aa; color: white; }
+        .category-btn[data-type="经济"] { background: rgba(0, 96, 100, 0.1); color: #4dd0e1; }
+        .category-btn[data-type="经济"].active { background: #006064; color: white; }
+        .category-btn[data-type="灾害"] { background: rgba(198, 40, 40, 0.1); color: #ef5350; }
+        .category-btn[data-type="灾害"].active { background: #c62828; color: white; }
+        .category-btn[data-type="其他"] { background: rgba(97, 97, 97, 0.1); color: #9e9e9e; }
+        .category-btn[data-type="其他"].active { background: #616161; color: white; }
+
+        /* 事件列表 */
+        .events-container {
+            display: grid;
+            gap: 18px;
+        }
+        .event-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            border-left: 4px solid transparent;
+        }
+        .event-card[data-type="政治"] { border-left-color: #1976d2; }
+        .event-card[data-type="科技"] { border-left-color: #2e7d32; }
+        .event-card[data-type="文化"] { border-left-color: #e65100; }
+        .event-card[data-type="体育"] { border-left-color: #8e24aa; }
+        .event-card[data-type="经济"] { border-left-color: #006064; }
+        .event-card[data-type="灾害"] { border-left-color: #c62828; }
+        .event-card[data-type="其他"] { border-left-color: #616161; }
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .event-year {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+        .event-category {
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: white;
+        }
+        .category-政治 { background: #1976d2; }
+        .category-科技 { background: #2e7d32; }
+        .category-文化 { background: #e65100; }
+        .category-体育 { background: #8e24aa; }
+        .category-经济 { background: #006064; }
+        .category-灾害 { background: #c62828; }
+        .category-其他 { background: #616161; }
+        .event-content {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: var(--text-primary);
+        }
+        .event-translation {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 12px;
+            padding-left: 4px;
+            border-left: 2px solid var(--border-color);
+        }
+        .feedback-btn {
+            padding: 4px 10px;
+            border: 1px solid #e74c3c;
+            border-radius: 4px;
+            background: transparent;
+            color: #e74c3c;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+        .feedback-btn:hover {
+            background: #e74c3c;
+            color: white;
+        }
+
+        /* 反馈表单 */
+        .feedback-form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            width: 90%;
+            max-width: 400px;
+            display: none;
+            z-index: 100;
+        }
+        .feedback-form.active {
+            display: block;
+        }
+        .feedback-form h4 {
+            margin-bottom: 18px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+        .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            resize: none;
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .submit-feedback {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+        .cancel-feedback {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* 遮罩层 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: none;
+            z-index: 99;
+        }
+        .overlay.active {
+            display: block;
+        }
+
+        /* 底部信息 */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            .category-filter {
+                padding: 12px;
+            }
+            .event-card {
+                padding: 16px;
+            }
+            .top-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .language-switcher {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 遮罩层 -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- 顶部标题区 -->
+    <div class="header">
+        <h1>历史上的今天 · 2024年10月05日</h1>
+        <div class="update-info">最后更新时间：2024年10月05日 08:12</div>
+        <div class="date-picker">
+            查看其他日期：
+            <select id="dateSelector">
+                <option value="2024-10-05" selected>2024年10月05日</option>
+                <option value="2024-10-04">2024年10月04日</option>
+                <option value="2024-10-03">2024年10月03日</option>
+                <option value="2024-10-02">2024年10月02日</option>
+                <option value="2024-10-01">2024年10月01日</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 语言切换与主题切换容器 -->
+    <div class="top-controls">
+        <!-- 语言切换 -->
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="zh">中文</button>
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="ja">日本語</button>
+            <button class="lang-btn" data-lang="ko">한국어</button>
+            <button class="lang-btn" data-lang="es">Español</button>
+            <button class="lang-btn" data-lang="fr">Français</button>
+        </div>
+
+        <!-- 主题切换 -->
+        <div class="theme-switcher">
+            <span class="theme-label">浅色模式</span>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon moon">🌙</span>
+                <div class="toggle-thumb"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分类筛选 -->
+    <div class="category-filter">
+        <button class="category-btn active" data-type="all">全部</button>
+        <button class="category-btn" data-type="政治">政治</button>
+        <button class="category-btn" data-type="科技">科技</button>
+        <button class="category-btn" data-type="文化">文化</button>
+        <button class="category-btn" data-type="体育">体育</button>
+        <button class="category-btn" data-type="经济">经济</button>
+        <button class="category-btn" data-type="灾害">灾害</button>
+        <button class="category-btn" data-type="其他">其他</button>
+    </div>
+
+    <!-- 事件列表容器 -->
+    <div class="events-container">
+        <!-- 政治事件 -->
+        <div class="event-card" data-type="政治">
+            <div class="event-header">
+                <div class="event-year">1974年</div>
+                <div class="event-category category-政治">政治</div>
+            </div>
+            <div class="event-content">联合国大会通过决议，将巴勒斯坦解放组织列为具有观察员资格的常驻联合国观察员</div>
+            <div class="event-translation" data-lang="en">The United Nations General Assembly adopted a resolution, granting the Palestine Liberation Organization the status of permanent observer at the UN.</div>
+            <div class="event-translation" data-lang="ja">国連総会は決議を採択し、パレスチナ解放機構に国連常設オブザーバー資格を付与しました。</div>
+            <div class="event-translation" data-lang="ko">국제연합 총회는 결의를 통과하여 팔레스타인 해방 기구에 유엔 상주 관찰자 자격을 부여했습니다.</div>
+            <div class="event-translation" data-lang="es">La Asamblea General de las Naciones Unidas adoptó una resolución que otorga a la Organización para la Liberación de Palestina el estatuto de observador permanente en las Naciones Unidas.</div>
+            <div class="event-translation" data-lang="fr">L'Assemblée générale des Nations Unies a adopté une résolution accordant à l'Organisation de libération de la Palestine le statut d'observateur permanent aux Nations Unies.</div>
+            <button class="feedback-btn" data-year="1974" data-event="联合国巴勒斯坦决议">反馈错误</button>
+        </div>
+
+        <!-- 科技事件 -->
+        <div class="event-card" data-type="科技">
+            <div class="event-header">
+                <div class="event-year">1984年</div>
+                <div class="event-category category-科技">科技</div>
+            </div>
+            <div class="event-content">美国航天飞机"挑战者号"完成首次夜间发射和着陆任务，验证了全天候航天能力</div>
+            <div class="event-translation" data-lang="en">The U.S. space shuttle Challenger completed its first night launch and landing mission, verifying all-weather space capability.</div>
+            <div class="event-translation" data-lang="ja">アメリカのスペースシャトル「チャレンジャー号」が初の夜間打ち上げと着陸任務を完了し、全天候型宇宙能力を検証しました。</div>
+            <div class="event-translation" data-lang="ko">미국 우주왕복선 "챌린저호"는 최초의 야간 발사와 착륙 임무를 완료하여 상시 우주 활동 능력을 검증했습니다.</div>
+            <div class="event-translation" data-lang="es">El transbordador espacial estadounidense "Challenger" completó su primera misión de lanzamiento y aterrizaje nocturno, verificando la capacidad espacial en todo tipo de clima.</div>
+            <div class="event-translation" data-lang="fr">La navette spatiale américaine "Challenger" a accompli sa première mission de lancement et d'atterrissage nocturne, vérifiant la capacité spatiale en toutes conditions météorologiques.</div>
+            <button class="feedback-btn" data-year="1984" data-event="挑战者号夜间任务">反馈错误</button>
+        </div>
+
+        <!-- 文化事件 -->
+        <div class="event-card" data-type="文化">
+            <div class="event-header">
+                <div class="event-year">1994年</div>
+                <div class="event-category category-文化">文化</div>
+            </div>
+            <div class="event-content">诺贝尔文学奖揭晓，日本作家大江健三郎凭借"以诗意的想象力创造出一个把现实与神话紧密结合的世界"获奖</div>
+            <div class="event-translation" data-lang="en">The Nobel Prize in Literature was announced, with Japanese writer Kenzaburō Ōe winning for "creating an imagined world, where life and myth condense to form a disconcerting picture of the human predicament today".</div>
+            <div class="event-translation" data-lang="ja">ノーベル文学賞が発表され、大江健三郎が「詩的な想像力をもって現実と神話を緊密に結びつけた世界を創り出した」として受賞しました。</div>
+            <div class="event-translation" data-lang="ko">노벨 문학상이 발표되었으며, 일본 작가 오에 켄자부로는 "시적인 상상력으로 현실과 신화를 긴밀히 결합한 세계를 창조했다"는 이유로 수상했습니다.</div>
+            <div class="event-translation" data-lang="es">Se anunció el Premio Nobel de Literatura, que fue otorgado al escritor japonés Kenzaburō Ōe por "crear un mundo imaginario donde la vida y el mito se condensan para formar una imagen inquietante de la condición humana actual".</div>
+            <div class="event-translation" data-lang="fr">Le Prix Nobel de littérature a été annoncé, remporté par l'écrivain japonais Kenzaburō Ōe pour "avoir créé un monde imaginaire où la vie et le mythe se condensent pour former un tableau troublant de la condition humaine aujourd'hui".</div>
+            <button class="feedback-btn" data-year="1994" data-event="大江健三郎诺奖">反馈错误</button>
+        </div>
+
+        <!-- 体育事件 -->
+        <div class="event-card" data-type="体育">
+            <div class="event-header">
+                <div class="event-year">2004年</div>
+                <div class="event-category category-体育">体育</div>
+            </div>
+            <div class="event-content">F1中国大奖赛在上海国际赛车场首次举办，德国车手迈克尔·舒马赫夺得冠军</div>
+            <div class="event-translation" data-lang="en">The Formula 1 Chinese Grand Prix was held for the first time at the Shanghai International Circuit, with German driver Michael Schumacher winning the championship.</div>
+            <div class="event-translation" data-lang="ja">F1中国グランプリが上海国際サーキットで初開催され、ドイツのミハエル・シューマッハーが優勝しました。</div>
+            <div class="event-translation" data-lang="ko">F1 중국 그랑프리가 상하이 국제 서킷에서 처음으로 개최되었고, 독일 드라이버 미하엘 슈마허가 우승했습니다.</div>
+            <div class="event-translation" data-lang="es">El Gran Premio de China de Fórmula 1 se celebró por primera vez en el Circuito Internacional de Shanghái, con el piloto alemán Michael Schumacher ganando el campeonato.</div>
+            <div class="event-translation" data-lang="fr">Le Grand Prix de Chine de Formule 1 s'est déroulé pour la première fois au Circuit international de Shanghai, avec le pilote allemand Michael Schumacher remportant le championnat.</div>
+            <button class="feedback-btn" data-year="2004" data-event="F1中国大奖赛">反馈错误</button>
+        </div>
+
+        <!-- 经济事件 -->
+        <div class="event-card" data-type="经济">
+            <div class="event-header">
+                <div class="event-year">2014年</div>
+                <div class="event-category category-经济">经济</div>
+            </div>
+            <div class="event-content">欧洲中央银行推出负利率政策，隔夜存款利率下调至-0.1%，以刺激欧元区经济复苏</div>
+            <div class="event-translation" data-lang="en">The European Central Bank launched a negative interest rate policy, cutting the overnight deposit rate to -0.1% to stimulate economic recovery in the eurozone.</div>
+            <div class="event-translation" data-lang="ja">欧州中央銀行は負金利政策を導入し、オーバーナイト預金金利を-0.1%に引き下げ、ユーロ圏の経済回復を刺激しました。</div>
+            <div class="event-translation" data-lang="ko">유럽중앙은행은 음의 금리 정책을 도입하여 당일 예금 금리를 -0.1%로下调하여 유로존 경제 회복을 촉진했습니다.</div>
+            <div class="event-translation" data-lang="es">El Banco Central Europeo lanzó una política de tipos de interés negativos, reduciendo el tipo de depósito nocturno al -0.1% para estimular la recuperación económica de la zona euro.</div>
+            <div class="event-translation" data-lang="fr">La Banque centrale européenne a lancé une politique de taux d'intérêt négatifs, réduisant le taux de dépôt nocturne à -0.1% pour stimuler la reprise économique de la zone euro.</div>
+            <button class="feedback-btn" data-year="2014" data-event="欧央行负利率">反馈错误</button>
+        </div>
+
+        <!-- 灾害事件 -->
+        <div class="event-card" data-type="灾害">
+            <div class="event-header">
+                <div class="event-year">1999年</div>
+                <div class="event-category category-灾害">灾害</div>
+            </div>
+            <div class="event-content">台风"约克"在香港登陆，造成1人死亡、数十人受伤，成为当时香港50年来最强台风之一</div>
+            <div class="event-translation" data-lang="en">Typhoon York made landfall in Hong Kong, causing 1 death and dozens of injuries, becoming one of the strongest typhoons in Hong Kong in 50 years at that time.</div>
+            <div class="event-translation" data-lang="ja">台風「ヨーク」が香港に上陸し、1人の死亡と数十人の負傷を引き起こし、当時香港で50年ぶりの強力な台風の一つとなりました。</div>
+            <div class="event-translation" data-lang="ko">태풍 "요크"가 홍콩에 상륙하여 1명이 사망하고 수십 명이 부상당했으며, 당시 홍콩에서 50년 만에 가장 강력한 태풍 중 하나가 되었습니다.</div>
+            <div class="event-translation" data-lang="es">El tifón York hizo landfall en Hong Kong, causando 1 muerte y decenas de heridos, convirtiéndose en uno de los tifones más fuertes en Hong Kong en 50 años en ese momento.</div>
+            <div class="event-translation" data-lang="fr">Le typhon York est arrivé en Hong Kong, causant 1 mort et des dizaines de blessés, devenant l'un des plus forts typhons de Hong Kong depuis 50 ans à l'époque.</div>
+            <button class="feedback-btn" data-year="1999" data-event="台风约克香港">反馈错误</button>
+        </div>
+
+        <!-- 其他事件 -->
+        <div class="event-card" data-type="其他">
+            <div class="event-header">
+                <div class="event-year">2009年</div>
+                <div class="event-category category-其他">其他</div>
+            </div>
+            <div class="event-content">谷歌公司宣布推出基于Linux的操作系统"Chrome OS"，主打轻量化和云服务集成</div>
+            <div class="event-translation" data-lang="en">Google announced the launch of "Chrome OS", a Linux-based operating system focusing on lightweight design and cloud service integration.</div>
+            <div class="event-translation" data-lang="ja">Googleは、Linuxベースのオペレーティングシステム「Chrome OS」のリリースを発表し、軽量設計とクラウドサービス統合を主な特徴としています。</div>
+            <div class="event-translation" data-lang="ko">구글은 리눅스 기반 운영 체제 "Chrome OS" 출시를 발표했으며, 경량화와 클라우드 서비스 통합을 강점으로 내세웠습니다.</div>
+            <div class="event-translation" data-lang="es">Google anunció el lanzamiento de "Chrome OS", un sistema operativo basado en Linux que se enfoca en un diseño ligero y la integración de servicios en la nube.</div>
+            <div class="event-translation" data-lang="fr">Google a annoncé le lancement de "Chrome OS", un système d'exploitation basé sur Linux axé sur un design léger et l'intégration de services cloud.</div>
+            <button class="feedback-btn" data-year="2009" data-event="谷歌Chrome OS发布">反馈错误</button>
+        </div>
+    </div>
+
+    <!-- 反馈表单 -->
+    <div class="feedback-form" id="feedbackForm">
+        <h4>反馈错误事件</h4>
+        <input type="hidden" id="eventYear" value="">
+        <input type="hidden" id="eventTitle" value="">
+        <div class="form-group">
+            <label>错误类型：</label>
+            <select id="errorType">
+                <option value="年份错误">年份错误</option>
+                <option value="事件不实">事件不实</option>
+                <option value="分类错误">分类错误</option>
+                <option value="翻译错误">翻译错误</option>
+                <option value="其他">其他</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>详细说明：</label>
+            <textarea id="errorDesc" rows="3" placeholder="请描述具体错误内容..."></textarea>
+        </div>
+        <div class="form-actions">
+            <button class="submit-feedback">提交反馈</button>
+            <button class="cancel-feedback">取消</button>
+        </div>
+    </div>
+
+    <!-- 底部信息 - 已更新版权信息并添加链接 -->
+    <div class="footer">
+        <p>
+            <a href="javascript:location.reload();" id="todayLink">历史上的今天</a> © 2025 | 
+            <a href="https://ls.harper.dpdns.org" target="_self" id="siteLink">ls.harper.dpdns.org</a> 版权所有
+        </p>
+    </div>
+
+    <script>
+        // 页面加载时检查用户主题偏好
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查本地存储中的主题设置
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.getElementById('themeToggle');
+            const themeLabel = document.querySelector('.theme-label');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggle.classList.add('dark');
+                themeLabel.textContent = '深色模式';
+            }
+            
+            // 默认隐藏非英文翻译
+            hideNonActiveTranslations();
+            
+            // 设置当前日期链接跳转逻辑
+            setupFooterLinks();
+        });
+
+        // 设置底部链接跳转逻辑
+        function setupFooterLinks() {
+            // 获取当前日期
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const currentDate = `${year}-${month}-${day}`;
+            
+            // 设置"历史上的今天"链接跳转当前日期
+            const todayLink = document.getElementById('todayLink');
+            todayLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                // 模拟跳转到当前日期页面
+                document.getElementById('dateSelector').value = currentDate;
+                // 触发日期选择事件
+                const event = new Event('change');
+                document.getElementById('dateSelector').dispatchEvent(event);
+            });
+            
+            // 设置网站链接跳转首页
+            const siteLink = document.getElementById('siteLink');
+            siteLink.addEventListener('click', function(e) {
+                // 这里可以根据实际情况修改跳转逻辑
+                // e.preventDefault();
+                // window.location.href = 'https://ls.harper.dpdns.org';
+            });
+        }
+
+        // 主题切换逻辑
+        const themeToggle = document.getElementById('themeToggle');
+        const themeLabel = document.querySelector('.theme-label');
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            this.classList.toggle('dark');
+            
+            // 更新主题标签文本
+            if (this.classList.contains('dark')) {
+                themeLabel.textContent = '深色模式';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeLabel.textContent = '浅色模式';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // 语言切换逻辑
+        const langBtns = document.querySelectorAll('.lang-btn');
+        const eventCards = document.querySelectorAll('.event-card');
+        const pageTitle = document.querySelector('h1');
+        const updateInfo = document.querySelector('.update-info');
+        const datePickerLabel = document.querySelector('.date-picker').firstChild;
+        const feedbackFormTitle = document.querySelector('.feedback-form h4');
+        const submitFeedbackBtn = document.querySelector('.submit-feedback');
+        const cancelFeedbackBtn = document.querySelector('.cancel-feedback');
+        const todayLink = document.getElementById('todayLink');
+        const siteLink = document.getElementById('siteLink');
+        
+        // 页面文本翻译映射 - 已更新底部版权信息
+        const translations = {
+            zh: {
+                pageTitle: '历史上的今天 · 2024年10月05日',
+                updateInfo: '最后更新时间：2024年10月05日 08:12',
+                datePickerLabel: '查看其他日期：',
+                feedbackFormTitle: '反馈错误事件',
+                submitFeedback: '提交反馈',
+                cancelFeedback: '取消',
+                todayLink: '历史上的今天',
+                siteLink: 'ls.harper.dpdns.org',
+                footer: '历史上的今天 © 2025 | ls.harper.dpdns.org 版权所有'
+            },
+            en: {
+                pageTitle: 'On This Day · October 05, 2024',
+                updateInfo: 'Last Updated: October 05, 2024 08:12',
+                datePickerLabel: 'View other dates: ',
+                feedbackFormTitle: 'Report Incorrect Event',
+                submitFeedback: 'Submit Feedback',
+                cancelFeedback: 'Cancel',
+                todayLink: 'On This Day',
+                siteLink: 'ls.harper.dpdns.org',
+                footer: 'On This Day © 2025 | ls.harper.dpdns.org All Rights Reserved'
+            },
+            ja: {
+                pageTitle: '歴史の今日 · 2024年10月05日',
+                updateInfo: '最終更新日時：2024年10月05日 08:12',
+                datePickerLabel: '他の日付を表示：',
+                feedbackFormTitle: 'イベントの誤りを報告',
+                submitFeedback: 'フィードバックを送信',
+                cancelFeedback: 'キャンセル',
+                todayLink: '歴史の今日',
+                siteLink: 'ls.harper.dpdns.org',
+                footer: '歴史の今日 © 2025 | ls.harper.dpdns.org 全著作権所有'
+            },
+            ko: {
+                pageTitle: '역사 속 오늘 · 2024년 10월 05일',
+                updateInfo: '최종 업데이트 시간: 2024년 10월 05일 08:12',
+                datePickerLabel: '다른 날짜 보기: ',
+                feedbackFormTitle: '잘못된 사건 신고',
+                submitFeedback: '피드백 제출',
+                cancelFeedback: '취소',
+                todayLink: '역사 속 오늘',
+                siteLink: 'ls.harper.dpdns.org',
+                footer: '역사 속 오늘 © 2025 | ls.harper.dpdns.org 저작권 소유'
+            },
+            es: {
+                pageTitle: 'En este día de la historia · 05 de octubre de 2024',
+                updateInfo: 'Última actualización: 05 de octubre de 2024 08:12',
+                datePickerLabel: 'Ver otras fechas: ',
+                feedbackFormTitle: 'Informar sobre un evento incorrecto',
+                submitFeedback: 'Enviar comentarios',
+                cancelFeedback: 'Cancelar',
+                todayLink: 'En este día de la historia',
+                siteLink: 'ls.harper.dpdns.org',
+                footer: 'En este día de la historia © 2025 | ls.harper.dpdns.org Todos los derechos reservados'
+            },
+            fr: {
+                pageTitle: "Dans l'histoire, ce jour · 05 octobre 2024",
+                updateInfo: 'Dernière mise à jour : 05 octobre 2024 08:12',
+                datePickerLabel: 'Voir autres dates : ',
+                feedbackFormTitle: 'Signaler un événement incorrect',
+                submitFeedback: 'Soumettre des commentaires',
+                cancelFeedback: 'Annuler',
+                todayLink: "Dans l'histoire, ce jour",
+                siteLink: 'ls.harper.dpdns.org',
+                footer: 'Dans l\'histoire, ce jour © 2025 | ls.harper.dpdns.org Tous droits réservés'
+            }
+        };
+        
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 切换按钮激活状态
+                langBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const targetLang = btn.dataset.lang;
+                
+                // 更新页面文本
+                pageTitle.textContent = translations[targetLang].pageTitle;
+                updateInfo.textContent = translations[targetLang].updateInfo;
+                datePickerLabel.textContent = translations[targetLang].datePickerLabel;
+                feedbackFormTitle.textContent = translations[targetLang].feedbackFormTitle;
+                submitFeedbackBtn.textContent = translations[targetLang].submitFeedback;
+                cancelFeedbackBtn.textContent = translations[targetLang].cancelFeedback;
+                todayLink.textContent = translations[targetLang].todayLink;
+                siteLink.textContent = translations[targetLang].siteLink;
+                
+                // 显示当前语言的翻译，隐藏其他语言
+                hideNonActiveTranslations(targetLang);
+            });
+        });
+        
+        // 隐藏非当前语言的翻译
+        function hideNonActiveTranslations(activeLang = 'zh') {
+            const allTranslations = document.querySelectorAll('.event-translation');
+            
+            allTranslations.forEach(translation => {
+                if (translation.dataset.lang === activeLang) {
+                    translation.style.display = 'block';
+                } else {
+                    translation.style.display = 'none';
+                }
+            });
+        }
+
+        // 分类筛选逻辑
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 切换按钮激活状态
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const targetType = btn.dataset.type;
+                
+                // 筛选事件卡片
+                eventCards.forEach(card => {
+                    if (targetType === 'all' || card.dataset.type === targetType) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 日期选择逻辑 - 可扩展为从GitHub加载数据
+        const dateSelector = document.getElementById('dateSelector');
+        dateSelector.addEventListener('change', function() {
+            const selectedDate = this.value;
+            // 实际应用中，这里可以从GitHub仓库的JSON文件加载数据
+            loadEventsFromGitHub(selectedDate);
+        });
+
+        // 从GitHub加载事件数据的函数
+        function loadEventsFromGitHub(date) {
+            // 示例：从GitHub仓库加载数据
+            const githubRepoUrl = `https://raw.githubusercontent.com/你的用户名/你的仓库名/main/data/events-${date}.json`;
+            
+            fetch(githubRepoUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('未找到该日期的数据');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 成功获取数据后更新页面
+                    updateEventsContainer(data);
+                })
+                .catch(error => {
+                    alert(error.message);
+                    console.error('加载数据失败:', error);
+                });
+        }
+
+        // 更新事件列表容器
+        function updateEventsContainer(events) {
+            const container = document.querySelector('.events-container');
+            container.innerHTML = ''; // 清空现有内容
+            
+            // 遍历事件数据并创建卡片
+            events.forEach(event => {
+                // 这里是创建事件卡片的逻辑，与现有HTML结构匹配
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                card.dataset.type = event.type;
+                
+                // 构建卡片内容（省略具体实现，与现有结构一致）
+                // ...
+                
+                container.appendChild(card);
+            });
+        }
+
+        // 反馈表单逻辑
+        const feedbackBtns = document.querySelectorAll('.feedback-btn');
+        const feedbackForm = document.getElementById('feedbackForm');
+        const overlay = document.getElementById('overlay');
+        const eventYearInput = document.getElementById('eventYear');
+        const eventTitleInput = document.getElementById('eventTitle');
+        
+        feedbackBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 填充事件信息
+                eventYearInput.value = btn.dataset.year;
+                eventTitleInput.value = btn.dataset.event;
+                // 显示表单和遮罩
+                feedbackForm.classList.add('active');
+                overlay.classList.add('active');
+            });
+        });
+        
+        // 取消反馈
+        document.querySelector('.cancel-feedback').addEventListener('click', closeFeedbackForm);
+        
+        // 点击遮罩关闭表单
+        overlay.addEventListener('click', closeFeedbackForm);
+        
+        function closeFeedbackForm() {
+            feedbackForm.classList.remove('active');
+            overlay.classList.remove('active');
+            // 清空表单
+            document.getElementById('errorDesc').value = '';
+        }
+        
+        // 提交反馈
+        document.querySelector('.submit-feedback').addEventListener('click', () => {
+            const errorDesc = document.getElementById('errorDesc').value;
+            if (!errorDesc.trim()) {
+                alert('请描述具体错误内容');
+                return;
+            }
+            
+            // 在实际应用中，这里可以将反馈提交到GitHub Issues或其他服务
+            console.log({
+                year: eventYearInput.value,
+                event: eventTitleInput.value,
+                errorType: document.getElementById('errorType').value,
+                description: errorDesc,
+                submittedAt: new Date().toISOString()
+            });
+            
+            alert('反馈提交成功！感谢您的指正。');
+            closeFeedbackForm();
+        });
+    </script>
+</body>
+</html>
+    
