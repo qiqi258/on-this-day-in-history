@@ -20,11 +20,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
-
+        run: |
+          # 检查是否有package.json，如果没有则创建
+          if [ ! -f "package.json" ]; then
+            npm init -y
+          fi
+          # 确保安装必要依赖
+          npm install @google/generative-ai
+          
       - name: Generate events
         env:
-          # 配置两个Gemini API密钥
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
         run: node generate-events.js
@@ -33,6 +38,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add events.json cache/ last-updated.txt
+          git add events.json cache/ last-updated.txt package.json package-lock.json
           git commit -m "Update events: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
+    
