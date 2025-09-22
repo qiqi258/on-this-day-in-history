@@ -153,8 +153,11 @@ async function generateEventsWithAI(dateStr, month, day) {
                     generationConfig: {
                         temperature: 0.7,
                         maxOutputTokens: 1000
+                        timeout: 30000 // 添加30秒超时
                     }
                 });
+                // 增加最大重试次数
+                const maxRetries = Math.max(apiKeys.length * 2, 3); // 至少重试3次
 
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
                 const result = await model.generateContent(prompts[lang]);
