@@ -1,0 +1,58 @@
+{
+  "09-22": {
+    "zh": [
+      {
+        "year": 1980,
+        "title": "两伊战争全面爆发",
+        "category": "政治"
+      },
+      {
+        "year": 1993,
+        "title": "印度拉图尔地震",
+        "category": "灾害"
+      },
+      {
+        "year": 2002,
+        "title": "中国短道速滑世界杯夺金",
+        "category": "体育"
+      },
+      {
+        "year": 2013,
+        "title": "肯尼亚内罗毕购物中心袭击",
+        "category": "其他"
+      },
+      {
+        "year": 2023,
+        "title": "印度空间研究组织成功测试逃生系统",
+        "category": "科技"
+      }
+    ],
+    "en": [
+      {
+        "year": 1980,
+        "title": "Iraq invades Iran, beginning the Iran-Iraq War.",
+        "category": "Politics"
+      },
+      {
+        "year": 1994,
+        "title": "NBC airs the first episode of \"Friends\".",
+        "category": "Culture"
+      },
+      {
+        "year": 2006,
+        "title": "Angela Merkel sworn in as Germany's first female chancellor.",
+        "category": "Politics"
+      },
+      {
+        "year": 2013,
+        "title": "Federal government shutdown begins in the US.",
+        "category": "Politics"
+      },
+      {
+        "year": 2020,
+        "title": "California surpasses 800,000 COVID-19 cases.",
+        "category": "Disaster"
+      }
+    ]
+  }
+}
