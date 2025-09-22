@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path');
+const path = require('fs').promises;
 const { existsSync, mkdirSync } = require('fs');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
