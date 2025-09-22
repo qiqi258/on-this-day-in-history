@@ -38,19 +38,28 @@ if (apiKeys.length === 0) {
 // 当前使用的密钥索引
 let currentKeyIndex = 0;
 
-// 获取Gemini客户端
+/**
+ * 获取Gemini客户端实例
+ * @returns {GoogleGenerativeAI} Gemini客户端实例
+ */
 function getGeminiClient() {
-    const genAI = new GoogleGenerativeAI(apiKeys[currentKeyIndex]);
-    return genAI;
+    return new GoogleGenerativeAI(apiKeys[currentKeyIndex]);
 }
 
-// 切换到下一个API密钥
+/**
+ * 切换到下一个API密钥
+ */
 function switchToNextApiKey() {
     currentKeyIndex = (currentKeyIndex + 1) % apiKeys.length;
     console.log(`已切换到API密钥 #${currentKeyIndex + 1}`);
 }
 
-// 实现API调用超时控制
+/**
+ * 实现API调用超时控制
+ * @param {Promise} promise 需要添加超时控制的Promise
+ * @param {number} timeoutMs 超时时间（毫秒）
+ * @returns {Promise} 带超时控制的Promise
+ */
 function withTimeout(promise, timeoutMs = 30000) {
     return Promise.race([
         promise,
@@ -60,7 +69,13 @@ function withTimeout(promise, timeoutMs = 30000) {
     ]);
 }
 
-// 生成提示词
+/**
+ * 生成提示词
+ * @param {string} lang 语言代码（'zh'或'en'）
+ * @param {number} month 月份
+ * @param {number} day 日期
+ * @returns {string} 生成的提示词
+ */
 function generatePrompt(lang, month, day) {
     const isChinese = lang === 'zh';
     const categories = isChinese ? CATEGORIES.zh.join('、') : CATEGORIES.en.join(', ');
@@ -84,7 +99,13 @@ function generatePrompt(lang, month, day) {
     }
 }
 
-// 调用Gemini API生成历史事件
+/**
+ * 调用Gemini API生成历史事件
+ * @param {string} dateStr 日期字符串（格式：MM-DD）
+ * @param {number} month 月份
+ * @param {number} day 日期
+ * @returns {Promise<Object>} 包含不同语言生成内容的对象
+ */
 async function generateEventsWithAI(dateStr, month, day) {
     const results = {};
     const maxRetries = apiKeys.length * 2; // 每个密钥最多重试2次
@@ -97,26 +118,25 @@ async function generateEventsWithAI(dateStr, month, day) {
         while (retries < maxRetries && !success) {
             try {
                 const genAI = getGeminiClient();
-                // 使用 gemini-2.0-flash 模型
                 const model = genAI.getGenerativeModel({ 
-                    model: "gemini-2.0-flash",
+                    model: "gemini-pro",  // 使用gemini-pro模型
                     generationConfig: {
-                        temperature: 0.6,  // 降低随机性，提高格式稳定性
-                        maxOutputTokens: 800,
-                        responseMimeType: "text/plain" // 明确要求纯文本输出
+                        temperature: 0.6,
+                        maxOutputTokens: 800
                     }
                 });
 
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
                 
                 // 生成提示词
-                const prompt = generatePrompt(lang, month, day);
+                const promptText = generatePrompt(lang, month, day);
                 
                 // 带超时的API调用（30秒）
                 const result = await withTimeout(
-                    model.generateContent(prompt),
+                    model.generateContent([{ text: promptText }]),
                     30000
                 );
+                
                 const response = await result.response;
                 const aiText = response.text().trim();
                 
@@ -146,7 +166,12 @@ async function generateEventsWithAI(dateStr, month, day) {
     return results;
 }
 
-// 解析事件数据
+/**
+ * 解析事件数据
+ * @param {string} text AI生成的原始文本
+ * @param {string} lang 语言代码
+ * @returns {Array} 解析后的事件数组
+ */
 function parseEvents(text, lang) {
     const events = [];
     const lines = text.split('\n').filter(line => line.trim());
@@ -165,7 +190,12 @@ function parseEvents(text, lang) {
     return events;
 }
 
-// 验证事件数据
+/**
+ * 验证事件数据
+ * @param {Array} events 事件数组
+ * @param {string} lang 语言代码
+ * @returns {Array} 验证后的有效事件数组
+ */
 function validateEvents(events, lang) {
     const validCategories = CATEGORIES[lang];
     return events.filter(event => {
@@ -175,12 +205,20 @@ function validateEvents(events, lang) {
     });
 }
 
-// 获取缓存路径
+/**
+ * 获取缓存文件路径
+ * @param {string} dateStr 日期字符串
+ * @returns {string} 缓存文件的完整路径
+ */
 function getCachePath(dateStr) {
     return path.join(CACHE_DIR, `${dateStr}.json`);
 }
 
-// 检查缓存是否有效
+/**
+ * 检查缓存是否有效（30天内）
+ * @param {string} dateStr 日期字符串
+ * @returns {boolean} 缓存是否有效
+ */
 function isCacheValid(dateStr) {
     const cachePath = getCachePath(dateStr);
     if (!existsSync(cachePath)) {
@@ -198,7 +236,11 @@ function isCacheValid(dateStr) {
     }
 }
 
-// 从缓存获取数据
+/**
+ * 从缓存获取数据
+ * @param {string} dateStr 日期字符串
+ * @returns {Object|null} 缓存的数据或null
+ */
 function getFromCache(dateStr) {
     const cachePath = getCachePath(dateStr);
     try {
@@ -209,7 +251,11 @@ function getFromCache(dateStr) {
     }
 }
 
-// 写入缓存
+/**
+ * 写入缓存
+ * @param {string} dateStr 日期字符串
+ * @param {Object} data 要缓存的数据
+ */
 function writeToCache(dateStr, data) {
     const cachePath = getCachePath(dateStr);
     try {
@@ -219,14 +265,18 @@ function writeToCache(dateStr, data) {
     }
 }
 
-// 初始化事件文件
+/**
+ * 初始化事件文件
+ */
 function initEventsFile() {
     if (!existsSync(EVENTS_FILE)) {
         fs.writeFileSync(EVENTS_FILE, '{}', 'utf8');
     }
 }
 
-// 主函数：生成并更新事件
+/**
+ * 主函数：生成并更新事件
+ */
 async function generateAndUpdateEvents() {
     try {
         initEventsFile();
