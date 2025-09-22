@@ -1,0 +1,56 @@
+{
+  "zh": [
+    {
+      "year": 1980,
+      "title": "两伊战争全面爆发",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "印度拉图尔地震",
+      "category": "灾害"
+    },
+    {
+      "year": 2002,
+      "title": "欧洲央行降息0.5%",
+      "category": "经济"
+    },
+    {
+      "year": 2013,
+      "title": "肯尼亚购物中心袭击",
+      "category": "其他"
+    },
+    {
+      "year": 2023,
+      "title": "印度成功发射月船3号",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1980,
+      "title": "Iraq invades Iran, beginning the Iran-Iraq War.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "NBC airs the first episode of \"Friends.\"",
+      "category": "Culture"
+    },
+    {
+      "year": 2006,
+      "title": "Angela Merkel sworn in as Germany's first female chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2013,
+      "title": "Australian federal election results in Liberal/National Coalition victory.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "India suspends visa services for Canadian citizens amid diplomatic tensions.",
+      "category": "Politics"
+    }
+  ]
+}
