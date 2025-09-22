@@ -14,7 +14,7 @@
 ## 技术栈
 
 - **后端/自动化**：Node.js、GitHub Actions
-- **AI模型**：Gemini 2.5 Flash
+- **AI模型**：Gemini 2.0 Flash
 - **部署平台**：Vercel
 - **前端**：HTML、CSS、JavaScript（可根据实际情况替换为React/Vue等）
 - **数据存储**：JSON文件（事件数据）、Git版本控制
