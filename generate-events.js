@@ -96,16 +96,28 @@ function writeToCache(dateStr, data) {
 async function generateEventsWithAI(dateStr, month, day) {
     // 生成多语言提示词
     const prompts = {};
+    const currentYear = new Date().getFullYear();
     
     LANGUAGES.forEach(lang => {
         const isChinese = lang === 'zh';
         const categories = isChinese 
             ? CATEGORIES.zh.join('、')
             : CATEGORIES.en.join(', ');
+        
+        // 示例年份（根据当前日期动态生成类似格式）
+        const exampleYears = [
+            currentYear - 5,
+            currentYear - 10,
+            currentYear - 20,
+            currentYear - 30,
+            currentYear - 40,
+            currentYear - 50
+        ].map(y => `${y}年${month}月${day}日`);
             
         if (isChinese) {
-            // 中文提示词
-            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，${month}月${day}日发生的1-5个重要历史事件（每年1-2个即可，无需所有年份）。` +
+            // 中文提示词 - 生成7个左右事件，覆盖不同年份
+            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，每年${month}月${day}日发生的重要历史事件，共7个左右（不同年份）。` +
+                          `需要覆盖不同年代，例如：${exampleYears.slice(0,3).join('、')}等。` +
                           `必须严格按以下格式返回，不允许任何额外文字、标题、解释：\n` +
                           `年份|事件简述（20字以内）|分类（从[${categories}]选一个）\n` +
                           `示例：\n` +
@@ -113,14 +125,15 @@ async function generateEventsWithAI(dateStr, month, day) {
                           `2015|巴黎气候协定签署|政治\n` +
                           `确保事件真实，分类准确，仅返回符合格式的内容。`;
         } else {
-            // 英文提示词（修复了多余的冒号）
-            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 1-5 important historical events that occurred on ${month}/${day} over the past 50 years (one per year, not required for all years).\n` +
+            // 英文提示词 - 修复格式并明确年份分布要求
+            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list approximately 7 important historical events that occurred on ${month}/${day} over the past 50 years, each from a different year.` +
+                          `Cover different decades, for example: ${currentYear - 5}/${month}/${day}, ${currentYear - 15}/${month}/${day}, ${currentYear - 30}/${month}/${day}, etc.` +
                           `Return strictly in the following format without any additional text, titles, or explanations:\n` +
                           `Year|Event description (within 15 words)|Category (choose from [${categories}])\n` +
                           `Examples:\n` +
                           `2020|First COVID-19 vaccine trial|Technology\n` +
                           `2015|Paris Climate Agreement signed|Politics\n` +
-                          `Ensure events are true and accurate with appropriate categorization. Only return content that matches the format.`;
+                          `Ensure events are factual, categorized correctly, and only return content matching the format.`;
         }
     });
 
@@ -136,7 +149,7 @@ async function generateEventsWithAI(dateStr, month, day) {
             try {
                 const genAI = getGeminiClient();
                 const model = genAI.getGenerativeModel({ 
-                    model: "gemini-2.0-flash",
+                    model: "gemini-2.5-flash",
                     generationConfig: {
                         temperature: 0.7,
                         maxOutputTokens: 1000
@@ -204,11 +217,18 @@ function validateEvents(events, lang) {
     const currentYear = new Date().getFullYear();
     const validEvents = [];
     const validCategories = CATEGORIES[lang];
+    const usedYears = new Set(); // 确保年份不重复
     
     events.forEach(event => {
         // 检查年份是否在合理范围内（过去50年）
         if (isNaN(event.year) || event.year < currentYear - 50 || event.year > currentYear) {
             console.log(`过滤无效年份事件: ${event.year}年 ${event.title}`);
+            return;
+        }
+        
+        // 检查年份是否重复
+        if (usedYears.has(event.year)) {
+            console.log(`过滤重复年份事件: ${event.year}年 ${event.title}`);
             return;
         }
         
@@ -224,6 +244,7 @@ function validateEvents(events, lang) {
             return;
         }
         
+        usedYears.add(event.year);
         validEvents.push(event);
     });
     
