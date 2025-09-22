@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('fs').promises;
+const path = require('path');  // 正确：单独引用 path 模块
 const { existsSync, mkdirSync } = require('fs');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
