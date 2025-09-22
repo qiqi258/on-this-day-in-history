@@ -17,15 +17,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
+          # 移除npm缓存配置，避免对锁定文件的依赖
+          
+      - name: Install required package
         run: |
-          # 检查是否有package.json，如果没有则创建
-          if [ ! -f "package.json" ]; then
-            npm init -y
-          fi
-          # 确保安装必要依赖
+          # 直接安装所需依赖，不依赖package.json
           npm install @google/generative-ai
           
       - name: Generate events
@@ -38,7 +34,8 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add events.json cache/ last-updated.txt package.json package-lock.json
+          git add events.json cache/ last-updated.txt
+          # 只提交我们需要的文件，避免依赖文件冲突
           git commit -m "Update events: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
     
