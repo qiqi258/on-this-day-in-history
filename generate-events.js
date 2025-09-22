@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path');  // 正确：单独引用 path 模块
+const path = require('path');
 const { existsSync, mkdirSync } = require('fs');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
@@ -103,15 +103,25 @@ async function generateEventsWithAI(dateStr, month, day) {
             ? CATEGORIES.zh.join('、')
             : CATEGORIES.en.join(', ');
             
-        prompts[lang] = isChinese 
-            ? `请列出过去50年中，每年的${month}月${day}日发生的1-3个重要历史事件。` +
-              `请严格按照以下格式返回，不要添加任何额外内容：\n` +
-              `年份|事件简述|事件分类（从[${categories}]中选择）\n` +
-              `确保事件真实准确，分类合理，用中文回答。`
-            : `Please list 1-3 important historical events that occurred on ${month}/${day} each year over the past 50 years.` +
-              `Return strictly in the following format without any additional content:\n` +
-              `Year|Event description|Category (choose from [${categories}])\n` +
-              `Ensure events are true and accurate, with reasonable categorization. Answer in English.`;
+        if (isChinese) {
+            // 中文提示词
+            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，${month}月${day}日发生的1-5个重要历史事件（每年1-2个即可，无需所有年份）。` +
+                          `必须严格按以下格式返回，不允许任何额外文字、标题、解释：\n` +
+                          `年份|事件简述（20字以内）|分类（从[${categories}]选一个）\n` +
+                          `示例：\n` +
+                          `2020|新冠疫苗首次临床试验|科技\n` +
+                          `2015|巴黎气候协定签署|政治\n` +
+                          `确保事件真实，分类准确，仅返回符合格式的内容。`;
+        } else {
+            // 英文提示词（修复了多余的冒号）
+            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 1-5 important historical events that occurred on ${month}/${day} over the past 50 years (one per year, not required for all years).\n` +
+                          `Return strictly in the following format without any additional text, titles, or explanations:\n` +
+                          `Year|Event description (within 15 words)|Category (choose from [${categories}])\n` +
+                          `Examples:\n` +
+                          `2020|First COVID-19 vaccine trial|Technology\n` +
+                          `2015|Paris Climate Agreement signed|Politics\n` +
+                          `Ensure events are true and accurate with appropriate categorization. Only return content that matches the format.`;
+        }
     });
 
     const results = {};
@@ -136,7 +146,16 @@ async function generateEventsWithAI(dateStr, month, day) {
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
                 const result = await model.generateContent(prompts[lang]);
                 const response = await result.response;
-                results[lang] = response.text().trim();
+                const aiText = response.text().trim();
+                
+                // 打印AI返回的原始内容，方便排查格式问题
+                console.log(`Gemini返回${lang}原始内容:\n${aiText || '【空内容】'}`);
+                
+                if (!aiText) {
+                    throw new Error(`Gemini返回${lang}内容为空`);
+                }
+                
+                results[lang] = aiText;
                 success = true;
             } catch (error) {
                 console.error(`生成${lang}内容失败: ${error.message}`);
