@@ -802,9 +802,7 @@
         // 从GitHub加载事件数据的函数
         function loadEventsFromGitHub(date) {
             // 示例：从GitHub仓库加载数据
-            const [year, month, day] = date.split('-');
-            const dateStr = `${month}-${day}`;
-            const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/cache/${dateStr}.json`;
+            const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/data/events-${date}.json`;
             
             fetch(githubRepoUrl)
                 .then(response => {

@@ -1,0 +1,13 @@
+{
+  "name": "on-this-day-in-history",
+  "version": "1.0.0",
+  "description": "历史上的今天 - 自动文章发布系统",
+  "main": "generate-events.js",
+  "scripts": {
+    "generate": "node generate-events.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "axios": "^1.6.7"
+  }
+}

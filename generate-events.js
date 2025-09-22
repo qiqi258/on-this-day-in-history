@@ -3,14 +3,19 @@ const path = require('path');
 const { existsSync, mkdirSync } = require('fs');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
+// 获取项目根目录的绝对路径
+const ROOT_DIR = path.resolve(__dirname);
+
+// 使用绝对路径定义文件和目录
+const CACHE_DIR = path.join(ROOT_DIR, 'cache');
+const EVENTS_FILE = path.join(ROOT_DIR, 'events.json');
+const LAST_UPDATED_FILE = path.join(ROOT_DIR, 'last-updated.txt');
+
 // 确保缓存目录存在
-const CACHE_DIR = './cache';
 if (!existsSync(CACHE_DIR)) {
     mkdirSync(CACHE_DIR, { recursive: true });
 }
 
-// 事件数据文件路径
-const EVENTS_FILE = './events.json';
 // 支持的语言
 const LANGUAGES = ['zh', 'en'];
 // 事件分类（中英文对应）
