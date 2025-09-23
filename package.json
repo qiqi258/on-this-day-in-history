@@ -1,0 +1,24 @@
+{
+  "name": "on-this-day-in-history",
+  "version": "1.0.0",
+  "description": "一个基于GitHub Actions和Vercel的自动化系统，每天自动生成\"历史上的今天\"相关事件文章并发布到网站。使用Gemini 2.5 Flash模型生成内容，支持双API密钥轮换，确保稳定运行。",
+  "main": "generate-events.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiqi258/on-this-day-in-history.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiqi258/on-this-day-in-history/issues"
+  },
+  "homepage": "https://github.com/qiqi258/on-this-day-in-history#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "node-schedule": "^2.1.1"
+  }
+}
