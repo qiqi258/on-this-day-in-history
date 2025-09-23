@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "葡萄牙向佛得角移交权力",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "圣基茨和尼维斯独立",
+      "category": "政治"
+    },
+    {
+      "year": 1989,
+      "title": "匈牙利允许东德难民进入",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "亚美尼亚宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1999,
+      "title": "NASA丢失火星气候探测者",
+      "category": "科技"
+    },
+    {
+      "year": 2002,
+      "title": "Windows XP正式发布",
+      "category": "科技"
+    },
+    {
+      "year": 2008,
+      "title": "金融危机持续，股市下跌",
+      "category": "经济"
+    },
+    {
+      "year": 2019,
+      "title": "托马斯·库克集团破产",
+      "category": "经济"
+    },
+    {
+      "year": 2023,
+      "title": "印度成功发射月船三号",
+      "category": "科技"
+    },
+    {
+      "year": 2024,
+      "title": "（预测）巴黎奥运会闭幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Elizabeth Seton is canonized as first US-born saint.",
+      "category": "Culture"
+    },
+    {
+      "year": 1980,
+      "title": "Iraq invades Iran, beginning the Iran-Iraq War.",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "Saint Kitts and Nevis gains independence.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "Hungarian government opens its border to East Germans.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Armenia declares independence from the Soviet Union.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "NASA loses contact with Mars Climate Orbiter.",
+      "category": "Technology"
+    },
+    {
+      "year": 2002,
+      "title": "Mozilla Firefox 1.0 released.",
+      "category": "Technology"
+    },
+    {
+      "year": 2008,
+      "title": "Kauhajoki school shooting in Finland kills 11.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2017,
+      "title": "Australia wins the Netball World Youth Cup.",
+      "category": "Sports"
+    }
+  ]
+}
