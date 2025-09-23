@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "葡萄牙第六共和国成立",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "圣基茨和尼维斯独立",
+      "category": "政治"
+    },
+    {
+      "year": 1989,
+      "title": "匈牙利允许东德难民入境",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "亚美尼亚宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "海地恢复阿里斯蒂德总统",
+      "category": "政治"
+    },
+    {
+      "year": 2002,
+      "title": "欧洲太空局SMART-1发射",
+      "category": "科技"
+    },
+    {
+      "year": 2008,
+      "title": "芬兰考哈约基校园枪击案",
+      "category": "灾害"
+    },
+    {
+      "year": 2019,
+      "title": "托马斯·库克集团破产",
+      "category": "经济"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Mozambique joins the United Nations.",
+      "category": "Politics"
+    },
+    {
+      "year": 1980,
+      "title": "Bob Marley plays his final concert in Pittsburgh.",
+      "category": "Culture"
+    },
+    {
+      "year": 1983,
+      "title": "Saint Kitts and Nevis gains independence.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "Hungarian refugees flood Austria.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Linus Torvalds releases Linux kernel 0.01.",
+      "category": "Technology"
+    },
+    {
+      "year": 1999,
+      "title": "NASA loses contact with Mars Climate Orbiter.",
+      "category": "Technology"
+    },
+    {
+      "year": 2002,
+      "title": "Protestors rally against the Iraq War.",
+      "category": "Politics"
+    },
+    {
+      "year": 2008,
+      "title": "Wall Street plunges amid financial crisis.",
+      "category": "Economy"
+    },
+    {
+      "year": 2017,
+      "title": "Germany's Angela Merkel wins fourth term.",
+      "category": "Politics"
+    },
+    {
+      "year": 2024,
+      "title": "India launches lunar mission Chandrayaan-3.",
+      "category": "Technology"
+    }
+  ]
+}
