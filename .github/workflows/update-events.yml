@@ -41,8 +41,8 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add events.json cache/ last-updated.txt
+          # 关键修改：移除不存在的 events.json，添加生成文件所在的 data/ 目录
+          git add data/ cache/ last-updated.txt
           git commit -m "Update events: $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          # 使用令牌推送，避免权限问题
+          # 使用令牌推送，避免权限问题（仓库地址保持你的实际地址）
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/qiqi258/on-this-day-in-history.git main
-    
