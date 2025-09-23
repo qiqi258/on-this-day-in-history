@@ -1,0 +1,46 @@
+{
+  "zh": [
+    {
+      "year": 1983,
+      "title": "澳大利亚赢得美洲杯",
+      "category": "体育"
+    },
+    {
+      "year": 1991,
+      "title": "欧盟承认波罗的海国家独立",
+      "category": "政治"
+    },
+    {
+      "year": 2002,
+      "title": "行星2002 NY40发现",
+      "category": "科技"
+    },
+    {
+      "year": 2008,
+      "title": "金融危机全面爆发",
+      "category": "经济"
+    }
+  ],
+  "en": [
+    {
+      "year": 1983,
+      "title": "Saint Kitts and Nevis joins the United Nations.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Serbia besieges Vukovar, Croatia.",
+      "category": "Politics"
+    },
+    {
+      "year": 2002,
+      "title": "Mozilla Firefox 0.1 released.",
+      "category": "Technology"
+    },
+    {
+      "year": 2008,
+      "title": "Kauhajoki school shooting in Finland.",
+      "category": "Disaster"
+    }
+  ]
+}
