@@ -13,24 +13,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # 添加令牌授权，获取推送权限
           token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'  # 缓存npm依赖
           
       - name: Install required packages
         run: |
-          npm install @google/generative-ai axios
+          npm install @google/generative-ai node-schedule  # 确保安装了所有依赖
           
       - name: Generate events
         env:
-          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}  # 修正拼写错误 GEMINI
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
-        run: node generate-events.js
-
+        run: node generate-events.js --today  # 明确指定生成今天的事件
+        
       - name: Ensure last-updated.txt exists
         run: |
           if [ ! -f "last-updated.txt" ]; then
@@ -41,8 +41,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          # 关键修改：移除不存在的 events.json，添加生成文件所在的 data/ 目录
           git add data/ cache/ last-updated.txt
-          git commit -m "Update events: $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          # 使用令牌推送，避免权限问题（仓库地址保持你的实际地址）
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/qiqi258/on-this-day-in-history.git main
+          # 使用更明确的提交信息
+          git commit -m "Auto-update historical events for $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push origin main

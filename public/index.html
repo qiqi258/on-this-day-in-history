@@ -62,6 +62,11 @@
             color: var(--text-primary);
             margin-bottom: 8px;
         }
+        .current-time {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
         .update-info {
             font-size: 14px;
             color: var(--text-secondary);
@@ -70,21 +75,33 @@
         .date-picker {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             background: var(--bg-card);
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 4px;
             border: 1px solid var(--border-color);
-            font-size: 14px;
+            font-size: 16px; /* 增大字体 */
         }
-        .date-picker select {
-            border: none;
-            outline: none;
-            padding: 4px;
-            color: #3498db;
-            font-weight: 500;
+        .date-picker input {
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px 12px; /* 增大内边距 */
             background: transparent;
             color: var(--text-primary);
+            font-size: 16px; /* 增大字体 */
+        }
+        .date-confirm-btn {
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+        .date-confirm-btn:hover {
+            background: #2980b9;
         }
 
         /* 语言与主题切换容器 */
@@ -296,51 +313,50 @@
             display: block;
         }
         .feedback-form h4 {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             color: var(--text-primary);
-            font-size: 16px;
         }
         .form-group {
             margin-bottom: 15px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-size: 14px;
             color: var(--text-primary);
         }
-        .form-group select, .form-group textarea {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 8px 12px;
+            padding: 8px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            font-size: 14px;
-            resize: none;
-            background: var(--bg-card);
+            background: transparent;
             color: var(--text-primary);
+            font-size: 14px;
+        }
+        .form-group textarea {
+            resize: vertical;
         }
         .form-actions {
             display: flex;
             gap: 10px;
             margin-top: 20px;
         }
-        .submit-feedback {
-            flex: 1;
-            padding: 8px;
+        .form-actions button {
+            padding: 8px 16px;
             border: none;
             border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .submit-feedback {
             background: #3498db;
             color: white;
-            cursor: pointer;
         }
         .cancel-feedback {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            background: var(--bg-card);
+            background: var(--border-color);
             color: var(--text-primary);
-            cursor: pointer;
         }
 
         /* 遮罩层 */
@@ -350,9 +366,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.5);
+            z-index: 50;
             display: none;
-            z-index: 99;
         }
         .overlay.active {
             display: block;
@@ -386,6 +402,9 @@
             .language-switcher {
                 flex-wrap: wrap;
             }
+            .date-picker {
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -395,17 +414,13 @@
 
     <!-- 顶部标题区 -->
     <div class="header">
-        <h1>历史上的今天 · 2024年10月05日</h1>
-        <div class="update-info">最后更新时间：2024年10月05日 08:10</div>
+        <h1>历史上的今天 · <span id="displayDate">2024年10月05日</span></h1>
+        <div class="current-time" id="currentTime">2024年10月05日 12:34:56</div>
+        <div class="update-info" id="updateInfo">最后更新时间：2024年10月05日 08:12</div>
         <div class="date-picker">
-            查看其他日期：
-            <select id="dateSelector">
-                <option value="2024-10-05" selected>2024年10月05日</option>
-                <option value="2024-10-04">2024年10月04日</option>
-                <option value="2024-10-03">2024年10月03日</option>
-                <option value="2024-10-02">2024年10月02日</option>
-                <option value="2024-10-01">2024年10月01日</option>
-            </select>
+            <span id="datePickerLabel">查看其他日期：</span>
+            <input type="datetime-local" id="dateSelector" value="2024-10-05T00:00">
+            <button class="date-confirm-btn" id="dateConfirmBtn">确认</button>
         </div>
     </div>
 
@@ -446,109 +461,25 @@
 
     <!-- 事件列表容器 -->
     <div class="events-container">
-        <!-- 政治事件 -->
-        <div class="event-card" data-type="政治">
-            <div class="event-header">
-                <div class="event-year">1974年</div>
-                <div class="event-category category-政治">政治</div>
-            </div>
-            <div class="event-content">联合国大会通过决议，将巴勒斯坦解放组织列为具有观察员资格的常驻联合国观察员</div>
-            <div class="event-translation" data-lang="en">The United Nations General Assembly adopted a resolution, granting the Palestine Liberation Organization the status of permanent observer at the UN.</div>
-            <div class="event-translation" data-lang="ja">国連総会は決議を採択し、パレスチナ解放機構に国連常設オブザーバー資格を付与しました。</div>
-            <div class="event-translation" data-lang="ko">국제연합 총회는 결의를 통과하여 팔레스타인 해방 기구에 유엔 상주 관찰자 자격을 부여했습니다.</div>
-            <div class="event-translation" data-lang="es">La Asamblea General de las Naciones Unidas adoptó una resolución que otorga a la Organización para la Liberación de Palestina el estatuto de observador permanente en las Naciones Unidas.</div>
-            <div class="event-translation" data-lang="fr">L'Assemblée générale des Nations Unies a adopté une résolution accordant à l'Organisation de libération de la Palestine le statut d'observateur permanent aux Nations Unies.</div>
-            <button class="feedback-btn" data-year="1974" data-event="联合国巴勒斯坦决议">反馈错误</button>
-        </div>
-
-        <!-- 科技事件 -->
+        <!-- 事件卡片将通过JavaScript动态生成 -->
         <div class="event-card" data-type="科技">
             <div class="event-header">
-                <div class="event-year">1984年</div>
+                <div class="event-year">2020</div>
                 <div class="event-category category-科技">科技</div>
             </div>
-            <div class="event-content">美国航天飞机"挑战者号"完成首次夜间发射和着陆任务，验证了全天候航天能力</div>
-            <div class="event-translation" data-lang="en">The U.S. space shuttle Challenger completed its first night launch and landing mission, verifying all-weather space capability.</div>
-            <div class="event-translation" data-lang="ja">アメリカのスペースシャトル「チャレンジャー号」が初の夜間打ち上げと着陸任務を完了し、全天候型宇宙能力を検証しました。</div>
-            <div class="event-translation" data-lang="ko">미국 우주왕복선 "챌린저호"는 최초의 야간 발사와 착륙 임무를 완료하여 상시 우주 활동 능력을 검증했습니다.</div>
-            <div class="event-translation" data-lang="es">El transbordador espacial estadounidense "Challenger" completó su primera misión de lanzamiento y aterrizaje nocturno, verificando la capacidad espacial en todo tipo de clima.</div>
-            <div class="event-translation" data-lang="fr">La navette spatiale américaine "Challenger" a accompli sa première mission de lancement et d'atterrissage nocturne, vérifiant la capacité spatiale en toutes conditions météorologiques.</div>
-            <button class="feedback-btn" data-year="1984" data-event="挑战者号夜间任务">反馈错误</button>
+            <div class="event-content">新冠疫苗首次临床试验</div>
+            <div class="event-translation" data-lang="en">First COVID-19 vaccine trial</div>
+            <button class="feedback-btn" data-year="2020" data-title="新冠疫苗首次临床试验">反馈错误</button>
         </div>
-
-        <!-- 文化事件 -->
-        <div class="event-card" data-type="文化">
+        
+        <div class="event-card" data-type="政治">
             <div class="event-header">
-                <div class="event-year">1994年</div>
-                <div class="event-category category-文化">文化</div>
+                <div class="event-year">2015</div>
+                <div class="event-category category-政治">政治</div>
             </div>
-            <div class="event-content">诺贝尔文学奖揭晓，日本作家大江健三郎凭借"以诗意的想象力创造出一个把现实与神话紧密结合的世界"获奖</div>
-            <div class="event-translation" data-lang="en">The Nobel Prize in Literature was announced, with Japanese writer Kenzaburō Ōe winning for "creating an imagined world, where life and myth condense to form a disconcerting picture of the human predicament today".</div>
-            <div class="event-translation" data-lang="ja">ノーベル文学賞が発表され、大江健三郎が「詩的な想像力をもって現実と神話を緊密に結びつけた世界を創り出した」として受賞しました。</div>
-            <div class="event-translation" data-lang="ko">노벨 문학상이 발표되었으며, 일본 작가 오에 켄자부로는 "시적인 상상력으로 현실과 신화를 긴밀히 결합한 세계를 창조했다"는 이유로 수상했습니다.</div>
-            <div class="event-translation" data-lang="es">Se anunció el Premio Nobel de Literatura, que fue otorgado al escritor japonés Kenzaburō Ōe por "crear un mundo imaginario donde la vida y el mito se condensan para formar una imagen inquietante de la condición humana actual".</div>
-            <div class="event-translation" data-lang="fr">Le Prix Nobel de littérature a été annoncé, remporté par l'écrivain japonais Kenzaburō Ōe pour "avoir créé un monde imaginaire où la vie et le mythe se condensent pour former un tableau troublant de la condition humaine aujourd'hui".</div>
-            <button class="feedback-btn" data-year="1994" data-event="大江健三郎诺奖">反馈错误</button>
-        </div>
-
-        <!-- 体育事件 -->
-        <div class="event-card" data-type="体育">
-            <div class="event-header">
-                <div class="event-year">2004年</div>
-                <div class="event-category category-体育">体育</div>
-            </div>
-            <div class="event-content">F1中国大奖赛在上海国际赛车场首次举办，德国车手迈克尔·舒马赫夺得冠军</div>
-            <div class="event-translation" data-lang="en">The Formula 1 Chinese Grand Prix was held for the first time at the Shanghai International Circuit, with German driver Michael Schumacher winning the championship.</div>
-            <div class="event-translation" data-lang="ja">F1中国グランプリが上海国際サーキットで初開催され、ドイツのミハエル・シューマッハーが優勝しました。</div>
-            <div class="event-translation" data-lang="ko">F1 중국 그랑프리가 상하이 국제 서킷에서 처음으로 개최되었고, 독일 드라이버 미하엘 슈마허가 우승했습니다.</div>
-            <div class="event-translation" data-lang="es">El Gran Premio de China de Fórmula 1 se celebró por primera vez en el Circuito Internacional de Shanghái, con el piloto alemán Michael Schumacher ganando el campeonato.</div>
-            <div class="event-translation" data-lang="fr">Le Grand Prix de Chine de Formule 1 s'est déroulé pour la première fois au Circuit international de Shanghai, avec le pilote allemand Michael Schumacher remportant le championnat.</div>
-            <button class="feedback-btn" data-year="2004" data-event="F1中国大奖赛">反馈错误</button>
-        </div>
-
-        <!-- 经济事件 -->
-        <div class="event-card" data-type="经济">
-            <div class="event-header">
-                <div class="event-year">2014年</div>
-                <div class="event-category category-经济">经济</div>
-            </div>
-            <div class="event-content">欧洲中央银行推出负利率政策，隔夜存款利率下调至-0.1%，以刺激欧元区经济复苏</div>
-            <div class="event-translation" data-lang="en">The European Central Bank launched a negative interest rate policy, cutting the overnight deposit rate to -0.1% to stimulate economic recovery in the eurozone.</div>
-            <div class="event-translation" data-lang="ja">欧州中央銀行は負金利政策を導入し、オーバーナイト預金金利を-0.1%に引き下げ、ユーロ圏の経済回復を刺激しました。</div>
-            <div class="event-translation" data-lang="ko">유럽중앙은행은 음의 금리 정책을 도입하여 당일 예금 금리를 -0.1%로下调하여 유로존 경제 회복을 촉진했습니다.</div>
-            <div class="event-translation" data-lang="es">El Banco Central Europeo lanzó una política de tipos de interés negativos, reduciendo el tipo de depósito nocturno al -0.1% para estimular la recuperación económica de la zona euro.</div>
-            <div class="event-translation" data-lang="fr">La Banque centrale européenne a lancé une politique de taux d'intérêt négatifs, réduisant le taux de dépôt nocturne à -0.1% pour stimuler la reprise économique de la zone euro.</div>
-            <button class="feedback-btn" data-year="2014" data-event="欧央行负利率">反馈错误</button>
-        </div>
-
-        <!-- 灾害事件 -->
-        <div class="event-card" data-type="灾害">
-            <div class="event-header">
-                <div class="event-year">1999年</div>
-                <div class="event-category category-灾害">灾害</div>
-            </div>
-            <div class="event-content">台风"约克"在香港登陆，造成1人死亡、数十人受伤，成为当时香港50年来最强台风之一</div>
-            <div class="event-translation" data-lang="en">Typhoon York made landfall in Hong Kong, causing 1 death and dozens of injuries, becoming one of the strongest typhoons in Hong Kong in 50 years at that time.</div>
-            <div class="event-translation" data-lang="ja">台風「ヨーク」が香港に上陸し、1人の死亡と数十人の負傷を引き起こし、当時香港で50年ぶりの強力な台風の一つとなりました。</div>
-            <div class="event-translation" data-lang="ko">태풍 "요크"가 홍콩에 상륙하여 1명이 사망하고 수십 명이 부상당했으며, 당시 홍콩에서 50년 만에 가장 강력한 태풍 중 하나가 되었습니다.</div>
-            <div class="event-translation" data-lang="es">El tifón York hizo landfall en Hong Kong, causando 1 muerte y decenas de heridos, convirtiéndose en uno de los tifones más fuertes en Hong Kong en 50 años en ese momento.</div>
-            <div class="event-translation" data-lang="fr">Le typhon York est arrivé en Hong Kong, causant 1 mort et des dizaines de blessés, devenant l'un des plus forts typhons de Hong Kong depuis 50 ans à l'époque.</div>
-            <button class="feedback-btn" data-year="1999" data-event="台风约克香港">反馈错误</button>
-        </div>
-
-        <!-- 其他事件 -->
-        <div class="event-card" data-type="其他">
-            <div class="event-header">
-                <div class="event-year">2009年</div>
-                <div class="event-category category-其他">其他</div>
-            </div>
-            <div class="event-content">谷歌公司宣布推出基于Linux的操作系统"Chrome OS"，主打轻量化和云服务集成</div>
-            <div class="event-translation" data-lang="en">Google announced the launch of "Chrome OS", a Linux-based operating system focusing on lightweight design and cloud service integration.</div>
-            <div class="event-translation" data-lang="ja">Googleは、Linuxベースのオペレーティングシステム「Chrome OS」のリリースを発表し、軽量設計とクラウドサービス統合を主な特徴としています。</div>
-            <div class="event-translation" data-lang="ko">구글은 리눅스 기반 운영 체제 "Chrome OS" 출시를 발표했으며, 경량화와 클라우드 서비스 통합을 강점으로 내세웠습니다.</div>
-            <div class="event-translation" data-lang="es">Google anunció el lanzamiento de "Chrome OS", un sistema operativo basado en Linux que se enfoca en un diseño ligero y la integración de servicios en la nube.</div>
-            <div class="event-translation" data-lang="fr">Google a annoncé le lancement de "Chrome OS", un système d'exploitation basé sur Linux axé sur un design léger et l'intégration de services cloud.</div>
-            <button class="feedback-btn" data-year="2009" data-event="谷歌Chrome OS发布">反馈错误</button>
+            <div class="event-content">巴黎气候协定签署</div>
+            <div class="event-translation" data-lang="en">Paris Climate Agreement signed</div>
+            <button class="feedback-btn" data-year="2015" data-title="巴黎气候协定签署">反馈错误</button>
         </div>
     </div>
 
@@ -577,17 +508,24 @@
         </div>
     </div>
 
-    <!-- 底部信息 - 已更新版权信息并添加链接 -->
+    <!-- 底部信息 -->
     <div class="footer">
         <p>
-            <a href="javascript:location.reload();" id="todayLink">历史上的今天</a> © 2025 | 
+            <a href="javascript:loadTodayEvents();" id="todayLink">历史上的今天</a> © 2025 | 
             <a href="https://ls.harper.dpdns.org" target="_self" id="siteLink">ls.harper.dpdns.org</a> 版权所有
         </p>
     </div>
 
     <script>
-        // 页面加载时检查用户主题偏好
+        // 页面加载时初始化
         document.addEventListener('DOMContentLoaded', function() {
+            // 加载最后更新时间
+            loadLastUpdatedTime();
+            
+            // 更新当前时间并每秒刷新
+            updateCurrentTime();
+            setInterval(updateCurrentTime, 1000);
+            
             // 检查本地存储中的主题设置
             const savedTheme = localStorage.getItem('theme');
             const themeToggle = document.getElementById('themeToggle');
@@ -604,7 +542,121 @@
             
             // 设置当前日期链接跳转逻辑
             setupFooterLinks();
+            
+            // 初始化加载今天的事件
+            loadTodayEvents();
         });
+
+        // 加载今天的事件
+        function loadTodayEvents() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const currentDate = `${year}-${month}-${day}`;
+            
+            // 设置日期选择器为当前日期
+            document.getElementById('dateSelector').value = `${currentDate}T00:00`;
+            
+            // 更新页面标题中的日期
+            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
+            const formattedDate = formatDateForDisplay(currentDate, activeLang);
+            document.getElementById('displayDate').textContent = formattedDate;
+            
+            // 加载当天事件
+            loadEventsFromGitHub(currentDate);
+        }
+
+        // 加载最后更新时间（从last-updated.txt获取）
+        function loadLastUpdatedTime() {
+            // 实际项目中应通过后端API获取此文件内容
+            const lastUpdatedElement = document.getElementById('updateInfo');
+            
+            // 从文件内容可知最后更新时间为：2025年9月23日 10:44
+            updateLastUpdatedTime('2025年9月23日 10:44');
+        }
+        
+        // 更新最后更新时间显示
+        function updateLastUpdatedTime(timeString) {
+            const lastUpdatedElement = document.getElementById('updateInfo');
+            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
+            
+            // 根据当前语言更新最后更新时间文本
+            switch(activeLang) {
+                case 'zh':
+                    lastUpdatedElement.textContent = `最后更新时间：${timeString}`;
+                    break;
+                case 'en':
+                    lastUpdatedElement.textContent = `Last Updated: ${formatTimeEn(timeString)}`;
+                    break;
+                case 'ja':
+                    lastUpdatedElement.textContent = `最終更新日時：${timeString}`;
+                    break;
+                case 'ko':
+                    lastUpdatedElement.textContent = `최종 업데이트 시간: ${formatTimeKo(timeString)}`;
+                    break;
+                case 'es':
+                    lastUpdatedElement.textContent = `Última actualización: ${formatTimeEs(timeString)}`;
+                    break;
+                case 'fr':
+                    lastUpdatedElement.textContent = `Dernière mise à jour : ${formatTimeFr(timeString)}`;
+                    break;
+            }
+            
+            // 更新翻译映射中的时间
+            updateTranslationTimes(timeString);
+        }
+        
+        // 更新所有语言的时间翻译
+        function updateTranslationTimes(timeString) {
+            const year = timeString.split('年')[0];
+            const month = timeString.split('年')[1].split('月')[0];
+            const day = timeString.split('月')[1].split('日')[0];
+            const time = timeString.split(' ')[1];
+            
+            // 更新翻译中的更新时间
+            translations.zh.updateInfo = `最后更新时间：${timeString}`;
+            translations.en.updateInfo = `Last Updated: ${formatMonthEn(month)} ${day}, ${year} ${time}`;
+            translations.ja.updateInfo = `最終更新日時：${timeString}`;
+            translations.ko.updateInfo = `최종 업데이트 시간: ${year}년 ${month}월 ${day}일 ${time}`;
+            translations.es.updateInfo = `Última actualización: ${day} de ${formatMonthEs(month)} de ${year} ${time}`;
+            translations.fr.updateInfo = `Dernière mise à jour : ${day} ${formatMonthFr(month)} ${year} ${time}`;
+        }
+        
+        // 更新当前时间显示（带秒）
+        function updateCurrentTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
+            const timeElement = document.getElementById('currentTime');
+            
+            switch(activeLang) {
+                case 'zh':
+                    timeElement.textContent = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'en':
+                    timeElement.textContent = `${formatMonthEn(month)} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'ja':
+                    timeElement.textContent = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'ko':
+                    timeElement.textContent = `${year}년 ${month}월 ${day}일 ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'es':
+                    timeElement.textContent = `${day} de ${formatMonthEs(month)} de ${year} ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'fr':
+                    timeElement.textContent = `${day} ${formatMonthFr(month)} ${year} ${hours}:${minutes}:${seconds}`;
+                    break;
+            }
+        }
 
         // 设置底部链接跳转逻辑
         function setupFooterLinks() {
@@ -619,19 +671,7 @@
             const todayLink = document.getElementById('todayLink');
             todayLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                // 模拟跳转到当前日期页面
-                document.getElementById('dateSelector').value = currentDate;
-                // 触发日期选择事件
-                const event = new Event('change');
-                document.getElementById('dateSelector').dispatchEvent(event);
-            });
-            
-            // 设置网站链接跳转首页
-            const siteLink = document.getElementById('siteLink');
-            siteLink.addEventListener('click', function(e) {
-                // 这里可以根据实际情况修改跳转逻辑
-                // e.preventDefault();
-                // window.location.href = 'https://ls.harper.dpdns.org';
+                loadTodayEvents();
             });
         }
 
@@ -658,19 +698,22 @@
         const eventCards = document.querySelectorAll('.event-card');
         const pageTitle = document.querySelector('h1');
         const updateInfo = document.querySelector('.update-info');
-        const datePickerLabel = document.querySelector('.date-picker').firstChild;
+        const datePickerLabel = document.querySelector('#datePickerLabel');
+        const dateConfirmBtn = document.getElementById('dateConfirmBtn');
         const feedbackFormTitle = document.querySelector('.feedback-form h4');
         const submitFeedbackBtn = document.querySelector('.submit-feedback');
         const cancelFeedbackBtn = document.querySelector('.cancel-feedback');
         const todayLink = document.getElementById('todayLink');
         const siteLink = document.getElementById('siteLink');
+        const displayDateElement = document.getElementById('displayDate');
         
-        // 页面文本翻译映射 - 已更新底部版权信息
+        // 页面文本翻译映射
         const translations = {
             zh: {
-                pageTitle: '历史上的今天 · 2024年10月05日',
-                updateInfo: '最后更新时间：2024年10月05日 08:12',
+                pageTitle: '历史上的今天 · ',
+                updateInfo: '最后更新时间：2025年9月23日 10:44',
                 datePickerLabel: '查看其他日期：',
+                dateConfirmBtn: '确认',
                 feedbackFormTitle: '反馈错误事件',
                 submitFeedback: '提交反馈',
                 cancelFeedback: '取消',
@@ -679,9 +722,10 @@
                 footer: '历史上的今天 © 2025 | ls.harper.dpdns.org 版权所有'
             },
             en: {
-                pageTitle: 'On This Day · October 05, 2024',
-                updateInfo: 'Last Updated: October 05, 2024 08:12',
+                pageTitle: 'On This Day · ',
+                updateInfo: 'Last Updated: September 23, 2025 10:44',
                 datePickerLabel: 'View other dates: ',
+                dateConfirmBtn: 'Confirm',
                 feedbackFormTitle: 'Report Incorrect Event',
                 submitFeedback: 'Submit Feedback',
                 cancelFeedback: 'Cancel',
@@ -690,9 +734,10 @@
                 footer: 'On This Day © 2025 | ls.harper.dpdns.org All Rights Reserved'
             },
             ja: {
-                pageTitle: '歴史の今日 · 2024年10月05日',
-                updateInfo: '最終更新日時：2024年10月05日 08:12',
+                pageTitle: '歴史の今日 · ',
+                updateInfo: '最終更新日時：2025年9月23日 10:44',
                 datePickerLabel: '他の日付を表示：',
+                dateConfirmBtn: '確認',
                 feedbackFormTitle: 'イベントの誤りを報告',
                 submitFeedback: 'フィードバックを送信',
                 cancelFeedback: 'キャンセル',
@@ -701,9 +746,10 @@
                 footer: '歴史の今日 © 2025 | ls.harper.dpdns.org 全著作権所有'
             },
             ko: {
-                pageTitle: '역사 속 오늘 · 2024년 10월 05일',
-                updateInfo: '최종 업데이트 시간: 2024년 10월 05일 08:12',
+                pageTitle: '역사 속 오늘 · ',
+                updateInfo: '최종 업데이트 시간: 2025년 9월 23일 10:44',
                 datePickerLabel: '다른 날짜 보기: ',
+                dateConfirmBtn: '확인',
                 feedbackFormTitle: '잘못된 사건 신고',
                 submitFeedback: '피드백 제출',
                 cancelFeedback: '취소',
@@ -712,9 +758,10 @@
                 footer: '역사 속 오늘 © 2025 | ls.harper.dpdns.org 저작권 소유'
             },
             es: {
-                pageTitle: 'En este día de la historia · 05 de octubre de 2024',
-                updateInfo: 'Última actualización: 05 de octubre de 2024 08:12',
+                pageTitle: 'En este día de la historia · ',
+                updateInfo: 'Última actualización: 23 de septiembre de 2025 10:44',
                 datePickerLabel: 'Ver otras fechas: ',
+                dateConfirmBtn: 'Confirmar',
                 feedbackFormTitle: 'Informar sobre un evento incorrecto',
                 submitFeedback: 'Enviar comentarios',
                 cancelFeedback: 'Cancelar',
@@ -723,9 +770,10 @@
                 footer: 'En este día de la historia © 2025 | ls.harper.dpdns.org Todos los derechos reservados'
             },
             fr: {
-                pageTitle: "Dans l'histoire, ce jour · 05 octobre 2024",
-                updateInfo: 'Dernière mise à jour : 05 octobre 2024 08:12',
+                pageTitle: "Dans l'histoire, ce jour · ",
+                updateInfo: 'Dernière mise à jour : 23 septembre 2025 10:44',
                 datePickerLabel: 'Voir autres dates : ',
+                dateConfirmBtn: 'Confirmer',
                 feedbackFormTitle: 'Signaler un événement incorrect',
                 submitFeedback: 'Soumettre des commentaires',
                 cancelFeedback: 'Annuler',
@@ -743,14 +791,21 @@
                 const targetLang = btn.dataset.lang;
                 
                 // 更新页面文本
-                pageTitle.textContent = translations[targetLang].pageTitle;
+                const currentDateValue = document.getElementById('dateSelector').value;
+                const formattedDate = formatDateForDisplay(currentDateValue, targetLang);
+                
+                pageTitle.innerHTML = translations[targetLang].pageTitle + `<span id="displayDate">${formattedDate}</span>`;
                 updateInfo.textContent = translations[targetLang].updateInfo;
                 datePickerLabel.textContent = translations[targetLang].datePickerLabel;
+                dateConfirmBtn.textContent = translations[targetLang].dateConfirmBtn;
                 feedbackFormTitle.textContent = translations[targetLang].feedbackFormTitle;
                 submitFeedbackBtn.textContent = translations[targetLang].submitFeedback;
                 cancelFeedbackBtn.textContent = translations[targetLang].cancelFeedback;
                 todayLink.textContent = translations[targetLang].todayLink;
                 siteLink.textContent = translations[targetLang].siteLink;
+                
+                // 更新当前时间显示
+                updateCurrentTime();
                 
                 // 显示当前语言的翻译，隐藏其他语言
                 hideNonActiveTranslations(targetLang);
@@ -781,6 +836,7 @@
                 const targetType = btn.dataset.type;
                 
                 // 筛选事件卡片
+                const eventCards = document.querySelectorAll('.event-card');
                 eventCards.forEach(card => {
                     if (targetType === 'all' || card.dataset.type === targetType) {
                         card.style.display = 'block';
@@ -791,19 +847,110 @@
             });
         });
 
-        // 日期选择逻辑 - 可扩展为从GitHub加载数据
-        const dateSelector = document.getElementById('dateSelector');
-        dateSelector.addEventListener('change', function() {
-            const selectedDate = this.value;
-            // 实际应用中，这里可以从GitHub仓库的JSON文件加载数据
-            loadEventsFromGitHub(selectedDate);
+        // 日期确认按钮逻辑
+        dateConfirmBtn.addEventListener('click', function() {
+            const selectedDate = document.getElementById('dateSelector').value;
+            if (!selectedDate) return;
+            
+            // 更新页面标题中的日期
+            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
+            const formattedDate = formatDateForDisplay(selectedDate, activeLang);
+            document.getElementById('displayDate').textContent = formattedDate;
+            
+            // 加载对应日期的数据
+            loadEventsFromGitHub(selectedDate.split('T')[0]);
         });
 
+        // 格式化日期用于显示
+        function formatDateForDisplay(dateString, lang) {
+            if (!dateString) return '';
+            
+            const datePart = dateString.split('T')[0];
+            const [year, month, day] = datePart.split('-').map(Number);
+            
+            switch(lang) {
+                case 'zh':
+                    return `${year}年${month}月${day}日`;
+                case 'en':
+                    return `${formatMonthEn(month)} ${day}, ${year}`;
+                case 'ja':
+                    return `${year}年${month}月${day}日`;
+                case 'ko':
+                    return `${year}년 ${month}월 ${day}일`;
+                case 'es':
+                    return `${day} de ${formatMonthEs(month)} de ${year}`;
+                case 'fr':
+                    return `${day} ${formatMonthFr(month)} ${year}`;
+                default:
+                    return `${year}年${month}月${day}日`;
+            }
+        }
+        
+        // 月份格式化辅助函数（英文）
+        function formatMonthEn(month) {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                           'July', 'August', 'September', 'October', 'November', 'December'];
+            return months[month - 1];
+        }
+        
+        // 月份格式化辅助函数（西班牙文）
+        function formatMonthEs(month) {
+            const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 
+                           'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+            return months[month - 1];
+        }
+        
+        // 月份格式化辅助函数（法文）
+        function formatMonthFr(month) {
+            const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 
+                           'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+            return months[month - 1];
+        }
+        
+        // 时间格式化辅助函数（英文）
+        function formatTimeEn(timeString) {
+            const year = timeString.split('年')[0];
+            const month = parseInt(timeString.split('年')[1].split('月')[0]);
+            const day = timeString.split('月')[1].split('日')[0];
+            const time = timeString.split(' ')[1];
+            
+            return `${formatMonthEn(month)} ${day}, ${year} ${time}`;
+        }
+        
+        // 时间格式化辅助函数（韩文）
+        function formatTimeKo(timeString) {
+            const year = timeString.split('年')[0];
+            const month = timeString.split('年')[1].split('月')[0];
+            const day = timeString.split('月')[1].split('日')[0];
+            const time = timeString.split(' ')[1];
+            
+            return `${year}년 ${month}월 ${day}일 ${time}`;
+        }
+        
+        // 时间格式化辅助函数（西班牙文）
+        function formatTimeEs(timeString) {
+            const year = timeString.split('年')[0];
+            const month = parseInt(timeString.split('年')[1].split('月')[0]);
+            const day = timeString.split('月')[1].split('日')[0];
+            const time = timeString.split(' ')[1];
+            
+            return `${day} de ${formatMonthEs(month)} de ${year} ${time}`;
+        }
+        
+        // 时间格式化辅助函数（法文）
+        function formatTimeFr(timeString) {
+            const year = timeString.split('年')[0];
+            const month = parseInt(timeString.split('年')[1].split('月')[0]);
+            const day = timeString.split('月')[1].split('日')[0];
+            const time = timeString.split(' ')[1];
+            
+            return `${day} ${formatMonthFr(month)} ${year} ${time}`;
+        }
+
         // 从GitHub加载事件数据的函数
-        async function loadEventsFromGitHub(date) {
-            // 添加 ?t=时间戳，确保每次请求都是最新数据
-            const timestamp = new Date().getTime();
-            const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/data/events-${date}.json?t=${timestamp}`;
+        function loadEventsFromGitHub(date) {
+            // 示例：从GitHub仓库加载数据
+            const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/data/events-${date}.json`;
             
             fetch(githubRepoUrl)
                 .then(response => {
@@ -829,70 +976,86 @@
             
             // 遍历事件数据并创建卡片
             events.forEach(event => {
-                // 这里是创建事件卡片的逻辑，与现有HTML结构匹配
+                // 创建事件卡片
                 const card = document.createElement('div');
                 card.className = 'event-card';
                 card.dataset.type = event.type;
                 
-                // 构建卡片内容（省略具体实现，与现有结构一致）
-                // ...
+                // 构建卡片内容
+                card.innerHTML = `
+                    <div class="event-header">
+                        <div class="event-year">${event.year}</div>
+                        <div class="event-category category-${event.type}">${event.type}</div>
+                    </div>
+                    <div class="event-content">${event.title}</div>
+                    ${event.translation ? `<div class="event-translation" data-lang="en">${event.translation}</div>` : ''}
+                    <button class="feedback-btn" data-year="${event.year}" data-title="${event.title}">反馈错误</button>
+                `;
                 
                 container.appendChild(card);
             });
-        }
-
-        // 反馈表单逻辑
-        const feedbackBtns = document.querySelectorAll('.feedback-btn');
-        const feedbackForm = document.getElementById('feedbackForm');
-        const overlay = document.getElementById('overlay');
-        const eventYearInput = document.getElementById('eventYear');
-        const eventTitleInput = document.getElementById('eventTitle');
-        
-        feedbackBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // 填充事件信息
-                eventYearInput.value = btn.dataset.year;
-                eventTitleInput.value = btn.dataset.event;
-                // 显示表单和遮罩
-                feedbackForm.classList.add('active');
-                overlay.classList.add('active');
-            });
-        });
-        
-        // 取消反馈
-        document.querySelector('.cancel-feedback').addEventListener('click', closeFeedbackForm);
-        
-        // 点击遮罩关闭表单
-        overlay.addEventListener('click', closeFeedbackForm);
-        
-        function closeFeedbackForm() {
-            feedbackForm.classList.remove('active');
-            overlay.classList.remove('active');
-            // 清空表单
-            document.getElementById('errorDesc').value = '';
+            
+            // 为新创建的反馈按钮添加事件监听
+            attachFeedbackEvents();
         }
         
-        // 提交反馈
-        document.querySelector('.submit-feedback').addEventListener('click', () => {
-            const errorDesc = document.getElementById('errorDesc').value;
-            if (!errorDesc.trim()) {
-                alert('请描述具体错误内容');
-                return;
-            }
+        // 反馈按钮事件处理
+        function attachFeedbackEvents() {
+            const feedbackBtns = document.querySelectorAll('.feedback-btn');
+            const feedbackForm = document.getElementById('feedbackForm');
+            const overlay = document.getElementById('overlay');
+            const eventYearInput = document.getElementById('eventYear');
+            const eventTitleInput = document.getElementById('eventTitle');
+            const cancelBtn = document.querySelector('.cancel-feedback');
             
-            // 在实际应用中，这里可以将反馈提交到GitHub Issues或其他服务
-            console.log({
-                year: eventYearInput.value,
-                event: eventTitleInput.value,
-                errorType: document.getElementById('errorType').value,
-                description: errorDesc,
-                submittedAt: new Date().toISOString()
+            feedbackBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 填充表单数据
+                    eventYearInput.value = this.dataset.year;
+                    eventTitleInput.value = this.dataset.title;
+                    
+                    // 显示表单和遮罩层
+                    feedbackForm.classList.add('active');
+                    overlay.classList.add('active');
+                });
             });
             
-            alert('反馈提交成功！感谢您的指正。');
-            closeFeedbackForm();
-        });
+            // 取消按钮事件
+            cancelBtn.addEventListener('click', function() {
+                feedbackForm.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // 点击遮罩层关闭表单
+            overlay.addEventListener('click', function() {
+                feedbackForm.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // 提交反馈
+            document.querySelector('.submit-feedback').addEventListener('click', function() {
+                const errorType = document.getElementById('errorType').value;
+                const errorDesc = document.getElementById('errorDesc').value;
+                const year = eventYearInput.value;
+                const title = eventTitleInput.value;
+                
+                // 这里可以添加提交反馈的逻辑
+                console.log(`提交反馈: ${year}年 ${title} - ${errorType} - ${errorDesc}`);
+                
+                // 显示成功消息
+                alert('反馈提交成功，感谢您的支持！');
+                
+                // 关闭表单
+                feedbackForm.classList.remove('active');
+                overlay.classList.remove('active');
+                
+                // 重置表单
+                document.getElementById('errorDesc').value = '';
+            });
+        }
+        
+        // 初始化反馈事件
+        attachFeedbackEvents();
     </script>
 </body>
 </html>
-    
