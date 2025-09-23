@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>历史上的今天 · 2024年10月05日</title>
+    <title>历史上的今天</title>
     <style>
         * {
             margin: 0;
@@ -75,33 +75,19 @@
         .date-picker {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             background: var(--bg-card);
-            padding: 8px 16px;
+            padding: 6px 12px;
             border-radius: 4px;
             border: 1px solid var(--border-color);
-            font-size: 16px; /* 增大字体 */
+            font-size: 14px;
         }
         .date-picker input {
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            padding: 8px 12px; /* 增大内边距 */
+            padding: 4px 8px;
             background: transparent;
             color: var(--text-primary);
-            font-size: 16px; /* 增大字体 */
-        }
-        .date-confirm-btn {
-            padding: 8px 16px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.2s;
-        }
-        .date-confirm-btn:hover {
-            background: #2980b9;
         }
 
         /* 语言与主题切换容器 */
@@ -271,14 +257,6 @@
             font-size: 15px;
             color: var(--text-primary);
         }
-        .event-translation {
-            font-size: 14px;
-            color: var(--text-secondary);
-            font-style: italic;
-            margin-bottom: 12px;
-            padding-left: 4px;
-            border-left: 2px solid var(--border-color);
-        }
         .feedback-btn {
             padding: 4px 10px;
             border: 1px solid #e74c3c;
@@ -384,6 +362,16 @@
             color: var(--text-secondary);
         }
 
+        /* 错误提示 */
+        .error-message {
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+        }
+
         /* 响应式适配 */
         @media (max-width: 768px) {
             .header h1 {
@@ -402,9 +390,6 @@
             .language-switcher {
                 flex-wrap: wrap;
             }
-            .date-picker {
-                flex-wrap: wrap;
-            }
         }
     </style>
 </head>
@@ -414,13 +399,12 @@
 
     <!-- 顶部标题区 -->
     <div class="header">
-        <h1>历史上的今天 · <span id="displayDate">2024年10月05日</span></h1>
-        <div class="current-time" id="currentTime">2024年10月05日 12:34:56</div>
-        <div class="update-info" id="updateInfo">最后更新时间：2024年10月05日 08:12</div>
+        <h1>历史上的今天 · <span id="displayDate">2025年09月23日</span></h1>
+        <div class="current-time" id="currentTime">2025年09月23日 12:34:56</div>
+        <div class="update-info" id="updateInfo">最后更新时间：2025年09月23日 10:44</div>
         <div class="date-picker">
             <span id="datePickerLabel">查看其他日期：</span>
-            <input type="datetime-local" id="dateSelector" value="2024-10-05T00:00">
-            <button class="date-confirm-btn" id="dateConfirmBtn">确认</button>
+            <input type="datetime-local" id="dateSelector" value="2025-09-23T00:00">
         </div>
     </div>
 
@@ -462,25 +446,6 @@
     <!-- 事件列表容器 -->
     <div class="events-container">
         <!-- 事件卡片将通过JavaScript动态生成 -->
-        <div class="event-card" data-type="科技">
-            <div class="event-header">
-                <div class="event-year">2020</div>
-                <div class="event-category category-科技">科技</div>
-            </div>
-            <div class="event-content">新冠疫苗首次临床试验</div>
-            <div class="event-translation" data-lang="en">First COVID-19 vaccine trial</div>
-            <button class="feedback-btn" data-year="2020" data-title="新冠疫苗首次临床试验">反馈错误</button>
-        </div>
-        
-        <div class="event-card" data-type="政治">
-            <div class="event-header">
-                <div class="event-year">2015</div>
-                <div class="event-category category-政治">政治</div>
-            </div>
-            <div class="event-content">巴黎气候协定签署</div>
-            <div class="event-translation" data-lang="en">Paris Climate Agreement signed</div>
-            <button class="feedback-btn" data-year="2015" data-title="巴黎气候协定签署">反馈错误</button>
-        </div>
     </div>
 
     <!-- 反馈表单 -->
@@ -511,7 +476,7 @@
     <!-- 底部信息 -->
     <div class="footer">
         <p>
-            <a href="javascript:loadTodayEvents();" id="todayLink">历史上的今天</a> © 2025 | 
+            <a href="javascript:location.reload();" id="todayLink">历史上的今天</a> © 2025 | 
             <a href="https://ls.harper.dpdns.org" target="_self" id="siteLink">ls.harper.dpdns.org</a> 版权所有
         </p>
     </div>
@@ -537,43 +502,36 @@
                 themeLabel.textContent = '深色模式';
             }
             
-            // 默认隐藏非英文翻译
-            hideNonActiveTranslations();
-            
             // 设置当前日期链接跳转逻辑
             setupFooterLinks();
             
-            // 初始化加载今天的事件
-            loadTodayEvents();
+            // 加载当前日期的事件
+            const currentDateValue = document.getElementById('dateSelector').value;
+            if (currentDateValue) {
+                loadEventsFromGitHub(currentDateValue.split('T')[0]);
+            }
         });
-
-        // 加载今天的事件
-        function loadTodayEvents() {
-            const today = new Date();
-            const year = today.getFullYear();
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const day = String(today.getDate()).padStart(2, '0');
-            const currentDate = `${year}-${month}-${day}`;
-            
-            // 设置日期选择器为当前日期
-            document.getElementById('dateSelector').value = `${currentDate}T00:00`;
-            
-            // 更新页面标题中的日期
-            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
-            const formattedDate = formatDateForDisplay(currentDate, activeLang);
-            document.getElementById('displayDate').textContent = formattedDate;
-            
-            // 加载当天事件
-            loadEventsFromGitHub(currentDate);
-        }
 
         // 加载最后更新时间（从last-updated.txt获取）
         function loadLastUpdatedTime() {
-            // 实际项目中应通过后端API获取此文件内容
             const lastUpdatedElement = document.getElementById('updateInfo');
             
-            // 从文件内容可知最后更新时间为：2025年9月23日 10:44
-            updateLastUpdatedTime('2025年9月23日 10:44');
+            // 尝试从GitHub获取最后更新时间
+            fetch('https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/last-updated.txt')
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    // 如果获取失败，使用默认时间
+                    return '2025年9月23日 10:44';
+                })
+                .then(time => {
+                    updateLastUpdatedTime(time.trim());
+                })
+                .catch(error => {
+                    console.error('获取最后更新时间失败:', error);
+                    updateLastUpdatedTime('2025年9月23日 10:44');
+                });
         }
         
         // 更新最后更新时间显示
@@ -602,60 +560,6 @@
                     lastUpdatedElement.textContent = `Dernière mise à jour : ${formatTimeFr(timeString)}`;
                     break;
             }
-            
-            // 更新翻译映射中的时间
-            updateTranslationTimes(timeString);
-        }
-        
-        // 更新所有语言的时间翻译
-        function updateTranslationTimes(timeString) {
-            const year = timeString.split('年')[0];
-            const month = timeString.split('年')[1].split('月')[0];
-            const day = timeString.split('月')[1].split('日')[0];
-            const time = timeString.split(' ')[1];
-            
-            // 更新翻译中的更新时间
-            translations.zh.updateInfo = `最后更新时间：${timeString}`;
-            translations.en.updateInfo = `Last Updated: ${formatMonthEn(month)} ${day}, ${year} ${time}`;
-            translations.ja.updateInfo = `最終更新日時：${timeString}`;
-            translations.ko.updateInfo = `최종 업데이트 시간: ${year}년 ${month}월 ${day}일 ${time}`;
-            translations.es.updateInfo = `Última actualización: ${day} de ${formatMonthEs(month)} de ${year} ${time}`;
-            translations.fr.updateInfo = `Dernière mise à jour : ${day} ${formatMonthFr(month)} ${year} ${time}`;
-        }
-        
-        // 更新当前时间显示（带秒）
-        function updateCurrentTime() {
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = now.getMonth() + 1;
-            const day = now.getDate();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            
-            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
-            const timeElement = document.getElementById('currentTime');
-            
-            switch(activeLang) {
-                case 'zh':
-                    timeElement.textContent = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
-                    break;
-                case 'en':
-                    timeElement.textContent = `${formatMonthEn(month)} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
-                    break;
-                case 'ja':
-                    timeElement.textContent = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
-                    break;
-                case 'ko':
-                    timeElement.textContent = `${year}년 ${month}월 ${day}일 ${hours}:${minutes}:${seconds}`;
-                    break;
-                case 'es':
-                    timeElement.textContent = `${day} de ${formatMonthEs(month)} de ${year} ${hours}:${minutes}:${seconds}`;
-                    break;
-                case 'fr':
-                    timeElement.textContent = `${day} ${formatMonthFr(month)} ${year} ${hours}:${minutes}:${seconds}`;
-                    break;
-            }
         }
 
         // 设置底部链接跳转逻辑
@@ -671,7 +575,11 @@
             const todayLink = document.getElementById('todayLink');
             todayLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                loadTodayEvents();
+                // 设置日期选择器为当前日期
+                document.getElementById('dateSelector').value = `${currentDate}T00:00`;
+                // 触发日期选择事件
+                const event = new Event('change');
+                document.getElementById('dateSelector').dispatchEvent(event);
             });
         }
 
@@ -695,11 +603,9 @@
 
         // 语言切换逻辑
         const langBtns = document.querySelectorAll('.lang-btn');
-        const eventCards = document.querySelectorAll('.event-card');
         const pageTitle = document.querySelector('h1');
         const updateInfo = document.querySelector('.update-info');
         const datePickerLabel = document.querySelector('#datePickerLabel');
-        const dateConfirmBtn = document.getElementById('dateConfirmBtn');
         const feedbackFormTitle = document.querySelector('.feedback-form h4');
         const submitFeedbackBtn = document.querySelector('.submit-feedback');
         const cancelFeedbackBtn = document.querySelector('.cancel-feedback');
@@ -713,73 +619,61 @@
                 pageTitle: '历史上的今天 · ',
                 updateInfo: '最后更新时间：2025年9月23日 10:44',
                 datePickerLabel: '查看其他日期：',
-                dateConfirmBtn: '确认',
                 feedbackFormTitle: '反馈错误事件',
                 submitFeedback: '提交反馈',
                 cancelFeedback: '取消',
                 todayLink: '历史上的今天',
-                siteLink: 'ls.harper.dpdns.org',
-                footer: '历史上的今天 © 2025 | ls.harper.dpdns.org 版权所有'
+                siteLink: 'ls.harper.dpdns.org'
             },
             en: {
                 pageTitle: 'On This Day · ',
                 updateInfo: 'Last Updated: September 23, 2025 10:44',
                 datePickerLabel: 'View other dates: ',
-                dateConfirmBtn: 'Confirm',
                 feedbackFormTitle: 'Report Incorrect Event',
                 submitFeedback: 'Submit Feedback',
                 cancelFeedback: 'Cancel',
                 todayLink: 'On This Day',
-                siteLink: 'ls.harper.dpdns.org',
-                footer: 'On This Day © 2025 | ls.harper.dpdns.org All Rights Reserved'
+                siteLink: 'ls.harper.dpdns.org'
             },
             ja: {
                 pageTitle: '歴史の今日 · ',
                 updateInfo: '最終更新日時：2025年9月23日 10:44',
                 datePickerLabel: '他の日付を表示：',
-                dateConfirmBtn: '確認',
                 feedbackFormTitle: 'イベントの誤りを報告',
                 submitFeedback: 'フィードバックを送信',
                 cancelFeedback: 'キャンセル',
                 todayLink: '歴史の今日',
-                siteLink: 'ls.harper.dpdns.org',
-                footer: '歴史の今日 © 2025 | ls.harper.dpdns.org 全著作権所有'
+                siteLink: 'ls.harper.dpdns.org'
             },
             ko: {
                 pageTitle: '역사 속 오늘 · ',
                 updateInfo: '최종 업데이트 시간: 2025년 9월 23일 10:44',
                 datePickerLabel: '다른 날짜 보기: ',
-                dateConfirmBtn: '확인',
                 feedbackFormTitle: '잘못된 사건 신고',
                 submitFeedback: '피드백 제출',
                 cancelFeedback: '취소',
                 todayLink: '역사 속 오늘',
-                siteLink: 'ls.harper.dpdns.org',
-                footer: '역사 속 오늘 © 2025 | ls.harper.dpdns.org 저작권 소유'
+                siteLink: 'ls.harper.dpdns.org'
             },
             es: {
                 pageTitle: 'En este día de la historia · ',
                 updateInfo: 'Última actualización: 23 de septiembre de 2025 10:44',
                 datePickerLabel: 'Ver otras fechas: ',
-                dateConfirmBtn: 'Confirmar',
                 feedbackFormTitle: 'Informar sobre un evento incorrecto',
                 submitFeedback: 'Enviar comentarios',
                 cancelFeedback: 'Cancelar',
                 todayLink: 'En este día de la historia',
-                siteLink: 'ls.harper.dpdns.org',
-                footer: 'En este día de la historia © 2025 | ls.harper.dpdns.org Todos los derechos reservados'
+                siteLink: 'ls.harper.dpdns.org'
             },
             fr: {
                 pageTitle: "Dans l'histoire, ce jour · ",
                 updateInfo: 'Dernière mise à jour : 23 septembre 2025 10:44',
                 datePickerLabel: 'Voir autres dates : ',
-                dateConfirmBtn: 'Confirmer',
                 feedbackFormTitle: 'Signaler un événement incorrect',
                 submitFeedback: 'Soumettre des commentaires',
                 cancelFeedback: 'Annuler',
                 todayLink: "Dans l'histoire, ce jour",
-                siteLink: 'ls.harper.dpdns.org',
-                footer: 'Dans l\'histoire, ce jour © 2025 | ls.harper.dpdns.org Tous droits réservés'
+                siteLink: 'ls.harper.dpdns.org'
             }
         };
         
@@ -797,7 +691,6 @@
                 pageTitle.innerHTML = translations[targetLang].pageTitle + `<span id="displayDate">${formattedDate}</span>`;
                 updateInfo.textContent = translations[targetLang].updateInfo;
                 datePickerLabel.textContent = translations[targetLang].datePickerLabel;
-                dateConfirmBtn.textContent = translations[targetLang].dateConfirmBtn;
                 feedbackFormTitle.textContent = translations[targetLang].feedbackFormTitle;
                 submitFeedbackBtn.textContent = translations[targetLang].submitFeedback;
                 cancelFeedbackBtn.textContent = translations[targetLang].cancelFeedback;
@@ -807,23 +700,12 @@
                 // 更新当前时间显示
                 updateCurrentTime();
                 
-                // 显示当前语言的翻译，隐藏其他语言
-                hideNonActiveTranslations(targetLang);
-            });
-        });
-        
-        // 隐藏非当前语言的翻译
-        function hideNonActiveTranslations(activeLang = 'zh') {
-            const allTranslations = document.querySelectorAll('.event-translation');
-            
-            allTranslations.forEach(translation => {
-                if (translation.dataset.lang === activeLang) {
-                    translation.style.display = 'block';
-                } else {
-                    translation.style.display = 'none';
+                // 重新加载当前日期的事件，显示对应语言
+                if (currentDateValue) {
+                    loadEventsFromGitHub(currentDateValue.split('T')[0]);
                 }
             });
-        }
+        });
 
         // 分类筛选逻辑
         const categoryBtns = document.querySelectorAll('.category-btn');
@@ -847,9 +729,10 @@
             });
         });
 
-        // 日期确认按钮逻辑
-        dateConfirmBtn.addEventListener('click', function() {
-            const selectedDate = document.getElementById('dateSelector').value;
+        // 日期选择逻辑
+        const dateSelector = document.getElementById('dateSelector');
+        dateSelector.addEventListener('change', function() {
+            const selectedDate = this.value;
             if (!selectedDate) return;
             
             // 更新页面标题中的日期
@@ -949,8 +832,11 @@
 
         // 从GitHub加载事件数据的函数
         function loadEventsFromGitHub(date) {
-            // 示例：从GitHub仓库加载数据
             const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/data/events-${date}.json`;
+            
+            // 显示加载状态
+            const container = document.querySelector('.events-container');
+            container.innerHTML = '<div class="error-message">正在加载历史事件数据...</div>';
             
             fetch(githubRepoUrl)
                 .then(response => {
@@ -960,35 +846,98 @@
                     return response.json();
                 })
                 .then(data => {
-                    // 成功获取数据后更新页面
-                    updateEventsContainer(data);
+                    // 检查数据结构是否符合预期
+                    if (!data || (typeof data !== 'object') || (!data.zh && !data.en)) {
+                        throw new Error('数据格式不正确，缺少语言数组');
+                    }
+                    
+                    // 获取当前激活的语言
+                    const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
+                    
+                    // 根据当前语言选择要显示的事件数组
+                    // 如果当前语言没有数据，默认使用中文
+                    const eventsToDisplay = data[activeLang] || data.zh || [];
+                    
+                    // 验证是否为数组
+                    if (!Array.isArray(eventsToDisplay)) {
+                        throw new Error(`获取的${activeLang}事件不是数组`);
+                    }
+                    
+                    // 更新事件容器
+                    updateEventsContainer(eventsToDisplay, activeLang);
                 })
                 .catch(error => {
-                    alert(error.message);
                     console.error('加载数据失败:', error);
+                    // 显示友好的错误提示
+                    container.innerHTML = `
+                        <div class="error-message">
+                            无法加载历史事件数据: ${error.message}
+                        </div>
+                    `;
                 });
         }
 
         // 更新事件列表容器
-        function updateEventsContainer(events) {
+        function updateEventsContainer(events, lang) {
             const container = document.querySelector('.events-container');
             container.innerHTML = ''; // 清空现有内容
             
+            // 验证events是否为数组
+            if (!Array.isArray(events)) {
+                console.error('事件数据不是数组:', events);
+                container.innerHTML = `
+                    <div class="error-message">
+                        数据格式错误，无法显示事件
+                    </div>
+                `;
+                return;
+            }
+            
+            // 如果没有事件数据
+            if (events.length === 0) {
+                container.innerHTML = `
+                    <div class="error-message">
+                        未找到该日期的历史事件记录
+                    </div>
+                `;
+                return;
+            }
+            
             // 遍历事件数据并创建卡片
             events.forEach(event => {
+                // 验证事件对象是否包含必要属性
+                if (!event || !event.year || !event.title || !event.category) {
+                    console.warn('跳过格式不完整的事件:', event);
+                    return;
+                }
+                
+                // 转换分类为中文以便于前端样式匹配
+                let categoryZh = event.category;
+                if (lang === 'en') {
+                    const categoryMap = {
+                        'Politics': '政治',
+                        'Economy': '经济',
+                        'Technology': '科技',
+                        'Culture': '文化',
+                        'Sports': '体育',
+                        'Disaster': '灾害',
+                        'Other': '其他'
+                    };
+                    categoryZh = categoryMap[event.category] || '其他';
+                }
+                
                 // 创建事件卡片
                 const card = document.createElement('div');
                 card.className = 'event-card';
-                card.dataset.type = event.type;
+                card.dataset.type = categoryZh;
                 
                 // 构建卡片内容
                 card.innerHTML = `
                     <div class="event-header">
                         <div class="event-year">${event.year}</div>
-                        <div class="event-category category-${event.type}">${event.type}</div>
+                        <div class="event-category category-${categoryZh}">${categoryZh}</div>
                     </div>
                     <div class="event-content">${event.title}</div>
-                    ${event.translation ? `<div class="event-translation" data-lang="en">${event.translation}</div>` : ''}
                     <button class="feedback-btn" data-year="${event.year}" data-title="${event.title}">反馈错误</button>
                 `;
                 
@@ -1054,8 +1003,40 @@
             });
         }
         
-        // 初始化反馈事件
-        attachFeedbackEvents();
+        // 更新当前时间显示（带秒）
+        function updateCurrentTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const activeLang = document.querySelector('.lang-btn.active').dataset.lang;
+            const timeElement = document.getElementById('currentTime');
+            
+            switch(activeLang) {
+                case 'zh':
+                    timeElement.textContent = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'en':
+                    timeElement.textContent = `${formatMonthEn(month)} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'ja':
+                    timeElement.textContent = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'ko':
+                    timeElement.textContent = `${year}년 ${month}월 ${day}일 ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'es':
+                    timeElement.textContent = `${day} de ${formatMonthEs(month)} de ${year} ${hours}:${minutes}:${seconds}`;
+                    break;
+                case 'fr':
+                    timeElement.textContent = `${day} ${formatMonthFr(month)} ${year} ${hours}:${minutes}:${seconds}`;
+                    break;
+            }
+        }
     </script>
 </body>
 </html>
