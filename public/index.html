@@ -396,7 +396,7 @@
     <!-- 顶部标题区 -->
     <div class="header">
         <h1>历史上的今天 · 2024年10月05日</h1>
-        <div class="update-info">最后更新时间：2024年10月05日 08:12</div>
+        <div class="update-info">最后更新时间：2024年10月05日 08:10</div>
         <div class="date-picker">
             查看其他日期：
             <select id="dateSelector">
@@ -800,9 +800,10 @@
         });
 
         // 从GitHub加载事件数据的函数
-        function loadEventsFromGitHub(date) {
-            // 示例：从GitHub仓库加载数据
-            const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/data/events-${date}.json`;
+        async function loadEventsFromGitHub(date) {
+            // 添加 ?t=时间戳，确保每次请求都是最新数据
+            const timestamp = new Date().getTime();
+            const githubRepoUrl = `https://raw.githubusercontent.com/qiqi258/on-this-day-in-history/main/data/events-${date}.json?t=${timestamp}`;
             
             fetch(githubRepoUrl)
                 .then(response => {
