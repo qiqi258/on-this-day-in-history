@@ -110,12 +110,12 @@ function isCacheValid(dateStr) {
     if (!fs.existsSync(cacheFile)) {
         return false;
     }
-    
+
     const stats = fs.statSync(cacheFile);
     const now = new Date();
     const cacheTime = new Date(stats.mtime);
     const daysDiff = (now - cacheTime) / (1000 * 60 * 60 * 24);
-    
+
     return daysDiff < 30;
 }
 
@@ -157,7 +157,7 @@ function writeToCache(dateStr, data) {
 function withTimeout(promise, timeoutMs) {
     return Promise.race([
         promise,
-        new Promise((_, reject) => 
+        new Promise((_, reject) =>
             setTimeout(() => reject(new Error(`API调用超时（${timeoutMs}ms）`)), timeoutMs)
         )
     ]);
@@ -171,47 +171,91 @@ function withTimeout(promise, timeoutMs) {
 async function generateEventsWithAI(dateStr) {
     const [year, month, day] = dateStr.split('-').map(Number);
     const currentYear = new Date().getFullYear();
-    
-    // 生成多语言提示词
+
+    // 生成多语言提示词（优化版）
     const prompts = {};
-    
+
+    // 补充各语言的事件类型示例，增强模型理解
+    const categoryExamples = {
+        zh: {
+            政治: "国家独立、政策颁布、国际协议签署等",
+            科技: "重大发明、航天探索、医学突破等",
+            文化: "文学获奖、艺术流派诞生、重要作品发布等",
+            体育: "奥运会赛事、世界纪录突破、体育盛会举办等",
+            经济: "金融危机、重要协议签署、经济政策变革等",
+            灾害: "地震、飓风等自然灾害及重大事故",
+            其他: "不适合以上分类的重要事件"
+        },
+        en: {
+            Politics: "national independence, policy enactment, international agreements, etc.",
+            Technology: "major inventions, space exploration, medical breakthroughs, etc.",
+            Culture: "literary awards, art movements, important works release, etc.",
+            Sports: "Olympic events, world records, major sports competitions, etc.",
+            Economy: "financial crises, important agreements, economic policy changes, etc.",
+            Disaster: "earthquakes, hurricanes and other natural disasters, major accidents",
+            Other: "significant events not fitting above categories"
+        }
+    };
+
     LANGUAGES.forEach(lang => {
         const isChinese = lang === 'zh';
-        const categories = isChinese 
+        const categories = isChinese
             ? CATEGORIES.zh.join('、')
             : CATEGORIES.en.join(', ');
-            
+
+        // 构建分类说明文本
+        const categoryDesc = isChinese
+            ? Object.entries(categoryExamples.zh).map(([key, val]) => `${key}（${val}）`).join('；')
+            : Object.entries(categoryExamples.en).map(([key, val]) => `${key} (${val})`).join('; ');
+
         if (isChinese) {
-            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，${month}月${day}日发生的5-10个重要历史事件（每年1个，年份范围：${currentYear - 50} - ${currentYear}）。` +
-                          `必须严格按以下格式返回，不允许任何额外文字、标题、解释：\n` +
-                          `年份|事件简述（20字以内）|分类（从[${categories}]选一个）\n` +
-                          `示例：\n` +
-                          `2020|新冠疫苗首次临床试验|科技\n` +
-                          `2015|巴黎气候协定签署|政治\n` +
-                          `确保事件真实，分类准确，仅返回符合格式的内容。`;
+            prompts[lang] = `【严格格式要求 - 不遵守则视为无效】请列举过去50年中，${month}月${day}日发生的5-10个重要历史事件（每年1个，年份范围：${currentYear - 50} - ${currentYear}）。
+要求：
+1. 事件需覆盖不同领域，避免单一类型集中出现
+2. 优先选择具有全球影响力或地区标志性的事件
+3. 确保事实准确，避免虚构或争议性内容
+4. 分类需精准匹配（分类说明：${categoryDesc}）
+
+必须按以下格式返回，不允许任何额外文字、标题或解释：
+年份|事件简述（30字以内，简洁明了）|分类（从[${categories}]中选择）
+
+示例：
+2020|新冠疫苗首次临床试验成功|科技
+2015|巴黎气候协定正式签署|政治
+1997|香港回归中国|政治
+2008|北京成功举办第29届奥运会|体育`;
         } else {
-            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 5-10 important historical events that occurred on ${month}/${day} over the past 50 years (one per year, year range: ${currentYear - 50} - ${currentYear}).\n` +
-                          `Return strictly in the following format without any additional text, titles, or explanations:\n` +
-                          `Year|Event description (within 15 words)|Category (choose from [${categories}])\n` +
-                          `Examples:\n` +
-                          `2020|First COVID-19 vaccine trial|Technology\n` +
-                          `2015|Paris Climate Agreement signed|Politics\n` +
-                          `Ensure events are true and accurate with appropriate categorization. Only return content that matches the format.`;
+            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 5-10 important historical events that occurred on ${month}/${day} over the past 50 years (one per year, year range: ${currentYear - 50} - ${currentYear}).
+
+Requirements:
+1. Events should cover diverse fields, avoiding concentration in a single category
+2. Prioritize events with global influence or regional significance
+3. Ensure factual accuracy; avoid fictional or highly controversial content
+4. Categories must be precisely matched (category explanations: ${categoryDesc})
+
+Return strictly in the following format without any additional text, titles, or explanations:
+Year|Event description (within 30 words, concise and clear)|Category (choose from [${categories}])
+
+Examples:
+2020|First successful COVID-19 vaccine trial|Technology
+2015|Paris Climate Agreement officially signed|Politics
+1997|Hong Kong returned to China|Politics
+2008|Beijing successfully hosted the 29th Olympics|Sports`;
         }
     });
 
     const results = {};
     const maxRetries = apiKeys.length * CONFIG.maxRetries;
-    
+
     // 为每种语言生成内容
     for (const lang of LANGUAGES) {
         let retries = 0;
         let success = false;
-        
+
         while (retries < maxRetries && !success) {
             try {
                 const genAI = getGeminiClient();
-                const model = genAI.getGenerativeModel({ 
+                const model = genAI.getGenerativeModel({
                     model: "gemini-2.0-flash",
                     generationConfig: {
                         temperature: 0.6,
@@ -227,19 +271,19 @@ async function generateEventsWithAI(dateStr) {
                 );
                 const response = await result.response;
                 const aiText = response.text().trim();
-                
+
                 console.log(`Gemini返回${lang}原始内容:\n${aiText || '【空内容】'}`);
-                
+
                 if (!aiText) {
                     throw new Error(`Gemini返回${lang}内容为空`);
                 }
-                
+
                 results[lang] = aiText;
                 success = true;
             } catch (error) {
                 console.error(`生成${lang}内容失败: ${error.message}`);
                 retries++;
-                
+
                 if (retries < maxRetries) {
                     switchToNextApiKey();
                     console.log(`重试第${retries + 1}次...`);
@@ -249,7 +293,7 @@ async function generateEventsWithAI(dateStr) {
             }
         }
     }
-    
+
     return results;
 }
 
@@ -262,24 +306,24 @@ async function generateEventsWithAI(dateStr) {
 function parseEvents(aiResponse, lang) {
     const events = [];
     const lines = aiResponse.split('\n');
-    
+
     lines.forEach(line => {
         const trimmedLine = line.trim();
         if (trimmedLine === '') return;
-        
+
         const parts = trimmedLine.split('|');
         if (parts.length !== 3) {
             console.warn(`跳过格式错误的行: ${trimmedLine}`);
             return;
         }
-        
+
         events.push({
             year: parseInt(parts[0].trim(), 10),
             title: parts[1].trim(),
             category: parts[2].trim()
         });
     });
-    
+
     return events;
 }
 
@@ -293,29 +337,29 @@ function validateEvents(events, lang) {
     const currentYear = new Date().getFullYear();
     const validEvents = [];
     const validCategories = CATEGORIES[lang];
-    
+
     events.forEach(event => {
         // 检查年份是否在合理范围内（过去50年）
         if (isNaN(event.year) || event.year < currentYear - 50 || event.year > currentYear) {
             console.log(`过滤无效年份事件: ${event.year}年 ${event.title}`);
             return;
         }
-        
+
         // 检查分类是否有效
         if (!validCategories.includes(event.category)) {
             console.log(`修正无效分类事件: ${event.year}年 ${event.title} (${event.category})`);
             event.category = lang === 'zh' ? '其他' : 'Other';
         }
-        
+
         // 检查标题是否为空
         if (!event.title || event.title.trim() === '') {
             console.log(`过滤空标题事件: ${event.year}年`);
             return;
         }
-        
+
         validEvents.push(event);
     });
-    
+
     return validEvents;
 }
 
@@ -331,9 +375,9 @@ function syncToGitHub(dateStr) {
             month: 'long',
             day: 'numeric'
         });
-        
+
         const command = CONFIG.syncCommand.replace('%s', formattedDate);
-        
+
         exec(command, { cwd: __dirname }, (error, stdout, stderr) => {
             if (error) {
                 console.error(`同步失败: ${error.message}`);
@@ -356,44 +400,44 @@ async function generateAndUpdateEvents(dateStr = getDateString()) {
     try {
         const eventsFile = getEventsFilePath(dateStr);
         initEventsFile(eventsFile);
-        
+
         // 检查缓存
         if (isCacheValid(dateStr)) {
             console.log(`使用缓存数据: ${dateStr}`);
             const cachedData = getFromCache(dateStr);
-            
+
             if (cachedData) {
                 fs.writeFileSync(eventsFile, JSON.stringify(cachedData, null, 2), 'utf8');
                 return cachedData;
             }
         }
-        
+
         console.log(`生成新数据: ${dateStr}`);
         // 调用AI生成事件
         const aiResults = await generateEventsWithAI(dateStr);
-        
+
         // 解析和校验每种语言的事件
         const eventsData = {};
         LANGUAGES.forEach(lang => {
             const parsedEvents = parseEvents(aiResults[lang], lang);
             eventsData[lang] = validateEvents(parsedEvents, lang);
         });
-        
+
         // 写入缓存和数据文件
         writeToCache(dateStr, eventsData);
         fs.writeFileSync(eventsFile, JSON.stringify(eventsData, null, 2), 'utf8');
-        
+
         // 更新最后更新时间
         const now = new Date();
-        const lastUpdated = now.toLocaleString('zh-CN', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric', 
-            hour: '2-digit', 
-            minute: '2-digit' 
+        const lastUpdated = now.toLocaleString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
         });
         fs.writeFileSync(CONFIG.lastUpdatedFile, lastUpdated, 'utf8');
-        
+
         console.log(`事件生成成功: ${eventsFile}`);
         return eventsData;
     } catch (error) {
@@ -410,13 +454,13 @@ async function generateAndUpdateEvents(dateStr = getDateString()) {
 async function generateAndSync(dateStr = getDateString()) {
     try {
         console.log(`开始处理${dateStr}的历史事件...`);
-        
+
         // 生成事件
         await generateAndUpdateEvents(dateStr);
-        
+
         // 同步到GitHub
         await syncToGitHub(dateStr);
-        
+
         console.log(`${dateStr}的事件生成和同步已完成`);
         return true;
     } catch (error) {
@@ -430,14 +474,14 @@ async function generateAndSync(dateStr = getDateString()) {
  */
 function setupSchedule() {
     console.log(`设置定时任务，将在每天${CONFIG.scheduledTime}执行`);
-    
+
     // 安排定时任务
     const job = schedule.scheduleJob(CONFIG.scheduledTime, async () => {
         console.log('定时任务触发，开始生成今日事件...');
         const today = getDateString();
         await generateAndSync(today);
     });
-    
+
     // 验证任务是否已安排
     if (job) {
         console.log('定时任务已成功设置');
