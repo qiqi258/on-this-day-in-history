@@ -1,16 +1,30 @@
+// 导入必要模块
 const fs = require('fs');
 const path = require('path');
-const { existsSync, mkdirSync } = require('fs');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generative-ai'); // 保留（仍用Gemini API）
 
-// 确保缓存目录存在
-const CACHE_DIR = './cache';
-if (!existsSync(CACHE_DIR)) {
-    mkdirSync(CACHE_DIR, { recursive: true });
+// 1. 修正数据存储目录（确保与前端加载路径一致）
+const dataDir = path.join(__dirname, 'data'); // 项目根目录的data文件夹
+if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true }); // 自动创建data目录
 }
 
-// 事件数据文件路径
-const EVENTS_FILE = './events.json';
+// 2. 缓存目录设置（使用path模块，避免跨系统问题）
+const CACHE_DIR = path.join(__dirname, 'cache');
+if (!fs.existsSync(CACHE_DIR)) {
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+}
+
+// 3. 统一日期格式：全局使用 YYYY-MM-DD（与前端完全匹配）
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const dateStr = `${year}-${month}-${day}`; // 关键：统一为 YYYY-MM-DD（如 2024-10-05）
+
+// 4. 事件数据文件路径（单个日期对应单个文件）
+const EVENTS_FILE = path.join(dataDir, `events-${dateStr}.json`); // 最终路径：data/events-2024-10-05.json
+
 // 支持的语言
 const LANGUAGES = ['zh', 'en'];
 // 事件分类（中英文对应）
@@ -49,17 +63,17 @@ function switchToNextApiKey() {
     console.log(`已切换到API密钥 #${currentKeyIndex + 1}`);
 }
 
-// 初始化事件数据文件
+// 初始化事件数据文件（修复：添加fs前缀）
 function initEventsFile() {
-    if (!existsSync(EVENTS_FILE)) {
-        fs.writeFileSync(EVENTS_FILE, JSON.stringify({}), 'utf8');
+    if (!fs.existsSync(EVENTS_FILE)) { // 关键：修复为 fs.existsSync
+        fs.writeFileSync(EVENTS_FILE, JSON.stringify({}, 'utf8'));
     }
 }
 
-// 检查缓存是否存在且有效（30天内）
-function isCacheValid(dateStr) {
-    const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`);
-    if (!existsSync(cacheFile)) {
+// 检查缓存是否存在且有效（30天内，缓存文件名添加年份）
+function isCacheValid() {
+    const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`); // 缓存文件：cache/2024-10-05.json（避免年份覆盖）
+    if (!fs.existsSync(cacheFile)) {
         return false;
     }
     
@@ -68,11 +82,11 @@ function isCacheValid(dateStr) {
     const cacheTime = new Date(stats.mtime);
     const daysDiff = (now - cacheTime) / (1000 * 60 * 60 * 24);
     
-    return daysDiff < 30; // 缓存30天有效
+    return daysDiff < 30;
 }
 
-// 从缓存获取数据
-function getFromCache(dateStr) {
+// 从缓存获取数据（使用YYYY-MM-DD格式的缓存文件）
+function getFromCache() {
     try {
         const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`);
         return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
@@ -82,8 +96,8 @@ function getFromCache(dateStr) {
     }
 }
 
-// 写入缓存
-function writeToCache(dateStr, data) {
+// 写入缓存（缓存文件用YYYY-MM-DD命名）
+function writeToCache(data) {
     try {
         const cacheFile = path.join(CACHE_DIR, `${dateStr}.json`);
         fs.writeFileSync(cacheFile, JSON.stringify(data, null, 2), 'utf8');
@@ -102,9 +116,9 @@ function withTimeout(promise, timeoutMs = 30000) {
     ]);
 }
 
-// 调用Gemini API生成历史事件
-async function generateEventsWithAI(dateStr, month, day) {
-    // 生成多语言提示词
+// 调用Gemini API生成历史事件（参数移除冗余的dateStr）
+async function generateEventsWithAI() {
+    // 生成多语言提示词（使用全局的year/month/day，确保事件年份正确）
     const prompts = {};
     
     LANGUAGES.forEach(lang => {
@@ -114,8 +128,7 @@ async function generateEventsWithAI(dateStr, month, day) {
             : CATEGORIES.en.join(', ');
             
         if (isChinese) {
-            // 中文提示词（优化格式要求清晰度）
-            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，${month}月${day}日发生的3-5个重要历史事件（每年1个）。` +
+            prompts[lang] = `【强制格式要求，不遵守则无效】请列出过去50年中，${month}月${day}日发生的5-10个重要历史事件（每年1个，年份范围：${year - 50} - ${year}）。` +
                           `必须严格按以下格式返回，不允许任何额外文字、标题、解释：\n` +
                           `年份|事件简述（20字以内）|分类（从[${categories}]选一个）\n` +
                           `示例：\n` +
@@ -123,8 +136,7 @@ async function generateEventsWithAI(dateStr, month, day) {
                           `2015|巴黎气候协定签署|政治\n` +
                           `确保事件真实，分类准确，仅返回符合格式的内容。`;
         } else {
-            // 英文提示词
-            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 3-5 important historical events that occurred on ${month}/${day} over the past 50 years (one per year).\n` +
+            prompts[lang] = `【Mandatory Format - Invalid if not followed】Please list 5-10 important historical events that occurred on ${month}/${day} over the past 50 years (one per year, year range: ${year - 50} - ${year}).\n` +
                           `Return strictly in the following format without any additional text, titles, or explanations:\n` +
                           `Year|Event description (within 15 words)|Category (choose from [${categories}])\n` +
                           `Examples:\n` +
@@ -145,18 +157,16 @@ async function generateEventsWithAI(dateStr, month, day) {
         while (retries < maxRetries && !success) {
             try {
                 const genAI = getGeminiClient();
-                // 使用 gemini-2.0-flash 模型
                 const model = genAI.getGenerativeModel({ 
                     model: "gemini-2.0-flash",
                     generationConfig: {
-                        temperature: 0.6,  // 降低随机性，提高格式稳定性
+                        temperature: 0.6,
                         maxOutputTokens: 800,
-                        responseMimeType: "text/plain" // 明确要求纯文本输出
+                        responseMimeType: "text/plain"
                     }
                 });
 
                 console.log(`使用API密钥 #${currentKeyIndex + 1} 生成${lang}内容...`);
-                // 带超时的API调用（30秒）
                 const result = await withTimeout(
                     model.generateContent(prompts[lang]),
                     30000
@@ -164,7 +174,6 @@ async function generateEventsWithAI(dateStr, month, day) {
                 const response = await result.response;
                 const aiText = response.text().trim();
                 
-                // 打印AI返回的原始内容，方便排查格式问题
                 console.log(`Gemini返回${lang}原始内容:\n${aiText || '【空内容】'}`);
                 
                 if (!aiText) {
@@ -190,7 +199,7 @@ async function generateEventsWithAI(dateStr, month, day) {
     return results;
 }
 
-// 解析AI生成的内容
+// 解析AI生成的内容（逻辑不变）
 function parseEvents(aiResponse, lang) {
     const events = [];
     const lines = aiResponse.split('\n');
@@ -215,9 +224,9 @@ function parseEvents(aiResponse, lang) {
     return events;
 }
 
-// 数据校验：检查事件有效性
+// 数据校验：检查事件有效性（逻辑不变）
 function validateEvents(events, lang) {
-    const currentYear = new Date().getFullYear();
+    const currentYear = year; // 使用全局的year，避免重复计算
     const validEvents = [];
     const validCategories = CATEGORIES[lang];
     
@@ -246,63 +255,41 @@ function validateEvents(events, lang) {
     return validEvents;
 }
 
-// 主函数：生成并更新事件
+// 主函数：生成并更新事件（核心逻辑修改）
 async function generateAndUpdateEvents() {
     try {
         initEventsFile();
         
-        const today = new Date();
-        const month = today.getMonth() + 1;
-        const day = today.getDate();
-        const dateStr = `${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-        
-        // 检查缓存
-        if (isCacheValid(dateStr)) {
+        // 检查缓存（使用YYYY-MM-DD格式的缓存）
+        if (isCacheValid()) {
             console.log(`使用缓存数据: ${dateStr}`);
-            const cachedData = getFromCache(dateStr);
+            const cachedData = getFromCache();
             
             if (cachedData) {
-                // 更新主事件文件
-                let eventsData = {};
-                try {
-                    eventsData = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
-                } catch (error) {
-                    console.error('读取事件文件失败，重新初始化', error);
-                    eventsData = {};
-                }
-                
-                eventsData[dateStr] = cachedData;
-                fs.writeFileSync(EVENTS_FILE, JSON.stringify(eventsData, null, 2), 'utf8');
+                // 直接写入当前日期的独立文件（不再聚合多个日期）
+                fs.writeFileSync(EVENTS_FILE, JSON.stringify(cachedData, null, 2), 'utf8');
                 return;
             }
         }
         
         console.log(`生成新数据: ${dateStr}`);
-        // 调用AI生成事件
-        const aiResults = await generateEventsWithAI(dateStr, month, day);
+        // 调用AI生成事件（无需传dateStr，使用全局变量）
+        const aiResults = await generateEventsWithAI();
         
-        // 解析和校验每种语言的事件
+        // 解析和校验每种语言的事件（生成当天的独立数据）
         const eventsData = {};
         LANGUAGES.forEach(lang => {
             const parsedEvents = parseEvents(aiResults[lang], lang);
             eventsData[lang] = validateEvents(parsedEvents, lang);
         });
         
-        // 写入缓存
-        writeToCache(dateStr, eventsData);
+        // 写入缓存（缓存文件带年份）
+        writeToCache(eventsData);
         
-        // 更新主事件文件
-        let allEvents = {};
-        try {
-            allEvents = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
-        } catch (error) {
-            console.error('读取事件文件失败，重新初始化', error);
-        }
+        // 写入当前日期的独立文件（结构：{zh: [...], en: [...]}，前端可直接解析）
+        fs.writeFileSync(EVENTS_FILE, JSON.stringify(eventsData, null, 2), 'utf8');
         
-        allEvents[dateStr] = eventsData;
-        fs.writeFileSync(EVENTS_FILE, JSON.stringify(allEvents, null, 2), 'utf8');
-        
-        // 更新最后更新时间
+        // 更新最后更新时间（逻辑不变）
         const now = new Date();
         const lastUpdated = now.toLocaleString('zh-CN', { 
             year: 'numeric', 
@@ -313,7 +300,7 @@ async function generateAndUpdateEvents() {
         });
         fs.writeFileSync('last-updated.txt', lastUpdated, 'utf8');
         
-        console.log(`事件生成成功: ${dateStr}`);
+        console.log(`事件生成成功: ${EVENTS_FILE}`); // 打印最终文件路径，方便验证
     } catch (error) {
         console.error(`生成事件失败: ${error.message}`);
         console.error(error.stack);
