@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "古巴允许居住在美国的古巴人回国探亲",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "澳大利亚赢得美洲杯帆船赛冠军",
+      "category": "体育"
+    },
+    {
+      "year": 1988,
+      "title": "加拿大短跑运动员本·约翰逊奥运会兴奋剂事件",
+      "category": "体育"
+    },
+    {
+      "year": 1993,
+      "title": "柬埔寨恢复君主立宪制，西哈努克重新登基",
+      "category": "政治"
+    },
+    {
+      "year": 1996,
+      "title": "联合国《全面禁止核试验条约》开放签署",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "《辛普森一家》成为美国电视史上播出时间最长的动画",
+      "category": "文化"
+    },
+    {
+      "year": 2015,
+      "title": "大众汽车承认在美国的柴油车排放测试中作弊",
+      "category": "经济"
+    },
+    {
+      "year": 2018,
+      "title": "美国最高法院提名人卡瓦诺性侵指控听证会举行",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "CompuServe demonstrates first online shopping system.",
+      "category": "Technology"
+    },
+    {
+      "year": 1982,
+      "title": "The NFL Players Association went on strike.",
+      "category": "Sports"
+    },
+    {
+      "year": 1988,
+      "title": "Ben Johnson stripped of Olympic gold for doping.",
+      "category": "Sports"
+    },
+    {
+      "year": 1993,
+      "title": "Cambodia's new constitution is promulgated, restoring the monarchy.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Rita made landfall in Louisiana and Texas.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2008,
+      "title": "Wall Street experiences major market declines amid financial crisis.",
+      "category": "Economy"
+    },
+    {
+      "year": 2015,
+      "title": "Volkswagen emissions scandal became public.",
+      "category": "Economy"
+    },
+    {
+      "year": 2018,
+      "title": "Cosmos 142, an ex-Soviet spy satellite, re-entered Earth's atmosphere.",
+      "category": "Other"
+    },
+    {
+      "year": 2023,
+      "title": "NASA's OSIRIS-REx mission successfully delivered asteroid sample to Earth.",
+      "category": "Technology"
+    }
+  ]
+}
