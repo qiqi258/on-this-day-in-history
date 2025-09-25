@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "PSA集团收购克莱斯勒欧洲公司",
+      "category": "经济"
+    },
+    {
+      "year": 1983,
+      "title": "苏联太空船进入地球大气层时解体",
+      "category": "科技"
+    },
+    {
+      "year": 1989,
+      "title": "朝鲜半岛南北总理首次会谈",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "火星探测者号发射升空",
+      "category": "科技"
+    },
+    {
+      "year": 1997,
+      "title": "意大利翁布里亚和马尔凯地震",
+      "category": "灾害"
+    },
+    {
+      "year": 2002,
+      "title": "东帝汶加入联合国",
+      "category": "政治"
+    },
+    {
+      "year": 2008,
+      "title": "中国神舟七号载人飞船发射",
+      "category": "科技"
+    },
+    {
+      "year": 2013,
+      "title": "阿尔及利亚航空公司5017号班机失事",
+      "category": "灾害"
+    },
+    {
+      "year": 2018,
+      "title": "比尔·埃文斯获得普利策音乐奖",
+      "category": "文化"
+    },
+    {
+      "year": 2023,
+      "title": "加沙地带与以色列爆发新一轮冲突",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "PSA Flight 182 collided with a Cessna, killing 144.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1981,
+      "title": "Sandra Day O'Connor sworn in as first female Supreme Court Justice.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "First episode of The Simpsons aired on Fox.",
+      "category": "Culture"
+    },
+    {
+      "year": 1992,
+      "title": "NASA's Mars Observer launched; mission failed en route to Mars.",
+      "category": "Technology"
+    },
+    {
+      "year": 1997,
+      "title": "Oklahoma City bombing trial: Terry Nichols sentenced to life in prison.",
+      "category": "Other"
+    },
+    {
+      "year": 2002,
+      "title": "Switzerland joins the United Nations.",
+      "category": "Politics"
+    },
+    {
+      "year": 2008,
+      "title": "China launched Shenzhou 7, its third human spaceflight mission.",
+      "category": "Technology"
+    },
+    {
+      "year": 2019,
+      "title": "Thomas Cook Group, a major travel firm, collapsed.",
+      "category": "Economy"
+    }
+  ]
+}
