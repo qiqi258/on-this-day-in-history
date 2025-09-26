@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1983,
+      "title": "苏联太空船礼炮7号与联盟T-9对接失败",
+      "category": "科技"
+    },
+    {
+      "year": 1984,
+      "title": "英国与中国就香港问题草签联合声明",
+      "category": "政治"
+    },
+    {
+      "year": 1988,
+      "title": "加拿大短跑运动员本·约翰逊打破百米世界纪录，后被查出服用兴奋剂",
+      "category": "体育"
+    },
+    {
+      "year": 1993,
+      "title": "美国在线推出图形化网络浏览器",
+      "category": "科技"
+    },
+    {
+      "year": 1996,
+      "title": "塔利班攻占阿富汗首都喀布尔",
+      "category": "政治"
+    },
+    {
+      "year": 2000,
+      "title": "联合国千年发展目标正式确立",
+      "category": "政治"
+    },
+    {
+      "year": 2002,
+      "title": "印度教寺庙遭恐怖袭击，造成多人伤亡",
+      "category": "其他"
+    },
+    {
+      "year": 2008,
+      "title": "瑞士信贷银行被政府紧急注资",
+      "category": "经济"
+    },
+    {
+      "year": 2010,
+      "title": "委内瑞拉举行议会选举",
+      "category": "政治"
+    },
+    {
+      "year": 2014,
+      "title": "香港发生大规模“占中”运动",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "Boeing 767, wide-body airliner, made its first flight.",
+      "category": "Technology"
+    },
+    {
+      "year": 1980,
+      "title": "Oktoberfest bombing in Munich kills 13, injures over 200.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1984,
+      "title": "United Kingdom agrees to return Hong Kong to China in 1997.",
+      "category": "Politics"
+    },
+    {
+      "year": 1988,
+      "title": "Ben Johnson stripped of Olympic gold medal for doping.",
+      "category": "Sports"
+    },
+    {
+      "year": 1992,
+      "title": "The Carabinieri Headquarter bombing in Palermo kills one and injures nine.",
+      "category": "Other"
+    },
+    {
+      "year": 1997,
+      "title": "Newcastle Brown Ale ceases production in Newcastle.",
+      "category": "Economy"
+    },
+    {
+      "year": 2000,
+      "title": "Anti-globalization protests disrupt World Bank/IMF meetings in Prague.",
+      "category": "Politics"
+    },
+    {
+      "year": 2002,
+      "title": "East Timor becomes a member of the United Nations.",
+      "category": "Politics"
+    },
+    {
+      "year": 2009,
+      "title": "Typhoon Ketsana hits the Philippines, causing widespread flooding.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2014,
+      "title": "43 students abducted in Iguala, Mexico, sparking national outrage.",
+      "category": "Other"
+    }
+  ]
+}
