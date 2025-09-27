@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "中国首次发行熊猫金币",
+      "category": "经济"
+    },
+    {
+      "year": 1983,
+      "title": "澳大利亚赢得美洲杯帆船赛",
+      "category": "体育"
+    },
+    {
+      "year": 1988,
+      "title": "加拿大田径运动员本·约翰逊被取消奥运金牌",
+      "category": "体育"
+    },
+    {
+      "year": 1993,
+      "title": "苏联解体后，格鲁吉亚加入独联体",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "欧洲伽利略卫星导航系统首颗试验卫星发射",
+      "category": "科技"
+    },
+    {
+      "year": 2008,
+      "title": "中国神舟七号成功实现首次太空行走",
+      "category": "科技"
+    },
+    {
+      "year": 2013,
+      "title": "阿尔及利亚军用飞机坠毁，至少77人死亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2015,
+      "title": "大众汽车承认在美国使用作弊软件应对排放测试",
+      "category": "经济"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Spain executed five members of armed groups despite international protests.",
+      "category": "Politics"
+    },
+    {
+      "year": 1984,
+      "title": "Canada's Ocean Ranger oil rig disaster inquiry released its report.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1988,
+      "title": "Ben Johnson stripped of Olympic gold medal for doping.",
+      "category": "Sports"
+    },
+    {
+      "year": 1996,
+      "title": "Taliban seized Kabul, establishing their regime in Afghanistan.",
+      "category": "Politics"
+    },
+    {
+      "year": 2002,
+      "title": "East Timor became a member of the United Nations.",
+      "category": "Politics"
+    },
+    {
+      "year": 2003,
+      "title": "SMART-1, the first European lunar probe, was launched.",
+      "category": "Technology"
+    },
+    {
+      "year": 2008,
+      "title": "China launched Shenzhou 7, its third manned space mission.",
+      "category": "Technology"
+    },
+    {
+      "year": 2013,
+      "title": "Kenya's Westgate shopping mall attack began in Nairobi.",
+      "category": "Other"
+    },
+    {
+      "year": 2017,
+      "title": "Saudi Arabia lifted its ban on women driving.",
+      "category": "Politics"
+    },
+    {
+      "year": 2020,
+      "title": "Azerbaijan launched an offensive in Nagorno-Karabakh.",
+      "category": "Politics"
+    }
+  ]
+}
