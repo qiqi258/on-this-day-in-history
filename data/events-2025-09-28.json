@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "教皇约翰·保罗一世逝世",
+      "category": "其他"
+    },
+    {
+      "year": 1983,
+      "title": "澳大利亚赢得美洲杯帆船赛",
+      "category": "体育"
+    },
+    {
+      "year": 1987,
+      "title": "苏联与叙利亚签署友好合作条约",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "林纳斯·托瓦兹发布Linux内核",
+      "category": "科技"
+    },
+    {
+      "year": 1994,
+      "title": "爱沙尼亚渡轮“爱沙尼亚”号沉没",
+      "category": "灾害"
+    },
+    {
+      "year": 2003,
+      "title": "中国首次载人航天飞行成功",
+      "category": "科技"
+    },
+    {
+      "year": 2008,
+      "title": "中国石家庄三鹿奶粉事件爆发",
+      "category": "经济"
+    },
+    {
+      "year": 2018,
+      "title": "印尼苏拉威西岛发生强烈地震海啸",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Air Canada Flight 189 crashed in Toronto, killing two.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1982,
+      "title": "Indonesia held its general election.",
+      "category": "Politics"
+    },
+    {
+      "year": 1988,
+      "title": "Ben Johnson stripped of Olympic gold medal for doping.",
+      "category": "Sports"
+    },
+    {
+      "year": 1991,
+      "title": "Linus Torvalds announced the first version of Linux.",
+      "category": "Technology"
+    },
+    {
+      "year": 1994,
+      "title": "The ferry Estonia sank in the Baltic Sea, killing 852 people.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1996,
+      "title": "The Defense of Marriage Act (DOMA) was signed into law in the US.",
+      "category": "Politics"
+    },
+    {
+      "year": 2000,
+      "title": "The Second Intifada began following Ariel Sharon's visit to Temple Mount.",
+      "category": "Politics"
+    },
+    {
+      "year": 2003,
+      "title": "Blackout hits Italy, causing widespread disruption.",
+      "category": "Other"
+    },
+    {
+      "year": 2008,
+      "title": "Dow Jones suffered its largest one-day point drop ever.",
+      "category": "Economy"
+    },
+    {
+      "year": 2018,
+      "title": "Palau became the first country to ban sunscreen to protect coral reefs.",
+      "category": "Politics"
+    }
+  ]
+}
