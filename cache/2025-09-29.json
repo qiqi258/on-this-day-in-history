@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "教皇约翰·保罗二世首次访问爱尔兰",
+      "category": "其他"
+    },
+    {
+      "year": 1988,
+      "title": "美国发现号航天飞机成功发射",
+      "category": "科技"
+    },
+    {
+      "year": 1990,
+      "title": "海湾战争爆发前夕，多国部队集结",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "巴西总统费尔南多·科洛尔遭弹劾",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "波音787梦想飞机首次亮相",
+      "category": "科技"
+    },
+    {
+      "year": 2009,
+      "title": "萨摩亚海啸造成重大人员伤亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2013,
+      "title": "中国（上海）自由贸易试验区正式成立",
+      "category": "经济"
+    },
+    {
+      "year": 2017,
+      "title": "美国宣布对朝鲜实施新的制裁",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Pope John Paul II visited Ireland, a historic event.",
+      "category": "Politics"
+    },
+    {
+      "year": 1988,
+      "title": "Space Shuttle Discovery launched, resuming US space flights.",
+      "category": "Technology"
+    },
+    {
+      "year": 1990,
+      "title": "The Soviet Union recognized the Republic of Korea.",
+      "category": "Politics"
+    },
+    {
+      "year": 1992,
+      "title": "Fernando Collor de Mello impeached as President of Brazil.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "O.J. Simpson was acquitted on murder charges.",
+      "category": "Other"
+    },
+    {
+      "year": 2006,
+      "title": "Gol Transportes Aéreos Flight 1907 crashed in Brazil.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2009,
+      "title": "Pittsburgh Penguins goalie Michel-Maxime \"Max\" Talbot became the first player in Penguins' history to score two goals in Game 7 of a Stanley Cup final.",
+      "category": "Sports"
+    },
+    {
+      "year": 2013,
+      "title": "Government shutdown in the United States began.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "Hurricane Maria devastated Puerto Rico.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2023,
+      "title": "Azerbaijan launched a military offensive in Nagorno-Karabakh.",
+      "category": "Politics"
+    }
+  ]
+}
