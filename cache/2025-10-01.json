@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "图瓦卢从英国独立",
+      "category": "政治"
+    },
+    {
+      "year": 1982,
+      "title": "索尼发布首款CD播放器",
+      "category": "科技"
+    },
+    {
+      "year": 1985,
+      "title": "以色列空袭突尼斯PLO总部",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "卡通频道正式开播",
+      "category": "文化"
+    },
+    {
+      "year": 1994,
+      "title": "帕劳共和国正式独立",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "印度尼西亚巴厘岛爆炸事件",
+      "category": "灾害"
+    },
+    {
+      "year": 2006,
+      "title": "Google收购YouTube",
+      "category": "经济"
+    },
+    {
+      "year": 2009,
+      "title": "中国国庆60周年阅兵式举行",
+      "category": "政治"
+    },
+    {
+      "year": 2017,
+      "title": "加泰罗尼亚举行独立公投",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "中国杭州亚运会圆满闭幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Barbara Walters debuts as first female network news anchor.",
+      "category": "Culture"
+    },
+    {
+      "year": 1982,
+      "title": "Helmut Kohl becomes Chancellor of West Germany.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Israel launches its first meteorological satellite, Ofeq 1.",
+      "category": "Technology"
+    },
+    {
+      "year": 1987,
+      "title": "The Loma Prieta earthquake strikes the San Francisco Bay Area.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1992,
+      "title": "Cartoon Network is launched by Turner Broadcasting.",
+      "category": "Culture"
+    },
+    {
+      "year": 1994,
+      "title": "Palau gains independence from the United States.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Stan causes widespread damage in Central America.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2017,
+      "title": "Las Vegas shooting, the deadliest mass shooting in modern US history.",
+      "category": "Other"
+    },
+    {
+      "year": 2018,
+      "title": "Canada-United States-Mexico Agreement (USMCA) is signed.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "Government shutdown averted as US Congress passes stopgap funding bill.",
+      "category": "Politics"
+    }
+  ]
+}
