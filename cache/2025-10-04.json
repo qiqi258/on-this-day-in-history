@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "中国粉碎“四人帮”，文化大革命结束",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "Free Software Foundation成立",
+      "category": "科技"
+    },
+    {
+      "year": 1990,
+      "title": "德国正式统一",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "莫桑比克和平协议签署，结束内战",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "俄罗斯总统叶利钦宣布国家进入紧急状态",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "瑞士太阳神庙教徒集体自杀",
+      "category": "其他"
+    },
+    {
+      "year": 2001,
+      "title": "北约首次启动第五条款，响应911袭击",
+      "category": "政治"
+    },
+    {
+      "year": 2004,
+      "title": "“太空船一号”完成首次私人载人航天飞行",
+      "category": "科技"
+    },
+    {
+      "year": 2010,
+      "title": "匈牙利铝厂发生赤泥泄漏事故",
+      "category": "灾害"
+    },
+    {
+      "year": 2011,
+      "title": "美国职业棒球联盟季后赛开打",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Hua Guofeng succeeds Mao Zedong as Chairman of the CCP.",
+      "category": "Politics"
+    },
+    {
+      "year": 1979,
+      "title": "Black filmmaker Oscar Micheaux honored with a Directors Guild of America award.",
+      "category": "Culture"
+    },
+    {
+      "year": 1985,
+      "title": "Free Software Foundation is founded by Richard Stallman.",
+      "category": "Technology"
+    },
+    {
+      "year": 1988,
+      "title": "Televangelist Jim Bakker indicted on fraud and conspiracy charges.",
+      "category": "Other"
+    },
+    {
+      "year": 1992,
+      "title": "Mozambique's government and RENAMO rebels sign a peace accord in Rome.",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "Russian President Yeltsin declares a state of emergency in Moscow.",
+      "category": "Politics"
+    },
+    {
+      "year": 1996,
+      "title": "The European Space Agency's Ariane 5 rocket fails on its maiden flight.",
+      "category": "Technology"
+    },
+    {
+      "year": 2001,
+      "title": "NATO invokes Article 5 after 9/11 attacks.",
+      "category": "Politics"
+    },
+    {
+      "year": 2004,
+      "title": "SpaceShipOne wins the Ansari X Prize for private spaceflight.",
+      "category": "Technology"
+    },
+    {
+      "year": 2010,
+      "title": "Hungary toxic sludge spill releases red mud, causing environmental disaster.",
+      "category": "Disaster"
+    }
+  ]
+}
