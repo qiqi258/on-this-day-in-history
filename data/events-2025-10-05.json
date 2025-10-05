@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "卡尔·刘易斯打破男子100米世界纪录",
+      "category": "体育"
+    },
+    {
+      "year": 1985,
+      "title": "英美烟草公司被控烟草危害健康",
+      "category": "其他"
+    },
+    {
+      "year": 1990,
+      "title": "德国正式统一",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "Linux内核首次公开发布",
+      "category": "科技"
+    },
+    {
+      "year": 1994,
+      "title": "瑞士太阳圣殿教集体自杀事件",
+      "category": "其他"
+    },
+    {
+      "year": 2000,
+      "title": "南斯拉夫总统米洛舍维奇下台",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "《断背山》于威尼斯电影节首映",
+      "category": "文化"
+    },
+    {
+      "year": 2011,
+      "title": "乔布斯去世",
+      "category": "科技"
+    },
+    {
+      "year": 2016,
+      "title": "联合国正式批准巴黎气候协议",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "诺贝尔化学奖授予量子点研究者",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Elizabeth Taylor marries Richard Burton for the second time.",
+      "category": "Other"
+    },
+    {
+      "year": 1984,
+      "title": "Marc Garneau became the first Canadian in space.",
+      "category": "Technology"
+    },
+    {
+      "year": 1990,
+      "title": "Start of the Persian Gulf Crisis after Iraq's invasion of Kuwait.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "Solar eclipse visible across South America.",
+      "category": "Other"
+    },
+    {
+      "year": 2000,
+      "title": "Final episode of \"Roswell\" aired on The WB.",
+      "category": "Culture"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Stan makes landfall in Mexico.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2011,
+      "title": "Steve Jobs, Apple co-founder, passed away.",
+      "category": "Technology"
+    },
+    {
+      "year": 2017,
+      "title": "The New York Times publishes extensive report on Harvey Weinstein.",
+      "category": "Other"
+    },
+    {
+      "year": 2022,
+      "title": "Nobel Prize in Chemistry awarded for click chemistry and bioorthogonal chemistry.",
+      "category": "Technology"
+    }
+  ]
+}
