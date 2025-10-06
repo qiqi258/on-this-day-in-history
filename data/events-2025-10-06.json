@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "华国锋任中共中央主席、中央军委主席",
+      "category": "政治"
+    },
+    {
+      "year": 1981,
+      "title": "埃及总统萨达特遇刺身亡",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国电影《回到未来》上映",
+      "category": "文化"
+    },
+    {
+      "year": 1995,
+      "title": "瑞士天文学家发现首颗系外行星",
+      "category": "科技"
+    },
+    {
+      "year": 2002,
+      "title": "美国与朝鲜核问题谈判破裂",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "谷歌收购YouTube",
+      "category": "经济"
+    },
+    {
+      "year": 2010,
+      "title": "Instagram正式上线",
+      "category": "文化"
+    },
+    {
+      "year": 2018,
+      "title": "卡瓦诺大法官确认听证引发争议",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Hua Guofeng succeeds Mao Zedong as Chairman of the Communist Party of China.",
+      "category": "Politics"
+    },
+    {
+      "year": 1979,
+      "title": "Pope John Paul II became the first Pope to visit the White House.",
+      "category": "Politics"
+    },
+    {
+      "year": 1981,
+      "title": "Egyptian President Anwar Sadat was assassinated in Cairo.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "The \"Chicago Bulls\" drafted Michael Jordan.",
+      "category": "Sports"
+    },
+    {
+      "year": 1987,
+      "title": "Fiji declared a republic after a military coup.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "51 Pegasi b, the first extrasolar planet orbiting a sun-like star, was discovered.",
+      "category": "Technology"
+    },
+    {
+      "year": 1999,
+      "title": "The Dow Jones Industrial Average closed above 10,000 for the first time.",
+      "category": "Economy"
+    },
+    {
+      "year": 2002,
+      "title": "The Angolan government declared the end of the civil war.",
+      "category": "Politics"
+    },
+    {
+      "year": 2010,
+      "title": "Instagram was launched on the Apple App Store.",
+      "category": "Technology"
+    },
+    {
+      "year": 2018,
+      "title": "Nikki Haley resigned as United States Ambassador to the United Nations.",
+      "category": "Politics"
+    }
+  ]
+}
