@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1977,
+      "title": "苏联宪法正式生效，巩固一党制",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "阿基莱·劳罗号邮轮被巴勒斯坦解放阵线劫持",
+      "category": "其他"
+    },
+    {
+      "year": 1993,
+      "title": "托尼·莫里森获诺贝尔文学奖",
+      "category": "文化"
+    },
+    {
+      "year": 1999,
+      "title": "印度奥里萨邦遭遇超级气旋，造成重大伤亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2001,
+      "title": "美国发动阿富汗战争",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "阿诺·施瓦辛格当选加州州长",
+      "category": "政治"
+    },
+    {
+      "year": 2004,
+      "title": "柬埔寨国王西哈努克正式退位",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "安娜·波利特科夫斯卡娅在莫斯科遇害",
+      "category": "其他"
+    },
+    {
+      "year": 2012,
+      "title": "委内瑞拉总统查韦斯再次赢得总统选举",
+      "category": "政治"
+    },
+    {
+      "year": 2013,
+      "title": "国际奥委会投票决定2020年奥运会在东京举办",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Hua Guofeng succeeds Mao Zedong as Chairman of the CCP.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Achille Lauro hijacking ends after negotiations with PLO.",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "Toni Morrison wins the Nobel Prize in Literature.",
+      "category": "Culture"
+    },
+    {
+      "year": 1999,
+      "title": "Yen slides amid financial crisis fears in Asia.",
+      "category": "Economy"
+    },
+    {
+      "year": 2001,
+      "title": "The US and UK begin military operations in Afghanistan.",
+      "category": "Politics"
+    },
+    {
+      "year": 2003,
+      "title": "Arnold Schwarzenegger is elected Governor of California.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Egypt holds its first multi-candidate presidential election.",
+      "category": "Politics"
+    },
+    {
+      "year": 2012,
+      "title": "Hugo Chavez wins Venezuelan presidential election.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "Raqqa, Syria, is liberated from ISIS control.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "Nobel Peace Prize awarded to Narges Mohammadi.",
+      "category": "Politics"
+    }
+  ]
+}
