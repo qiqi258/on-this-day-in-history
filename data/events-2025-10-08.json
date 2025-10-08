@@ -1,0 +1,81 @@
+{
+  "zh": [
+    {
+      "year": 1982,
+      "title": "波兰团结工会被取缔",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国海军拦截阿奇莱·劳罗号劫持者",
+      "category": "政治"
+    },
+    {
+      "year": 1998,
+      "title": "诺贝尔文学奖授予若泽·萨拉马戈",
+      "category": "文化"
+    },
+    {
+      "year": 2005,
+      "title": "巴基斯坦发生强烈地震，造成重大伤亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2012,
+      "title": "诺贝尔生理学或医学奖颁发给山中伸弥和约翰·格登",
+      "category": "科技"
+    },
+    {
+      "year": 2018,
+      "title": "联合国政府间气候变化专门委员会发布报告",
+      "category": "政治"
+    },
+    {
+      "year": 2021,
+      "title": "东京奥运会闭幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Saturday Night Live premiered on NBC.",
+      "category": "Culture"
+    },
+    {
+      "year": 1982,
+      "title": "Poland banned Solidarity trade union.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Achille Lauro hijacking ended after negotiation.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "NATO approved air strikes against Yugoslavia.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Stan made landfall in Mexico.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2016,
+      "title": "Hurricane Matthew devastated Haiti.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2018,
+      "title": "James Allison and Tasuku Honjo won Nobel Prize in Medicine.",
+      "category": "Other"
+    },
+    {
+      "year": 2023,
+      "title": "US House of Representatives ousted Kevin McCarthy as Speaker.",
+      "category": "Politics"
+    }
+  ]
+}
