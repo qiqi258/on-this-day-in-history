@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "巴布亚新几内亚宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国海军拦截阿基莱·劳伦号劫持者",
+      "category": "其他"
+    },
+    {
+      "year": 1997,
+      "title": "欧洲委员会通过《阿姆斯特丹条约》",
+      "category": "政治"
+    },
+    {
+      "year": 2000,
+      "title": "悉尼奥运会闭幕",
+      "category": "体育"
+    },
+    {
+      "year": 2005,
+      "title": "德国总理施罗德提前举行大选失利",
+      "category": "政治"
+    },
+    {
+      "year": 2010,
+      "title": "加勒比海霍乱爆发，海地疫情严重",
+      "category": "灾害"
+    },
+    {
+      "year": 2011,
+      "title": "美国苹果公司发布iPhone 4S",
+      "category": "科技"
+    },
+    {
+      "year": 2023,
+      "title": "诺贝尔经济学奖授予克劳迪娅·戈尔丁",
+      "category": "经济"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Papua New Guinea became independent from Australia.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "U.S. Navy intercepts Egyptian plane carrying Achille Lauro hijackers.",
+      "category": "Politics"
+    },
+    {
+      "year": 1992,
+      "title": "The first episode of *Batman: The Animated Series* aired.",
+      "category": "Culture"
+    },
+    {
+      "year": 1997,
+      "title": "Scientists announce discovery of the world's oldest human ancestor.",
+      "category": "Other"
+    },
+    {
+      "year": 2005,
+      "title": "Angela Merkel sworn in as Germany's first female Chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2010,
+      "title": "Antilles dissolved, Curaçao and Sint Maarten become autonomous.",
+      "category": "Politics"
+    },
+    {
+      "year": 2011,
+      "title": "A magnitude 6.9 earthquake struck near Vanuatu.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2014,
+      "title": "Malala Yousafzai awarded Nobel Peace Prize.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Hurricane Michael makes landfall in Florida as a Category 4 storm.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2021,
+      "title": "Expo 2020 Dubai officially opened.",
+      "category": "Other"
+    }
+  ]
+}
