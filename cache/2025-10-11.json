@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "中国首次成功进行氢弹空投试验",
+      "category": "科技"
+    },
+    {
+      "year": 1986,
+      "title": "里根与戈尔巴乔夫在雷克雅未克会晤",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "乌兹别克斯坦宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "联合国安理会通过对卢旺达的武器禁运",
+      "category": "政治"
+    },
+    {
+      "year": 2000,
+      "title": "“机遇号”探测器发射升空",
+      "category": "科技"
+    },
+    {
+      "year": 2002,
+      "title": "美国前总统卡特获诺贝尔和平奖",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "谷歌收购YouTube",
+      "category": "经济"
+    },
+    {
+      "year": 2012,
+      "title": "马拉拉·尤萨夫扎伊遭枪击",
+      "category": "其他"
+    },
+    {
+      "year": 2018,
+      "title": "中国-东盟战略伙伴关系建立15周年",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "美国众议院议长选举陷入僵局",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Saturday Night Live premiered on NBC.",
+      "category": "Culture"
+    },
+    {
+      "year": 1986,
+      "title": "Reagan and Gorbachev met in Reykjavik for arms control talks.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Clarence Thomas confirmed as a Supreme Court Justice.",
+      "category": "Politics"
+    },
+    {
+      "year": 1996,
+      "title": "The Dow Jones Industrial Average closed above 6,000 for the first time.",
+      "category": "Economy"
+    },
+    {
+      "year": 2000,
+      "title": "Space Shuttle Discovery launched on mission STS-92.",
+      "category": "Technology"
+    },
+    {
+      "year": 2002,
+      "title": "U.S. Congress authorized President Bush to use force against Iraq.",
+      "category": "Politics"
+    },
+    {
+      "year": 2006,
+      "title": "Google acquired YouTube for $1.65 billion.",
+      "category": "Economy"
+    },
+    {
+      "year": 2013,
+      "title": "The Chemical Weapons Convention won the Nobel Peace Prize.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "Catalan President Carles Puigdemont suspended declaration of independence.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "New York Yankees manager Aaron Boone signs a three-year contract extension.",
+      "category": "Sports"
+    }
+  ]
+}
