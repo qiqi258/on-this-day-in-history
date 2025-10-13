@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "玻利维亚发生军事政变，乌戈·班塞尔上台",
+      "category": "政治"
+    },
+    {
+      "year": 1977,
+      "title": "汉莎航空181号班机被劫持",
+      "category": "其他"
+    },
+    {
+      "year": 1983,
+      "title": "美国入侵格林纳达",
+      "category": "政治"
+    },
+    {
+      "year": 1989,
+      "title": "旧金山湾区发生6.9级地震",
+      "category": "灾害"
+    },
+    {
+      "year": 1990,
+      "title": "叙利亚军队进入贝鲁特结束黎巴嫩内战",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "巴勒斯坦解放组织主席阿拉法特、以色列总理拉宾和以色列外交部长佩雷斯共同获得诺贝尔和平奖",
+      "category": "政治"
+    },
+    {
+      "year": 2000,
+      "title": "悉尼奥运会闭幕",
+      "category": "体育"
+    },
+    {
+      "year": 2010,
+      "title": "智利矿难33名矿工全部获救",
+      "category": "其他"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Bob Dylan's \"Hard Rain\" TV special aired.",
+      "category": "Culture"
+    },
+    {
+      "year": 1983,
+      "title": "US Senate approves bill creating Martin Luther King Jr. Day",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Mexico City hosted a Formula 1 race after 15 years.",
+      "category": "Sports"
+    },
+    {
+      "year": 1990,
+      "title": "Last known wild Spix's Macaw sighted in Brazil.",
+      "category": "Other"
+    },
+    {
+      "year": 1992,
+      "title": "An earthquake of magnitude 5.9 struck Cairo, Egypt.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2000,
+      "title": "Sydney Olympics concluded.",
+      "category": "Sports"
+    },
+    {
+      "year": 2005,
+      "title": "Angela Merkel became Germany's first female chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2010,
+      "title": "Chilean Miners rescued after 69 days underground.",
+      "category": "Other"
+    },
+    {
+      "year": 2016,
+      "title": "Bob Dylan awarded the Nobel Prize in Literature.",
+      "category": "Culture"
+    },
+    {
+      "year": 2021,
+      "title": "Microsoft officially released Windows 11.",
+      "category": "Technology"
+    }
+  ]
+}
