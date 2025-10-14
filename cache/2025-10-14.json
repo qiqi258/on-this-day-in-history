@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "华国锋任中共中央主席、中央军委主席",
+      "category": "政治"
+    },
+    {
+      "year": 1980,
+      "title": "中国女排首次获得世界冠军",
+      "category": "体育"
+    },
+    {
+      "year": 1982,
+      "title": "波兰团结工会被宣布为非法",
+      "category": "政治"
+    },
+    {
+      "year": 1986,
+      "title": "美国首次宣布对日本实施贸易制裁",
+      "category": "经济"
+    },
+    {
+      "year": 1994,
+      "title": "巴以领导人获得诺贝尔和平奖",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "中国首次载人航天飞行成功",
+      "category": "科技"
+    },
+    {
+      "year": 2012,
+      "title": "费利克斯·鲍姆加特纳超音速跳伞",
+      "category": "其他"
+    },
+    {
+      "year": 2017,
+      "title": "美国退出联合国教科文组织",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Hua Guofeng succeeds Mao Zedong as Chairman of the CCP.",
+      "category": "Politics"
+    },
+    {
+      "year": 1981,
+      "title": "Hosni Mubarak becomes President of Egypt after Sadat's assassination.",
+      "category": "Politics"
+    },
+    {
+      "year": 1986,
+      "title": "US Congress overrides Reagan's veto on South Africa sanctions.",
+      "category": "Politics"
+    },
+    {
+      "year": 1990,
+      "title": "Leonard Bernstein, celebrated composer and conductor, dies.",
+      "category": "Culture"
+    },
+    {
+      "year": 1994,
+      "title": "Yasser Arafat, Yitzhak Rabin, and Shimon Peres win Nobel Peace Prize.",
+      "category": "Politics"
+    },
+    {
+      "year": 2003,
+      "title": "China launches Shenzhou 5, its first manned space mission.",
+      "category": "Technology"
+    },
+    {
+      "year": 2012,
+      "title": "Felix Baumgartner breaks the sound barrier in a freefall jump.",
+      "category": "Sports"
+    },
+    {
+      "year": 2017,
+      "title": "Bomb blast in Mogadishu, Somalia, kills over 500 people.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2021,
+      "title": "Facebook announces its metaverse project, \"Meta.\"",
+      "category": "Technology"
+    }
+  ]
+}
