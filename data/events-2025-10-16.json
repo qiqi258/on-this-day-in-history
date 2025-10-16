@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "波兰红衣主教卡罗尔·沃伊蒂瓦当选教皇约翰·保罗二世",
+      "category": "政治"
+    },
+    {
+      "year": 1984,
+      "title": "南非主教德斯蒙德·图图获诺贝尔和平奖",
+      "category": "政治"
+    },
+    {
+      "year": 1986,
+      "title": "莱茵哈德·哈恩因间谍罪在民主德国被捕",
+      "category": "其他"
+    },
+    {
+      "year": 1995,
+      "title": "以色列总理拉宾遇刺身亡",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "中国首次载人航天飞行任务成功返回",
+      "category": "科技"
+    },
+    {
+      "year": 2005,
+      "title": "亚洲相互协作与信任措施会议成员国外长会议召开",
+      "category": "政治"
+    },
+    {
+      "year": 2017,
+      "title": "美国宣布退出联合国教科文组织",
+      "category": "政治"
+    },
+    {
+      "year": 2021,
+      "title": "中国神舟十三号载人飞船成功发射",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Pope John Paul II elected as the 264th Pope",
+      "category": "Other"
+    },
+    {
+      "year": 1984,
+      "title": "Desmond Tutu wins the Nobel Peace Prize.",
+      "category": "Politics"
+    },
+    {
+      "year": 1987,
+      "title": "Black Monday stock market crash begins.",
+      "category": "Economy"
+    },
+    {
+      "year": 1995,
+      "title": "Million Man March takes place in Washington, D.C.",
+      "category": "Other"
+    },
+    {
+      "year": 2002,
+      "title": "Bibliotheca Alexandrina in Egypt is officially opened.",
+      "category": "Culture"
+    },
+    {
+      "year": 2005,
+      "title": "Formula One driver Fernando Alonso wins the World Championship.",
+      "category": "Sports"
+    },
+    {
+      "year": 2017,
+      "title": "Cyclone Ophelia reaches Ireland, causing widespread damage.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2023,
+      "title": "NASA's Psyche mission launches to explore a metal-rich asteroid.",
+      "category": "Technology"
+    }
+  ]
+}
