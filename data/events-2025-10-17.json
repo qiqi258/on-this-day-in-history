@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "特蕾莎修女获诺贝尔和平奖",
+      "category": "其他"
+    },
+    {
+      "year": 1989,
+      "title": "旧金山大地震发生",
+      "category": "灾害"
+    },
+    {
+      "year": 1990,
+      "title": "德国统一正式完成",
+      "category": "政治"
+    },
+    {
+      "year": 1996,
+      "title": "联合国通过全面禁止核试验条约",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "中国首次载人航天飞行成功",
+      "category": "科技"
+    },
+    {
+      "year": 2006,
+      "title": "美国人口达到3亿",
+      "category": "其他"
+    },
+    {
+      "year": 2017,
+      "title": "叙利亚拉卡从伊斯兰国手中解放",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "卡塔尔亚洲杯抽签仪式举行",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Mother Teresa awarded Nobel Peace Prize.",
+      "category": "Other"
+    },
+    {
+      "year": 1985,
+      "title": "First version of Microsoft Windows released.",
+      "category": "Technology"
+    },
+    {
+      "year": 1989,
+      "title": "Loma Prieta earthquake struck California.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1990,
+      "title": "Soviet Union officially recognizes German reunification.",
+      "category": "Politics"
+    },
+    {
+      "year": 1997,
+      "title": "Asahi Shimbun reports on Kobe beef mislabeling scandal.",
+      "category": "Economy"
+    },
+    {
+      "year": 2003,
+      "title": "Yang Liwei returns to Earth after China's first manned space mission.",
+      "category": "Technology"
+    },
+    {
+      "year": 2006,
+      "title": "United Nations Human Rights Council established.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Canada legalizes recreational cannabis use nationwide.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "FIFA announces the host countries for the 2030 World Cup.",
+      "category": "Sports"
+    }
+  ]
+}
