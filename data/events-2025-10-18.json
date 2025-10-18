@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "国际原子能机构大会召开，讨论核安全",
+      "category": "政治"
+    },
+    {
+      "year": 1989,
+      "title": "东德领导人埃里希·昂纳克下台",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "阿塞拜疆宣布恢复国家独立",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "波音777首次跨太平洋飞行",
+      "category": "科技"
+    },
+    {
+      "year": 2004,
+      "title": "缅甸全国和平与发展委员会改组",
+      "category": "政治"
+    },
+    {
+      "year": 2007,
+      "title": "巴基斯坦卡拉奇爆炸袭击，多人伤亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "新西兰工党领袖杰辛达·阿德恩就任总理",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "全球首个完全由AI设计的药物进入临床试验",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "German Autumn ends with the death of the Baader-Meinhof leaders.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "East German leader Erich Honecker is ousted from power.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Azerbaijan declares independence from the Soviet Union.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "Michael Schumacher wins his second Formula One World Championship.",
+      "category": "Sports"
+    },
+    {
+      "year": 1998,
+      "title": "The film \"Antz\" is released, pioneering CGI animation.",
+      "category": "Culture"
+    },
+    {
+      "year": 2007,
+      "title": "Benazir Bhutto returns to Pakistan after eight years in exile.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Canberra Airport becomes the first airport in the world to implement a full body scanner.",
+      "category": "Technology"
+    },
+    {
+      "year": 2023,
+      "title": "Hurricane Norma makes landfall in Baja California Sur, Mexico.",
+      "category": "Disaster"
+    }
+  ]
+}
