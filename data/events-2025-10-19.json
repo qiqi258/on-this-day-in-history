@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1977,
+      "title": "德国汉莎航空181号班机遭劫持",
+      "category": "其他"
+    },
+    {
+      "year": 1985,
+      "title": "墨西哥城发生8.1级地震",
+      "category": "灾害"
+    },
+    {
+      "year": 1987,
+      "title": "美国股市遭遇“黑色星期一”股灾",
+      "category": "经济"
+    },
+    {
+      "year": 1994,
+      "title": "以色列与约旦签署和平条约",
+      "category": "政治"
+    },
+    {
+      "year": 1998,
+      "title": "约翰·格伦重返太空",
+      "category": "科技"
+    },
+    {
+      "year": 2005,
+      "title": "萨达姆·侯赛因在巴格达受审",
+      "category": "政治"
+    },
+    {
+      "year": 2010,
+      "title": "中国嫦娥二号成功发射",
+      "category": "科技"
+    },
+    {
+      "year": 2011,
+      "title": "利比亚前领导人卡扎菲身亡",
+      "category": "政治"
+    },
+    {
+      "year": 2017,
+      "title": "#MeToo运动开始在全球蔓延",
+      "category": "其他"
+    },
+    {
+      "year": 2023,
+      "title": "卡塔尔亚洲杯抽签仪式举行",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "South African government bans 18 anti-apartheid organizations.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Wayne Gretzky surpasses Gordie Howe's NHL point record.",
+      "category": "Sports"
+    },
+    {
+      "year": 1987,
+      "title": "Black Monday stock market crash significantly impacts global economy.",
+      "category": "Economy"
+    },
+    {
+      "year": 1989,
+      "title": "The Guildford Four are released after wrongful conviction.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "The Chemical Weapons Convention is signed in Geneva.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Saddam Hussein goes on trial in Baghdad.",
+      "category": "Politics"
+    },
+    {
+      "year": 2012,
+      "title": "Launch of the Soyuz TMA-06M mission to the International Space Station.",
+      "category": "Technology"
+    },
+    {
+      "year": 2021,
+      "title": "The United Kingdom's COVID-19 cases surpass 8.6 million.",
+      "category": "Disaster"
+    }
+  ]
+}
