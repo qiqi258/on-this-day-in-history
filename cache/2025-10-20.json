@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1977,
+      "title": "美国食品药品监督管理局批准首个数字式计算机断层扫描仪（CT）",
+      "category": "科技"
+    },
+    {
+      "year": 1983,
+      "title": "美国入侵格林纳达",
+      "category": "政治"
+    },
+    {
+      "year": 1989,
+      "title": "美国股市黑色星期五，道琼斯指数暴跌",
+      "category": "经济"
+    },
+    {
+      "year": 1991,
+      "title": "波兰举行首次自由选举",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "美国导演昆汀·塔伦蒂诺的电影《低俗小说》上映",
+      "category": "文化"
+    },
+    {
+      "year": 1997,
+      "title": "康斯坦丁·卡瓦菲斯逝世一百周年纪念",
+      "category": "文化"
+    },
+    {
+      "year": 2003,
+      "title": "中国首次载人航天飞行圆满成功",
+      "category": "科技"
+    },
+    {
+      "year": 2011,
+      "title": "利比亚领导人卡扎菲在苏尔特被击毙",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "《哪吒之魔童降世》在中国大陆上映",
+      "category": "文化"
+    },
+    {
+      "year": 2023,
+      "title": "澳大利亚举行2032年夏季奥运会和残奥会",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "Lynyrd Skynyrd plane crash killed several band members",
+      "category": "Disaster"
+    },
+    {
+      "year": 1980,
+      "title": "First IBM PC prototype was demonstrated",
+      "category": "Technology"
+    },
+    {
+      "year": 1982,
+      "title": "Hundreds of thousands protest in Moscow for peace.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Michael Jordan's first signature shoe, Air Jordan 1, released.",
+      "category": "Culture"
+    },
+    {
+      "year": 1994,
+      "title": "The Chemical Weapons Convention was opened for signature.",
+      "category": "Politics"
+    },
+    {
+      "year": 2004,
+      "title": "Boston Red Sox won their first World Series in 86 years.",
+      "category": "Sports"
+    },
+    {
+      "year": 2011,
+      "title": "Libyan leader Muammar Gaddafi was killed in Sirte.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "Catalan parliament declared independence from Spain.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "Pan American Games officially opened in Santiago, Chile.",
+      "category": "Sports"
+    }
+  ]
+}
