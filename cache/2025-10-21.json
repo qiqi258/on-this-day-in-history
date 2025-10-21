@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1983,
+      "title": "国际度量衡大会重新定义“米”",
+      "category": "科技"
+    },
+    {
+      "year": 1984,
+      "title": "美国宣布退出联合国教科文组织",
+      "category": "政治"
+    },
+    {
+      "year": 1986,
+      "title": "莫桑比克总统萨莫拉飞机失事身亡",
+      "category": "其他"
+    },
+    {
+      "year": 1994,
+      "title": "朝鲜半岛核问题框架协议签署",
+      "category": "政治"
+    },
+    {
+      "year": 1999,
+      "title": "世界人口达到60亿",
+      "category": "其他"
+    },
+    {
+      "year": 2005,
+      "title": "“卡特里娜”飓风造成严重破坏",
+      "category": "灾害"
+    },
+    {
+      "year": 2011,
+      "title": "利比亚前领导人卡扎菲身亡",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "美国宣布退出《中导条约》",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "Karen Silkwood case documents mysteriously disappeared.",
+      "category": "Other"
+    },
+    {
+      "year": 1983,
+      "title": "The meter was redefined based on the speed of light.",
+      "category": "Technology"
+    },
+    {
+      "year": 1986,
+      "title": "President Reagan vetoed the Comprehensive Anti-Apartheid Act.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "North Korea and the United States signed an Agreed Framework.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "The Ladbroke Grove rail crash occurred in London, killing 31.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2003,
+      "title": "The Spirit rover was launched towards Mars.",
+      "category": "Technology"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Wilma became the most intense Atlantic hurricane on record.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2011,
+      "title": "Libyan leader Muammar Gaddafi was killed in Sirte.",
+      "category": "Politics"
+    },
+    {
+      "year": 2015,
+      "title": "Back to the Future Day was celebrated, referencing the film.",
+      "category": "Culture"
+    },
+    {
+      "year": 2021,
+      "title": "The World Health Organization approved the malaria vaccine.",
+      "category": "Technology"
+    }
+  ]
+}
