@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "苏联发射金星9号探测器，首次传回金星表面照片",
+      "category": "科技"
+    },
+    {
+      "year": 1979,
+      "title": "伊朗人质危机爆发",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "美国入侵格林纳达",
+      "category": "政治"
+    },
+    {
+      "year": 1986,
+      "title": "美国通过《1986年税制改革法案》",
+      "category": "经济"
+    },
+    {
+      "year": 1995,
+      "title": "O.J.辛普森被判无罪释放",
+      "category": "其他"
+    },
+    {
+      "year": 2005,
+      "title": "尼日利亚拉各斯发生坠机事故，117人遇难",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "新西兰工党领袖杰辛达·阿德恩就任总理",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "美国众议院议长选举陷入僵局",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Pope John Paul II inaugurated his papacy.",
+      "category": "Other"
+    },
+    {
+      "year": 1983,
+      "title": "First Pershing II missiles arrive in West Germany.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "Hungarian Republic proclaimed, ending communist rule.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "O.J. Simpson acquitted of murder charges.",
+      "category": "Other"
+    },
+    {
+      "year": 2007,
+      "title": "Raúl Castro becomes President of Cuba.",
+      "category": "Politics"
+    },
+    {
+      "year": 2008,
+      "title": "India launches Chandrayaan-1, its first lunar probe.",
+      "category": "Technology"
+    },
+    {
+      "year": 2016,
+      "title": "Bob Dylan awarded the Nobel Prize in Literature.",
+      "category": "Culture"
+    },
+    {
+      "year": 2023,
+      "title": "Pakistan defeats Sri Lanka in the ICC Cricket World Cup.",
+      "category": "Sports"
+    }
+  ]
+}
