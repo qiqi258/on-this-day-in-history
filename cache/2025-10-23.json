@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1983,
+      "title": "贝鲁特美军军营爆炸，造成重大伤亡",
+      "category": "灾害"
+    },
+    {
+      "year": 1989,
+      "title": "匈牙利宣布放弃社会主义制度",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "明仁天皇访问中国，促进中日关系",
+      "category": "政治"
+    },
+    {
+      "year": 1998,
+      "title": "以色列和巴勒斯坦达成怀伊河协议",
+      "category": "政治"
+    },
+    {
+      "year": 2001,
+      "title": "苹果公司发布iPod，革新音乐产业",
+      "category": "科技"
+    },
+    {
+      "year": 2002,
+      "title": "莫斯科剧院人质危机爆发",
+      "category": "其他"
+    },
+    {
+      "year": 2004,
+      "title": "罗马签署欧盟宪法条约",
+      "category": "政治"
+    },
+    {
+      "year": 2011,
+      "title": "利比亚“全国过渡委员会”宣布全国解放",
+      "category": "政治"
+    },
+    {
+      "year": 2015,
+      "title": "飓风帕特里夏袭击墨西哥，强度极高",
+      "category": "灾害"
+    },
+    {
+      "year": 2018,
+      "title": "沙特记者卡舒吉在土耳其遇害",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Venus 9, Soviet probe, landed on Venus, transmitting first surface images.",
+      "category": "Technology"
+    },
+    {
+      "year": 1983,
+      "title": "Beirut barracks bombing killed 241 U.S. Marines and 58 French paratroopers.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1989,
+      "title": "Hungary declared itself a republic, ending communist rule.",
+      "category": "Politics"
+    },
+    {
+      "year": 1992,
+      "title": "Akihito became the first Emperor of Japan to visit China.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "Israeli-Palestinian Wye River Memorandum signed, advancing peace process.",
+      "category": "Politics"
+    },
+    {
+      "year": 2001,
+      "title": "Apple released the first iPod.",
+      "category": "Technology"
+    },
+    {
+      "year": 2002,
+      "title": "Moscow theater hostage crisis began, Chechen militants seized hostages.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2011,
+      "title": "Argentina's Cristina Fernández de Kirchner re-elected as President.",
+      "category": "Politics"
+    },
+    {
+      "year": 2015,
+      "title": "Hurricane Patricia, one of the strongest hurricanes on record, made landfall in Mexico.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2018,
+      "title": "Saudi Arabia admitted Jamal Khashoggi died in its Istanbul consulate.",
+      "category": "Politics"
+    }
+  ]
+}
