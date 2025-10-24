@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "中国与日本签署和平友好条约",
+      "category": "政治"
+    },
+    {
+      "year": 1984,
+      "title": "IBM发布PC AT，奠定行业标准",
+      "category": "科技"
+    },
+    {
+      "year": 1989,
+      "title": "匈牙利宣布成为共和国",
+      "category": "政治"
+    },
+    {
+      "year": 1990,
+      "title": "世界卫生组织停止将同性恋归类为疾病",
+      "category": "其他"
+    },
+    {
+      "year": 1995,
+      "title": "联合国成立50周年纪念日",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "协和飞机完成最后一次飞行",
+      "category": "其他"
+    },
+    {
+      "year": 2005,
+      "title": "罗莎·帕克斯逝世，美国民权运动标志人物",
+      "category": "其他"
+    },
+    {
+      "year": 2018,
+      "title": "联合国发布报告，警告全球变暖风险",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Icelandic women strike for equal rights.",
+      "category": "Politics"
+    },
+    {
+      "year": 1984,
+      "title": "IBM ships PC AT personal computer.",
+      "category": "Technology"
+    },
+    {
+      "year": 1989,
+      "title": "Hungarian Republic proclaimed, ending communist rule.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "Launch of Deep Space 1 spacecraft.",
+      "category": "Technology"
+    },
+    {
+      "year": 2003,
+      "title": "Concorde makes its last commercial flight.",
+      "category": "Other"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Wilma becomes the most intense Atlantic hurricane on record.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2012,
+      "title": "The European Union awarded the Nobel Peace Prize.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Pittsburgh synagogue shooting kills 11.",
+      "category": "Other"
+    }
+  ]
+}
