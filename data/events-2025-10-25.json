@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "埃及归还西奈半岛给以色列",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "美国入侵格林纳达",
+      "category": "政治"
+    },
+    {
+      "year": 1990,
+      "title": "世界银行批准对华首笔环境贷款",
+      "category": "经济"
+    },
+    {
+      "year": 1995,
+      "title": "以色列总理拉宾遇刺身亡",
+      "category": "政治"
+    },
+    {
+      "year": 2001,
+      "title": "Windows XP正式发布",
+      "category": "科技"
+    },
+    {
+      "year": 2005,
+      "title": "飓风威尔玛达到最高强度",
+      "category": "灾害"
+    },
+    {
+      "year": 2010,
+      "title": "印尼苏门答腊岛发生海啸",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "沙特阿拉伯授予机器人公民身份",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Spain granted autonomy to Catalonia.",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "US invaded Grenada, codenamed Operation Urgent Fury.",
+      "category": "Politics"
+    },
+    {
+      "year": 1986,
+      "title": "Sydney Pollack's \"Out of Africa\" premiered.",
+      "category": "Culture"
+    },
+    {
+      "year": 1990,
+      "title": "The Dow Jones Industrial Average fell 103.58 points.",
+      "category": "Economy"
+    },
+    {
+      "year": 1992,
+      "title": "The Dream Team II won gold at the Tournament of the Americas.",
+      "category": "Sports"
+    },
+    {
+      "year": 1995,
+      "title": "Israeli Prime Minister Yitzhak Rabin's assassination plot uncovered.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "Paypal was founded by Peter Thiel, Max Levchin, Luke Nosek, Ken Howery, and Elon Musk.",
+      "category": "Technology"
+    },
+    {
+      "year": 2001,
+      "title": "Microsoft released Windows XP.",
+      "category": "Technology"
+    },
+    {
+      "year": 2010,
+      "title": "Scientists announced evidence of water on an asteroid.",
+      "category": "Other"
+    },
+    {
+      "year": 2021,
+      "title": "Sudan's military seized power in a coup.",
+      "category": "Politics"
+    }
+  ]
+}
