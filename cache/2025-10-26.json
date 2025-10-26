@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "韩国总统朴正熙遇刺身亡",
+      "category": "政治"
+    },
+    {
+      "year": 1984,
+      "title": "美国电影《终结者》上映",
+      "category": "文化"
+    },
+    {
+      "year": 1986,
+      "title": "中国首次发行股票",
+      "category": "经济"
+    },
+    {
+      "year": 1994,
+      "title": "以色列与约旦签署和平条约",
+      "category": "政治"
+    },
+    {
+      "year": 2001,
+      "title": "美国通过《爱国者法案》",
+      "category": "政治"
+    },
+    {
+      "year": 2012,
+      "title": "温州动车追尾事故调查报告公布",
+      "category": "其他"
+    },
+    {
+      "year": 2017,
+      "title": "新西兰工党领袖杰辛达·阿德恩就任总理",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "匹兹堡犹太教堂枪击案",
+      "category": "其他"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "South Korean President Park Chung-hee assassinated.",
+      "category": "Politics"
+    },
+    {
+      "year": 1984,
+      "title": "Baby Fae received a baboon heart transplant.",
+      "category": "Technology"
+    },
+    {
+      "year": 1991,
+      "title": "Boris Yeltsin announced radical economic reforms in Russia.",
+      "category": "Economy"
+    },
+    {
+      "year": 1994,
+      "title": "Jordan and Israel signed a peace treaty.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "Tony Blair addressed the Irish Parliament.",
+      "category": "Politics"
+    },
+    {
+      "year": 2001,
+      "title": "The USA PATRIOT Act was passed in response to 9/11.",
+      "category": "Politics"
+    },
+    {
+      "year": 2012,
+      "title": "Felix Baumgartner broke the sound barrier in freefall.",
+      "category": "Other"
+    },
+    {
+      "year": 2017,
+      "title": "Cyclone Ophelia caused significant damage in Ireland.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2022,
+      "title": "Rishi Sunak became Prime Minister of the UK.",
+      "category": "Politics"
+    }
+  ]
+}
