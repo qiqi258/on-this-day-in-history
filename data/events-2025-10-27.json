@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "圣文森特和格林纳丁斯独立",
+      "category": "政治"
+    },
+    {
+      "year": 1981,
+      "title": "安提瓜和巴布达独立",
+      "category": "政治"
+    },
+    {
+      "year": 1984,
+      "title": "中国首次南极考察队出发",
+      "category": "科技"
+    },
+    {
+      "year": 1992,
+      "title": "美国职业棒球大联盟世界大赛",
+      "category": "体育"
+    },
+    {
+      "year": 1999,
+      "title": "亚美尼亚议会枪击案",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "法国骚乱爆发，持续数周",
+      "category": "其他"
+    },
+    {
+      "year": 2017,
+      "title": "加泰罗尼亚宣布独立，引发危机",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "泰勒·斯威夫特《1989 (Taylor's Version)》发行",
+      "category": "文化"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Anwar Sadat and Menachem Begin jointly awarded Nobel Peace Prize.",
+      "category": "Politics"
+    },
+    {
+      "year": 1981,
+      "title": "Antigua and Barbuda gained independence from the United Kingdom.",
+      "category": "Politics"
+    },
+    {
+      "year": 1986,
+      "title": "The Big Bang theory gets further support from cosmic microwave background research.",
+      "category": "Technology"
+    },
+    {
+      "year": 1992,
+      "title": "US government indicted Manuel Noriega on drug trafficking charges.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "Golfer Payne Stewart dies in plane crash.",
+      "category": "Other"
+    },
+    {
+      "year": 2007,
+      "title": "Cristina Fernández de Kirchner elected President of Argentina.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Pittsburgh synagogue shooting results in 11 deaths.",
+      "category": "Other"
+    },
+    {
+      "year": 2022,
+      "title": "Rishi Sunak became the Prime Minister of the United Kingdom.",
+      "category": "Politics"
+    }
+  ]
+}
