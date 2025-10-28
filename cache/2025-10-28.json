@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "印尼入侵东帝汶，开始长期占领",
+      "category": "政治"
+    },
+    {
+      "year": 1982,
+      "title": "西班牙工人社会党在大选中获胜",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国国家债务首次突破2万亿美元",
+      "category": "经济"
+    },
+    {
+      "year": 1995,
+      "title": "阿塞拜疆首都巴库地铁发生火灾",
+      "category": "灾害"
+    },
+    {
+      "year": 2009,
+      "title": "NASA成功发射战神五号火箭进行测试",
+      "category": "科技"
+    },
+    {
+      "year": 2013,
+      "title": "裘德·洛担任圣彼得堡冬宫博物馆大使",
+      "category": "文化"
+    },
+    {
+      "year": 2018,
+      "title": "匹兹堡生命之树犹太教堂发生枪击案",
+      "category": "其他"
+    },
+    {
+      "year": 2023,
+      "title": "泰勒·斯威夫特打破演唱会票房纪录",
+      "category": "文化"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Syrian forces entered Lebanon amidst the Lebanese Civil War.",
+      "category": "Politics"
+    },
+    {
+      "year": 1982,
+      "title": "Spain held its first general election after Franco's dictatorship.",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "The US Senate officially designated November as National Alzheimer's Disease Awareness Month.",
+      "category": "Other"
+    },
+    {
+      "year": 1995,
+      "title": "Azerbaijan adopted its new constitution via a national referendum.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "Yuri Gagarin Cosmonaut Training Center was honored with the Order of Friendship.",
+      "category": "Other"
+    },
+    {
+      "year": 2005,
+      "title": "Lisa Leslie became the first player to dunk in a WNBA game.",
+      "category": "Sports"
+    },
+    {
+      "year": 2013,
+      "title": "Judas Priest guitarist Richie Faulkner replaced K.K. Downing.",
+      "category": "Culture"
+    },
+    {
+      "year": 2018,
+      "title": "Jair Bolsonaro was elected President of Brazil.",
+      "category": "Politics"
+    },
+    {
+      "year": 2022,
+      "title": "Elon Musk officially acquired Twitter for $44 billion.",
+      "category": "Economy"
+    }
+  ]
+}
