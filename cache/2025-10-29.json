@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1980,
+      "title": "意大利发生强烈地震，造成数千人死亡",
+      "category": "灾害"
+    },
+    {
+      "year": 1983,
+      "title": "土耳其首次举行多党选举",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "约旦与以色列签署和平条约",
+      "category": "政治"
+    },
+    {
+      "year": 1998,
+      "title": "格伦研究中心发现冰月球上有水",
+      "category": "科技"
+    },
+    {
+      "year": 2004,
+      "title": "欧盟签署宪法条约",
+      "category": "政治"
+    },
+    {
+      "year": 2012,
+      "title": "迪士尼收购卢卡斯影业，星战系列易主",
+      "category": "文化"
+    },
+    {
+      "year": 2015,
+      "title": "中国宣布全面实施二孩政策",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "印尼狮航JT610航班坠毁",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Pink Floyd released \"Wish You Were Here.\"",
+      "category": "Culture"
+    },
+    {
+      "year": 1985,
+      "title": "The Soviet Union extends its unilateral moratorium on nuclear testing.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "Jordan and Israel signed a peace treaty.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Wilma made landfall in Florida.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2008,
+      "title": "Dow Jones suffered its then-largest one-day point drop.",
+      "category": "Economy"
+    },
+    {
+      "year": 2012,
+      "title": "Disney acquired Lucasfilm for $4.05 billion.",
+      "category": "Other"
+    },
+    {
+      "year": 2013,
+      "title": "The Marmaray rail line under the Bosphorus opened.",
+      "category": "Technology"
+    },
+    {
+      "year": 2015,
+      "title": "China ended its one-child policy.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Lion Air Flight 610 crashed in Indonesia.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2023,
+      "title": "COP28 President named amidst controversy.",
+      "category": "Politics"
+    }
+  ]
+}
