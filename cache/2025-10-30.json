@@ -1,0 +1,81 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "西班牙胡安·卡洛斯一世登基",
+      "category": "政治"
+    },
+    {
+      "year": 1980,
+      "title": "萨尔瓦多内战爆发",
+      "category": "政治"
+    },
+    {
+      "year": 1988,
+      "title": "美国总统里根否决民权法案",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "魁北克独立公投失败",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "美国“深水地平线”钻井平台发生爆炸",
+      "category": "灾害"
+    },
+    {
+      "year": 2014,
+      "title": "瑞典承认巴勒斯坦国",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "卡塔尔多哈世乒联男子总决赛落幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Prince Juan Carlos became acting head of state of Spain.",
+      "category": "Politics"
+    },
+    {
+      "year": 1980,
+      "title": "El Salvador and Honduras signed a peace treaty ending their border conflict.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Space Shuttle Challenger STS-61-A launched, carrying Spacelab D-1.",
+      "category": "Technology"
+    },
+    {
+      "year": 1995,
+      "title": "Quebec referendum on sovereignty narrowly rejected independence.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Hurricane Wilma made landfall in Florida as a Category 3 storm.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2010,
+      "title": "Myanmar adopted a new national flag and name change to Republic of the Union of Myanmar.",
+      "category": "Politics"
+    },
+    {
+      "year": 2015,
+      "title": "Colectiv nightclub fire in Bucharest killed 64, leading to government protests.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2020,
+      "title": "NASA's OSIRIS-REx spacecraft successfully touched down on asteroid Bennu.",
+      "category": "Technology"
+    }
+  ]
+}
