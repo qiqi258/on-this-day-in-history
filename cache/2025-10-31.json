@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1984,
+      "title": "印度总理英迪拉·甘地遇刺身亡",
+      "category": "政治"
+    },
+    {
+      "year": 1999,
+      "title": "埃及航空990号班机坠毁，217人遇难",
+      "category": "灾害"
+    },
+    {
+      "year": 2000,
+      "title": "联盟TM-31发射，首批长期国际空间站居民",
+      "category": "科技"
+    },
+    {
+      "year": 2003,
+      "title": "马来西亚总理马哈蒂尔·穆罕默德卸任",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "西蒙与舒斯特出版社出版《哈利·波特与混血王子》",
+      "category": "文化"
+    },
+    {
+      "year": 2011,
+      "title": "世界人口达到70亿",
+      "category": "其他"
+    },
+    {
+      "year": 2015,
+      "title": "俄罗斯科加雷姆航空9268号班机坠毁",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "沙特阿拉伯授予机器人索菲亚公民身份",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1984,
+      "title": "Indian Prime Minister Indira Gandhi assassinated by her bodyguards.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "The U.S. Congress passed the Uruguay Round Agreements Act, implementing GATT.",
+      "category": "Economy"
+    },
+    {
+      "year": 1999,
+      "title": "EgyptAir Flight 990 crashed into the Atlantic Ocean, killing all 217 on board.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2000,
+      "title": "Soyuz TM-31 launched, beginning permanent human presence on the ISS.",
+      "category": "Technology"
+    },
+    {
+      "year": 2003,
+      "title": "Malaysia's Mahathir Mohamad retired after 22 years as Prime Minister.",
+      "category": "Politics"
+    },
+    {
+      "year": 2011,
+      "title": "The world population reached 7 billion.",
+      "category": "Other"
+    },
+    {
+      "year": 2015,
+      "title": "Metrojet Flight 9268 crashed in Sinai Peninsula, killing all 224 aboard.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2017,
+      "title": "Man Booker Prize awarded to George Saunders for \"Lincoln in the Bardo\".",
+      "category": "Culture"
+    }
+  ]
+}
