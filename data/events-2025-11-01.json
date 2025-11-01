@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "玻利维亚发生军事政变",
+      "category": "政治"
+    },
+    {
+      "year": 1981,
+      "title": "安提瓜和巴布达宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国电影分级制度更新",
+      "category": "文化"
+    },
+    {
+      "year": 1993,
+      "title": "欧洲联盟正式成立",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "北美自由贸易协定生效",
+      "category": "经济"
+    },
+    {
+      "year": 2006,
+      "title": "中国青藏铁路全线贯通",
+      "category": "其他"
+    },
+    {
+      "year": 2011,
+      "title": "世界人口达到70亿",
+      "category": "其他"
+    },
+    {
+      "year": 2012,
+      "title": "飓风桑迪袭击美国东海岸",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Bolivia's President Walter Guevara was overthrown in a coup.",
+      "category": "Politics"
+    },
+    {
+      "year": 1984,
+      "title": "Hurricane Klaus formed in the Atlantic Ocean.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1985,
+      "title": "The film \"Witness\" was released in the US.",
+      "category": "Culture"
+    },
+    {
+      "year": 1993,
+      "title": "The Maastricht Treaty came into effect, formally establishing the European Union.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "North American Free Trade Agreement (NAFTA) came into effect.",
+      "category": "Economy"
+    },
+    {
+      "year": 2000,
+      "title": "Final crew entered the International Space Station.",
+      "category": "Technology"
+    },
+    {
+      "year": 2005,
+      "title": "Ellen Johnson Sirleaf won Liberia's presidential election.",
+      "category": "Politics"
+    },
+    {
+      "year": 2012,
+      "title": "Hurricane Sandy caused extensive damage in the Northeastern US.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2014,
+      "title": "Lewis Hamilton won the United States Grand Prix.",
+      "category": "Sports"
+    },
+    {
+      "year": 2022,
+      "title": "COP27 UN Climate Change Conference began in Egypt.",
+      "category": "Politics"
+    }
+  ]
+}
