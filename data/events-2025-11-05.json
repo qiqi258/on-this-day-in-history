@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "澳大利亚惠特拉姆政府被总督解职",
+      "category": "政治"
+    },
+    {
+      "year": 1986,
+      "title": "伊朗门事件丑闻公开，里根政府受质疑",
+      "category": "政治"
+    },
+    {
+      "year": 1990,
+      "title": "玛丽·罗宾逊当选爱尔兰首位女总统",
+      "category": "政治"
+    },
+    {
+      "year": 1996,
+      "title": "比尔·克林顿成功连任美国总统",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "萨达姆·侯赛因被判处绞刑",
+      "category": "政治"
+    },
+    {
+      "year": 2007,
+      "title": "中国嫦娥一号成功进入月球轨道",
+      "category": "科技"
+    },
+    {
+      "year": 2015,
+      "title": "巴西米纳斯吉拉斯州发生水坝溃坝事故",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "天堂文件泄露，揭露大规模避税行为",
+      "category": "经济"
+    },
+    {
+      "year": 2023,
+      "title": "印度空间研究组织成功发射月船3号",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Lynette Fromme, a follower of Charles Manson, sentenced to life.",
+      "category": "Other"
+    },
+    {
+      "year": 1986,
+      "title": "Iran-Contra affair: Al-Shiraa magazine reports U.S. arms sales to Iran.",
+      "category": "Politics"
+    },
+    {
+      "year": 1990,
+      "title": "Mary Robinson elected as Ireland's first female president.",
+      "category": "Politics"
+    },
+    {
+      "year": 1996,
+      "title": "Bill Clinton re-elected as U.S. President.",
+      "category": "Politics"
+    },
+    {
+      "year": 2007,
+      "title": "Google unveils the Android mobile operating system.",
+      "category": "Technology"
+    },
+    {
+      "year": 2009,
+      "title": "Major flooding occurs in Jeddah, Saudi Arabia, killing over 100.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2017,
+      "title": "Paradise Papers, leaked documents about offshore investments, released.",
+      "category": "Economy"
+    },
+    {
+      "year": 2018,
+      "title": "One World Trade Center officially opens in New York City.",
+      "category": "Other"
+    },
+    {
+      "year": 2020,
+      "title": "Joe Biden defeats Donald Trump in US presidential election.",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "Taylor Swift's \"1989 (Taylor's Version)\" album released.",
+      "category": "Culture"
+    }
+  ]
+}
