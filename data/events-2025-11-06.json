@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1977,
+      "title": "苏联宪法正式生效，巩固勃列日涅夫时代。",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "哥伦比亚游击队攻占司法宫，引发大规模冲突。",
+      "category": "其他"
+    },
+    {
+      "year": 1990,
+      "title": "玛丽·罗宾逊当选爱尔兰首位女总统。",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "最后一批科威特油井大火被扑灭。",
+      "category": "灾害"
+    },
+    {
+      "year": 1999,
+      "title": "澳大利亚举行共和制公投，结果为维持君主制。",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "埃尔顿·约翰与大卫·弗尼什正式举行民事结合。",
+      "category": "文化"
+    },
+    {
+      "year": 2012,
+      "title": "美国科罗拉多州和华盛顿州投票通过大麻合法化。",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "美国中期选举，民主党重掌众议院控制权。",
+      "category": "政治"
+    },
+    {
+      "year": 2020,
+      "title": "美国总统大选持续计票，结果悬而未决。",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "印度成功发射首个太阳探测器“太阳神L1”。",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Sex Pistols played their first gig.",
+      "category": "Culture"
+    },
+    {
+      "year": 1985,
+      "title": "M56 motorway crash killed 127 people in England.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1990,
+      "title": "Violeta Barrios de Chamorro won Nicaraguan election.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "NASDAQ passed the 2,000 mark for the first time.",
+      "category": "Economy"
+    },
+    {
+      "year": 2005,
+      "title": "Angela Merkel sworn in as Germany's first female chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2012,
+      "title": "Tammy Baldwin becomes first openly gay US Senator.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "Midterm elections saw Democratic gains in the US House.",
+      "category": "Politics"
+    },
+    {
+      "year": 2020,
+      "title": "US officially withdraws from Paris Agreement.",
+      "category": "Politics"
+    }
+  ]
+}
