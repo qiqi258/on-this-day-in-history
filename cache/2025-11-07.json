@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "孟加拉国发生军事政变，齐亚·拉赫曼上台",
+      "category": "政治"
+    },
+    {
+      "year": 1987,
+      "title": "突尼斯总统布尔吉巴被总理本·阿里推翻",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "NBA球星魔术师约翰逊宣布感染艾滋病毒",
+      "category": "体育"
+    },
+    {
+      "year": 1996,
+      "title": "美国火星全球勘测者号发射升空",
+      "category": "科技"
+    },
+    {
+      "year": 2000,
+      "title": "美国总统大选戈尔和小布什争议持续",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "法国宣布进入紧急状态，应对骚乱",
+      "category": "政治"
+    },
+    {
+      "year": 2011,
+      "title": "俄罗斯联盟TMA-22载人飞船发射升空",
+      "category": "科技"
+    },
+    {
+      "year": 2018,
+      "title": "美国对伊朗实施新一轮经济制裁",
+      "category": "经济"
+    },
+    {
+      "year": 2023,
+      "title": "OpenAI开发者大会发布GPT-4 Turbo",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Bangladesh coup aftermath: Khaled Mosharraf ousted",
+      "category": "Politics"
+    },
+    {
+      "year": 1987,
+      "title": "Singapore's MRT (Mass Rapid Transit) system opened",
+      "category": "Technology"
+    },
+    {
+      "year": 1991,
+      "title": "Magic Johnson announced his HIV-positive status",
+      "category": "Sports"
+    },
+    {
+      "year": 1996,
+      "title": "NASA launched Mars Global Surveyor",
+      "category": "Technology"
+    },
+    {
+      "year": 2000,
+      "title": "Hillary Clinton elected to the U.S. Senate",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Ellen Johnson Sirleaf elected President of Liberia",
+      "category": "Politics"
+    },
+    {
+      "year": 2011,
+      "title": "Real Madrid defeated Osasuna with a 7-1 score",
+      "category": "Sports"
+    },
+    {
+      "year": 2014,
+      "title": "One World Trade Center officially opened",
+      "category": "Other"
+    },
+    {
+      "year": 2018,
+      "title": "California wildfires intensified, devastating communities",
+      "category": "Disaster"
+    },
+    {
+      "year": 2020,
+      "title": "Joe Biden declared winner of the US presidential election",
+      "category": "Politics"
+    }
+  ]
+}
