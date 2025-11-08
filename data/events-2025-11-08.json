@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1983,
+      "title": "美国入侵格林纳达",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "超级马里奥兄弟在日本发售",
+      "category": "文化"
+    },
+    {
+      "year": 1990,
+      "title": "玛丽·罗宾逊当选爱尔兰总统",
+      "category": "政治"
+    },
+    {
+      "year": 1998,
+      "title": "瑞士信贷收购美国信孚银行",
+      "category": "经济"
+    },
+    {
+      "year": 2005,
+      "title": "安吉拉·默克尔就任德国总理",
+      "category": "政治"
+    },
+    {
+      "year": 2011,
+      "title": "行星科学深空探测器黎明号抵达灶神星",
+      "category": "科技"
+    },
+    {
+      "year": 2013,
+      "title": "台风海燕重创菲律宾",
+      "category": "灾害"
+    },
+    {
+      "year": 2016,
+      "title": "特朗普当选美国总统",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "Greece discovers the Vergina Royal Tombs.",
+      "category": "Culture"
+    },
+    {
+      "year": 1985,
+      "title": "Nintendo releases the Nintendo Entertainment System in North America.",
+      "category": "Technology"
+    },
+    {
+      "year": 1990,
+      "title": "Mary Robinson elected as the first female President of Ireland.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "UBS and SBC merge to form UBS AG.",
+      "category": "Economy"
+    },
+    {
+      "year": 2003,
+      "title": "NASA's Swift Gamma-Ray Burst Explorer launched.",
+      "category": "Technology"
+    },
+    {
+      "year": 2005,
+      "title": "Ellen Johnson Sirleaf elected President of Liberia.",
+      "category": "Politics"
+    },
+    {
+      "year": 2011,
+      "title": "The asteroid 2005 YU55 passes within lunar orbit of Earth.",
+      "category": "Other"
+    },
+    {
+      "year": 2016,
+      "title": "Donald Trump is elected as the 45th President of the United States.",
+      "category": "Politics"
+    }
+  ]
+}
