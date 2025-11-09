@@ -1,0 +1,81 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "伊朗人质危机爆发，美国大使馆被占领",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "加里·卡斯帕罗夫成为最年轻的世界国际象棋冠军",
+      "category": "体育"
+    },
+    {
+      "year": 1989,
+      "title": "柏林墙倒塌，东西德统一进程加速",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "德国化学家乔治·奥拉因诺贝尔化学奖",
+      "category": "科技"
+    },
+    {
+      "year": 2005,
+      "title": "欧洲首颗金星探测卫星“金星快车”发射",
+      "category": "科技"
+    },
+    {
+      "year": 2016,
+      "title": "特朗普当选美国第45任总统",
+      "category": "政治"
+    },
+    {
+      "year": 2024,
+      "title": "印度空间研究组织成功发射月船4号",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Nuclear war early warning incident at NORAD",
+      "category": "Other"
+    },
+    {
+      "year": 1985,
+      "title": "Garry Kasparov becomes youngest World Chess Champion",
+      "category": "Sports"
+    },
+    {
+      "year": 1989,
+      "title": "Fall of the Berlin Wall began",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "Bridge over the Neretva River in Mostar destroyed",
+      "category": "Other"
+    },
+    {
+      "year": 1994,
+      "title": "Linus Torvalds released Linux 1.0.",
+      "category": "Technology"
+    },
+    {
+      "year": 2005,
+      "title": "Paris declared a state of emergency due to riots.",
+      "category": "Politics"
+    },
+    {
+      "year": 2016,
+      "title": "Donald Trump elected as 45th US President",
+      "category": "Politics"
+    },
+    {
+      "year": 2023,
+      "title": "BRICS New Development Bank admitted new members.",
+      "category": "Economy"
+    }
+  ]
+}
