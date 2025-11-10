@@ -1,0 +1,81 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "联合国通过决议，谴责锡安主义",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "微软发布Windows 1.0操作系统",
+      "category": "科技"
+    },
+    {
+      "year": 1985,
+      "title": "电影《回到未来》美国上映",
+      "category": "文化"
+    },
+    {
+      "year": 1989,
+      "title": "保加利亚领导人日夫科夫下台",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "尼日利亚军政府处决肯·萨罗-维瓦",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "舒马赫宣布正式退役",
+      "category": "体育"
+    },
+    {
+      "year": 2019,
+      "title": "玻利维亚总统莫拉莱斯辞职",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "United Nations General Assembly equated Zionism with racism.",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "Microsoft Word was first released.",
+      "category": "Technology"
+    },
+    {
+      "year": 1985,
+      "title": "Volcano Nevado del Ruiz eruption triggered deadly mudflows in Colombia.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1990,
+      "title": "Mary Robinson elected as first female President of Ireland.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "Bill Clinton approved North American Free Trade Agreement (NAFTA).",
+      "category": "Economy"
+    },
+    {
+      "year": 2005,
+      "title": "Angela Merkel became Germany's first female Chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2016,
+      "title": "Donald Trump elected as 45th President of the United States.",
+      "category": "Politics"
+    },
+    {
+      "year": 2019,
+      "title": "Evo Morales resigned as President of Bolivia amidst protests.",
+      "category": "Politics"
+    }
+  ]
+}
