@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "安哥拉宣布独立，结束葡萄牙殖民统治",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "比尔·盖茨发布Windows 1.0",
+      "category": "科技"
+    },
+    {
+      "year": 1990,
+      "title": "华沙条约组织宣布解散",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "涅瓦尔·曼德拉获得诺贝尔和平奖",
+      "category": "政治"
+    },
+    {
+      "year": 2000,
+      "title": "奥地利卡普伦缆车火灾，155人遇难",
+      "category": "灾害"
+    },
+    {
+      "year": 2004,
+      "title": "阿拉法特逝世，巴以和平进程受阻",
+      "category": "政治"
+    },
+    {
+      "year": 2011,
+      "title": "意大利总理贝卢斯科尼辞职",
+      "category": "政治"
+    },
+    {
+      "year": 2012,
+      "title": "叙利亚内战持续，人道主义危机加剧",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "第一次世界大战停战一百周年纪念",
+      "category": "其他"
+    },
+    {
+      "year": 2022,
+      "title": "FTX交易所破产，加密货币市场动荡",
+      "category": "经济"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Angola declared independence from Portugal.",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "Student protests against military rule in Chile.",
+      "category": "Politics"
+    },
+    {
+      "year": 1990,
+      "title": "Tim Berners-Lee began working on the World Wide Web.",
+      "category": "Technology"
+    },
+    {
+      "year": 1992,
+      "title": "England defeated Pakistan to win the Cricket World Cup.",
+      "category": "Sports"
+    },
+    {
+      "year": 1999,
+      "title": "The UN Population reached 6 Billion.",
+      "category": "Other"
+    },
+    {
+      "year": 2004,
+      "title": "Yasser Arafat, leader of the PLO, died in Paris.",
+      "category": "Politics"
+    },
+    {
+      "year": 2008,
+      "title": "Global financial crisis continued with stock market declines.",
+      "category": "Economy"
+    },
+    {
+      "year": 2011,
+      "title": "Italy faced severe debt crisis amidst Eurozone turmoil.",
+      "category": "Economy"
+    },
+    {
+      "year": 2012,
+      "title": "Myanmar's government allowed newspapers to publish daily for the first time in decades.",
+      "category": "Politics"
+    },
+    {
+      "year": 2018,
+      "title": "California's Camp Fire became the deadliest and most destructive wildfire in the state's history.",
+      "category": "Disaster"
+    }
+  ]
+}
