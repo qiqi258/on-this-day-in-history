@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "伊朗人质危机爆发，美国大使馆被占领",
+      "category": "政治"
+    },
+    {
+      "year": 1980,
+      "title": "美国航天局旅行者一号飞船掠过土星",
+      "category": "科技"
+    },
+    {
+      "year": 1985,
+      "title": "哥伦比亚内瓦多·德·鲁伊斯火山爆发，数万人死亡",
+      "category": "灾害"
+    },
+    {
+      "year": 1990,
+      "title": "日本明仁天皇即位大典",
+      "category": "政治"
+    },
+    {
+      "year": 1996,
+      "title": "沙特阿拉伯航空763号班机空难，349人遇难",
+      "category": "灾害"
+    },
+    {
+      "year": 2003,
+      "title": "上海磁悬浮示范运营线正式开通",
+      "category": "科技"
+    },
+    {
+      "year": 2011,
+      "title": "意大利总理贝卢斯科尼辞职",
+      "category": "政治"
+    },
+    {
+      "year": 2015,
+      "title": "巴黎发生恐怖袭击，造成重大伤亡",
+      "category": "其他"
+    },
+    {
+      "year": 2022,
+      "title": "卡塔尔世界杯足球赛开幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Iran hostage crisis began with the US embassy takeover.",
+      "category": "Politics"
+    },
+    {
+      "year": 1981,
+      "title": "Space Shuttle Columbia's second mission launched.",
+      "category": "Technology"
+    },
+    {
+      "year": 1982,
+      "title": "Lech Walesa, Solidarity leader, released from internment in Poland.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "MS Braer Erupts",
+      "category": "Disaster"
+    },
+    {
+      "year": 1990,
+      "title": "Tim Berners-Lee formally proposed the World Wide Web.",
+      "category": "Technology"
+    },
+    {
+      "year": 1991,
+      "title": "East Timor massacre in Santa Cruz cemetery.",
+      "category": "Politics"
+    },
+    {
+      "year": 2001,
+      "title": "China officially joined the World Trade Organization (WTO).",
+      "category": "Economy"
+    },
+    {
+      "year": 2003,
+      "title": "Shanghai Transrapid, first commercial maglev line, opened.",
+      "category": "Technology"
+    },
+    {
+      "year": 2009,
+      "title": "World population reached 6.8 billion.",
+      "category": "Other"
+    },
+    {
+      "year": 2014,
+      "title": "Rosetta lander Philae successfully landed on comet 67P.",
+      "category": "Technology"
+    }
+  ]
+}
