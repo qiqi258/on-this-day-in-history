@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1985,
+      "title": "哥伦比亚火山爆发，造成数万人死亡",
+      "category": "灾害"
+    },
+    {
+      "year": 1990,
+      "title": "万维网（World Wide Web）诞生",
+      "category": "科技"
+    },
+    {
+      "year": 1991,
+      "title": "苏联解体进程加速：俄罗斯总统叶利钦颁布法令，禁止俄罗斯共产党活动",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "瑞典全民公决加入欧盟",
+      "category": "政治"
+    },
+    {
+      "year": 2001,
+      "title": "卡塔尔多哈回合谈判启动，聚焦全球贸易",
+      "category": "经济"
+    },
+    {
+      "year": 2015,
+      "title": "巴黎发生系列恐怖袭击，造成重大伤亡",
+      "category": "其他"
+    },
+    {
+      "year": 2016,
+      "title": "特朗普当选美国总统",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "OpenAI 发布 GPT-4 Turbo 模型",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "WHO declared smallpox eradicated in Asia.",
+      "category": "Other"
+    },
+    {
+      "year": 1982,
+      "title": "Dedication of the Vietnam Veterans Memorial in Washington, D.C.",
+      "category": "Culture"
+    },
+    {
+      "year": 1985,
+      "title": "Volcanic eruption of Nevado del Ruiz kills over 23,000 in Colombia.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1990,
+      "title": "First website created by Tim Berners-Lee.",
+      "category": "Technology"
+    },
+    {
+      "year": 1992,
+      "title": "Germany introduced stricter asylum laws.",
+      "category": "Politics"
+    },
+    {
+      "year": 1997,
+      "title": "The Dow Jones Industrial Average closes above 8,000 for the first time.",
+      "category": "Economy"
+    },
+    {
+      "year": 2002,
+      "title": "Iraq disarmament crisis: Iraq agrees to the terms of Resolution 1441.",
+      "category": "Politics"
+    },
+    {
+      "year": 2015,
+      "title": "Paris terrorist attacks killed 130 people.",
+      "category": "Other"
+    },
+    {
+      "year": 2020,
+      "title": "US surpasses 11 million confirmed COVID-19 cases.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2022,
+      "title": "FIFA World Cup begins in Qatar.",
+      "category": "Sports"
+    }
+  ]
+}
