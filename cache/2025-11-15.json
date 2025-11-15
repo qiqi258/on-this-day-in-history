@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "六国峰会在法国朗布依埃举行",
+      "category": "政治"
+    },
+    {
+      "year": 1983,
+      "title": "土耳其共和国塞浦路斯北部成立",
+      "category": "政治"
+    },
+    {
+      "year": 1988,
+      "title": "巴解组织宣布接受联合国242号决议",
+      "category": "政治"
+    },
+    {
+      "year": 1990,
+      "title": "苏联礼炮七号空间站坠毁",
+      "category": "科技"
+    },
+    {
+      "year": 1996,
+      "title": "中国成功发射东方红三号卫星",
+      "category": "科技"
+    },
+    {
+      "year": 2000,
+      "title": "越南股市胡志明指数正式启动",
+      "category": "经济"
+    },
+    {
+      "year": 2003,
+      "title": "卡西尼-惠更斯号探测器抵达土星轨道",
+      "category": "科技"
+    },
+    {
+      "year": 2017,
+      "title": "佳士得拍卖行售出达芬奇《救世主》",
+      "category": "文化"
+    },
+    {
+      "year": 2022,
+      "title": "印尼G20峰会在巴厘岛开幕",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Bangladesh coup: Khondaker Mostaq Ahmad becomes president.",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "Turkish Republic of Northern Cyprus declared independence.",
+      "category": "Politics"
+    },
+    {
+      "year": 1988,
+      "title": "PLO recognized Israel's right to exist.",
+      "category": "Politics"
+    },
+    {
+      "year": 1990,
+      "title": "Space Shuttle Atlantis (STS-38) launched on a classified military mission.",
+      "category": "Technology"
+    },
+    {
+      "year": 1996,
+      "title": "Final report on the collapse of Barings Bank released.",
+      "category": "Economy"
+    },
+    {
+      "year": 2003,
+      "title": "The Concorde made its final commercial flight.",
+      "category": "Other"
+    },
+    {
+      "year": 2017,
+      "title": "Sale of Leonardo da Vinci's Salvator Mundi for $450.3 million.",
+      "category": "Culture"
+    },
+    {
+      "year": 2023,
+      "title": "Australia defeated India to win the Cricket World Cup.",
+      "category": "Sports"
+    }
+  ]
+}
