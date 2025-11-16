@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "安哥拉宣布独立，结束葡萄牙殖民统治",
+      "category": "政治"
+    },
+    {
+      "year": 1988,
+      "title": "贝·布托成为巴基斯坦首位女总理",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "联合国教科文组织通过《宽容原则宣言》",
+      "category": "文化"
+    },
+    {
+      "year": 2000,
+      "title": "克林顿成为首位访问越南的美国总统",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "上海磁悬浮列车正式开始商业运营",
+      "category": "科技"
+    },
+    {
+      "year": 2012,
+      "title": "中国共产党第十八次全国代表大会闭幕",
+      "category": "政治"
+    },
+    {
+      "year": 2013,
+      "title": "叙利亚化学武器核查工作正式启动",
+      "category": "政治"
+    },
+    {
+      "year": 2017,
+      "title": "沙特阿拉伯主导的反腐风暴展开",
+      "category": "政治"
+    },
+    {
+      "year": 2020,
+      "title": "SpaceX猎鹰9号成功发射载人龙飞船",
+      "category": "科技"
+    },
+    {
+      "year": 2022,
+      "title": "美国国家航空航天局的阿尔忒弥斯1号发射",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Argentina's Videla regime initiated \"National Reorganization Process.\"",
+      "category": "Politics"
+    },
+    {
+      "year": 1986,
+      "title": "NFL's Doug Flutie threw a \"Hail Flutie\" pass to beat Miami.",
+      "category": "Sports"
+    },
+    {
+      "year": 1988,
+      "title": "Benazir Bhutto elected Prime Minister of Pakistan.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "Disney's \"Toy Story\" was released in theaters.",
+      "category": "Culture"
+    },
+    {
+      "year": 1996,
+      "title": "Mother Teresa received honorary U.S. citizenship.",
+      "category": "Other"
+    },
+    {
+      "year": 2003,
+      "title": "Saudi Arabia's al-Qaeda branch bombed a residential compound in Riyadh.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2009,
+      "title": "The Dow Jones Industrial Average closed above 10,000 for the first time since October 2008.",
+      "category": "Economy"
+    },
+    {
+      "year": 2012,
+      "title": "Xi Jinping appointed General Secretary of the Communist Party of China.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "NASA successfully tested its Low-Density Supersonic Decelerator (LDSD).",
+      "category": "Technology"
+    },
+    {
+      "year": 2024,
+      "title": "Predicted date of the next US Presidential Election.",
+      "category": "Politics"
+    }
+  ]
+}
