@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "美国国会通过《能源税法》",
+      "category": "经济"
+    },
+    {
+      "year": 1985,
+      "title": "超级马里奥兄弟在北美发售",
+      "category": "文化"
+    },
+    {
+      "year": 1989,
+      "title": "捷克斯洛伐克发生天鹅绒革命",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "南非议会通过临时宪法",
+      "category": "政治"
+    },
+    {
+      "year": 1997,
+      "title": "卢克索袭击事件造成大量伤亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2003,
+      "title": "阿诺·施瓦辛格就任加州州长",
+      "category": "政治"
+    },
+    {
+      "year": 2006,
+      "title": "越南正式加入世界贸易组织",
+      "category": "经济"
+    },
+    {
+      "year": 2013,
+      "title": "卡塔尔埃米尔将王位传给儿子",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Bangladesh coup attempt failed; Khaled Mosharraf killed.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "Super Mario Bros. released in North America.",
+      "category": "Culture"
+    },
+    {
+      "year": 1993,
+      "title": "NAFTA approved by the U.S. House of Representatives.",
+      "category": "Politics"
+    },
+    {
+      "year": 1997,
+      "title": "Luxembourg becomes the first EU country to implement the euro.",
+      "category": "Economy"
+    },
+    {
+      "year": 2003,
+      "title": "Arnold Schwarzenegger sworn in as Governor of California.",
+      "category": "Politics"
+    },
+    {
+      "year": 2006,
+      "title": "PlayStation 3 was released in North America.",
+      "category": "Technology"
+    },
+    {
+      "year": 2013,
+      "title": "Tatarstan Boeing 737 crash kills 50 in Kazan, Russia.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2015,
+      "title": "The International Association of Athletics Federations suspended Russia.",
+      "category": "Sports"
+    },
+    {
+      "year": 2019,
+      "title": "First confirmed case of COVID-19 traced back to this date in China.",
+      "category": "Other"
+    }
+  ]
+}
