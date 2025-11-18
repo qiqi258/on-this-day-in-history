@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "伊朗爆发大规模反政府示威",
+      "category": "政治"
+    },
+    {
+      "year": 1987,
+      "title": "韩国大选，卢泰愚当选总统",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "南非多种族过渡委员会成立",
+      "category": "政治"
+    },
+    {
+      "year": 1999,
+      "title": "德州农工大学篝火倒塌，12人死亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2003,
+      "title": "美国马萨诸塞州同性婚姻合法化",
+      "category": "政治"
+    },
+    {
+      "year": 2009,
+      "title": "利比里亚通过新宪法修正案",
+      "category": "政治"
+    },
+    {
+      "year": 2013,
+      "title": "美国国家运输安全委员会成立",
+      "category": "其他"
+    },
+    {
+      "year": 2016,
+      "title": "巴黎圣母院管风琴大修完成",
+      "category": "文化"
+    },
+    {
+      "year": 2021,
+      "title": "詹姆斯·韦伯太空望远镜发射推迟",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Jonestown Massacre in Guyana: Over 900 died in mass suicide.",
+      "category": "Other"
+    },
+    {
+      "year": 1983,
+      "title": "Argentina's worst floods in history affected millions.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1987,
+      "title": "King's Cross fire in London killed 31 people.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1993,
+      "title": "NAFTA approved by the U.S. House of Representatives.",
+      "category": "Politics"
+    },
+    {
+      "year": 1999,
+      "title": "Texas A&M bonfire collapsed, killing 12 and injuring 27.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2003,
+      "title": "Massachusetts legalized same-sex marriage.",
+      "category": "Politics"
+    },
+    {
+      "year": 2009,
+      "title": "Detroit Pistons set NBA record for most consecutive losses.",
+      "category": "Sports"
+    },
+    {
+      "year": 2013,
+      "title": "Xbox One was released by Microsoft.",
+      "category": "Technology"
+    },
+    {
+      "year": 2019,
+      "title": "Protests and riots erupted in Chile amid social unrest.",
+      "category": "Politics"
+    },
+    {
+      "year": 2022,
+      "title": "The Artemis I mission launched successfully.",
+      "category": "Technology"
+    }
+  ]
+}
