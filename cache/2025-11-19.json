@@ -1,0 +1,101 @@
+{
+  "zh": [
+    {
+      "year": 1977,
+      "title": "埃及总统萨达特历史性访问以色列",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "日内瓦美苏首脑会议召开",
+      "category": "政治"
+    },
+    {
+      "year": 1990,
+      "title": "欧洲安全与合作组织巴黎宪章签署",
+      "category": "政治"
+    },
+    {
+      "year": 1998,
+      "title": "“奋进号”航天飞机STS-88任务发射",
+      "category": "科技"
+    },
+    {
+      "year": 2002,
+      "title": "希腊“埃尔卡号”油轮沉没，污染严重",
+      "category": "灾害"
+    },
+    {
+      "year": 2005,
+      "title": "美国国家橄榄球联盟（NFL）比赛取消",
+      "category": "体育"
+    },
+    {
+      "year": 2011,
+      "title": "尼日利亚发生汽车炸弹袭击事件",
+      "category": "其他"
+    },
+    {
+      "year": 2013,
+      "title": "欧盟与伊朗达成初步核协议",
+      "category": "政治"
+    },
+    {
+      "year": 2016,
+      "title": "“猎鹰9号”火箭成功发射",
+      "category": "科技"
+    },
+    {
+      "year": 2022,
+      "title": "卡塔尔世界杯开幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "Anwar Sadat became the first Arab leader to officially visit Israel.",
+      "category": "Politics"
+    },
+    {
+      "year": 1979,
+      "title": "Ayatollah Khomeini ordered the release of female and Black hostages in Iran.",
+      "category": "Politics"
+    },
+    {
+      "year": 1985,
+      "title": "President Reagan and Mikhail Gorbachev met in Geneva for the first time.",
+      "category": "Politics"
+    },
+    {
+      "year": 1988,
+      "title": "The \"Black Monday\" stock market crash affected global markets.",
+      "category": "Economy"
+    },
+    {
+      "year": 1990,
+      "title": "The European Space Agency's Olympus satellite was launched.",
+      "category": "Technology"
+    },
+    {
+      "year": 1998,
+      "title": "Vincent van Gogh's \"Portrait of the Artist Without Beard\" sold for $71.5 million.",
+      "category": "Culture"
+    },
+    {
+      "year": 2005,
+      "title": "The NCAA stripped USC of its 2004 national championship.",
+      "category": "Sports"
+    },
+    {
+      "year": 2013,
+      "title": "A double suicide bombing near the Iranian embassy in Beirut killed 23.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2016,
+      "title": "The final episode of the TV show \"Gilmore Girls: A Year in the Life\" aired on Netflix.",
+      "category": "Culture"
+    }
+  ]
+}
