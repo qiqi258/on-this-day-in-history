@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "西班牙独裁者弗朗西斯科·佛朗哥去世",
+      "category": "政治"
+    },
+    {
+      "year": 1980,
+      "title": "中国首次发行金币",
+      "category": "经济"
+    },
+    {
+      "year": 1985,
+      "title": "微软Windows 1.0发布",
+      "category": "科技"
+    },
+    {
+      "year": 1994,
+      "title": "安哥拉内战签署《卢萨卡议定书》",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "土耳其伊斯坦布尔发生连环爆炸袭击",
+      "category": "灾害"
+    },
+    {
+      "year": 2011,
+      "title": "意大利总理贝卢斯科尼辞职",
+      "category": "政治"
+    },
+    {
+      "year": 2015,
+      "title": "马里丽笙酒店发生恐怖袭击",
+      "category": "其他"
+    },
+    {
+      "year": 2022,
+      "title": "卡塔尔世界杯开幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Spain's dictator Francisco Franco died.",
+      "category": "Politics"
+    },
+    {
+      "year": 1980,
+      "title": "Voyager 1 made its closest approach to Saturn.",
+      "category": "Technology"
+    },
+    {
+      "year": 1985,
+      "title": "Microsoft Windows 1.0 was released.",
+      "category": "Technology"
+    },
+    {
+      "year": 1994,
+      "title": "Angolan government and UNITA rebels signed the Lusaka Protocol.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "2000th anniversary of the founding of Jerusalem was celebrated",
+      "category": "Other"
+    },
+    {
+      "year": 2003,
+      "title": "Istanbul Bombings: British consulate attacked, killing 32.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2007,
+      "title": "Peruvian President Alan Garcia declared a state of emergency due to cold wave.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2011,
+      "title": "Mariano Rajoy won the Spanish general election.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "Robert Mueller investigated Russian interference in the 2016 United States elections.",
+      "category": "Politics"
+    },
+    {
+      "year": 2022,
+      "title": "FIFA World Cup began in Qatar.",
+      "category": "Sports"
+    }
+  ]
+}
