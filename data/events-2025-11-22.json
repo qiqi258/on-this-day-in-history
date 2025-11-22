@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "西班牙国王胡安·卡洛斯一世登基",
+      "category": "政治"
+    },
+    {
+      "year": 1986,
+      "title": "迈克·泰森成为最年轻重量级拳王",
+      "category": "体育"
+    },
+    {
+      "year": 1990,
+      "title": "撒切尔夫人辞去英国首相职务",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "迪士尼动画电影《玩具总动员》上映",
+      "category": "文化"
+    },
+    {
+      "year": 2005,
+      "title": "安格拉·默克尔就任德国总理",
+      "category": "政治"
+    },
+    {
+      "year": 2010,
+      "title": "柬埔寨金边踩踏事件致数百人死亡",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "国际空间站接收新型电池升级系统",
+      "category": "科技"
+    },
+    {
+      "year": 2022,
+      "title": "卡塔尔世界杯正式开幕",
+      "category": "体育"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Juan Carlos became King of Spain.",
+      "category": "Politics"
+    },
+    {
+      "year": 1986,
+      "title": "Mike Tyson became youngest heavyweight boxing champion.",
+      "category": "Sports"
+    },
+    {
+      "year": 1990,
+      "title": "Margaret Thatcher resigned as Prime Minister of the UK.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "Disney/Pixar's \"Toy Story\" released in US theaters.",
+      "category": "Culture"
+    },
+    {
+      "year": 2005,
+      "title": "Angela Merkel became Germany's first female Chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2010,
+      "title": "North Korea shelled Yeonpyeong Island, escalating tensions.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "International Renewable Energy Agency (IRENA) published report on global energy transition.",
+      "category": "Economy"
+    },
+    {
+      "year": 2022,
+      "title": "FIFA World Cup began in Qatar.",
+      "category": "Sports"
+    }
+  ]
+}
