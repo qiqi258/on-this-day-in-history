@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "土耳其航空452号班机空难，154人遇难",
+      "category": "灾害"
+    },
+    {
+      "year": 1980,
+      "title": "美国与伊朗达成释放人质协议，危机结束",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国歌手比尔·威瑟斯宣布退出歌坛",
+      "category": "文化"
+    },
+    {
+      "year": 1991,
+      "title": "弗雷迪·默丘里公开承认患有艾滋病",
+      "category": "其他"
+    },
+    {
+      "year": 1997,
+      "title": "中国首台自主研制超导托卡马克建成",
+      "category": "科技"
+    },
+    {
+      "year": 2002,
+      "title": "尼日利亚卡杜纳爆发骚乱，至少200人死亡",
+      "category": "其他"
+    },
+    {
+      "year": 2005,
+      "title": "安吉丽娜·朱莉与布拉德·皮特公开恋情",
+      "category": "文化"
+    },
+    {
+      "year": 2012,
+      "title": "孟加拉国塔兹雷恩制衣厂大火，117人丧生",
+      "category": "灾害"
+    },
+    {
+      "year": 2016,
+      "title": "哥伦比亚政府与反政府武装签署和平协议",
+      "category": "政治"
+    },
+    {
+      "year": 2022,
+      "title": "中国空间站全面建成",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Earthquake struck Turkey and killed thousands.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1985,
+      "title": "Achille Lauro hijackers convicted in Italy.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "Czechoslovakia's Communist Party leadership resigned.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Freddie Mercury, Queen's lead singer, died.",
+      "category": "Culture"
+    },
+    {
+      "year": 1992,
+      "title": "China Southern Airlines Flight 3943 crashed, killing 141.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1995,
+      "title": "Ireland voted to remove the constitutional ban on divorce.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Angela Merkel became Germany's first female chancellor.",
+      "category": "Politics"
+    },
+    {
+      "year": 2012,
+      "title": "Fire at garment factory in Bangladesh killed 117 people.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2019,
+      "title": "Lewis Hamilton won the Abu Dhabi Grand Prix.",
+      "category": "Sports"
+    },
+    {
+      "year": 2023,
+      "title": "Binance CEO Changpeng Zhao resigned after pleading guilty to violating U.S. anti-money-laundering laws.",
+      "category": "Economy"
+    }
+  ]
+}
