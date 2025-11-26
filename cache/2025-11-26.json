@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "新西兰航空901号班机在南极洲坠毁",
+      "category": "灾害"
+    },
+    {
+      "year": 1983,
+      "title": "布林克装甲车抢劫案在美国发生",
+      "category": "其他"
+    },
+    {
+      "year": 1985,
+      "title": "美国与欧洲航天局签署空间站合作协议",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "俄罗斯宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "印度教狂热分子拆毁阿约提亚清真寺",
+      "category": "其他"
+    },
+    {
+      "year": 1998,
+      "title": "托尼·布莱尔成为首位在爱尔兰议会发表演讲的英国首相",
+      "category": "政治"
+    },
+    {
+      "year": 2003,
+      "title": "协和飞机完成最后一次飞行",
+      "category": "科技"
+    },
+    {
+      "year": 2008,
+      "title": "孟买发生恐怖袭击事件",
+      "category": "灾害"
+    },
+    {
+      "year": 2011,
+      "title": "美国国家航空航天局发射好奇号火星车",
+      "category": "科技"
+    },
+    {
+      "year": 2019,
+      "title": "阿尔巴尼亚发生6.4级地震",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Air New Zealand Flight 901 crashed into Mount Erebus, Antarctica.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1983,
+      "title": "Brink's-MAT robbery occurred at Heathrow Airport.",
+      "category": "Other"
+    },
+    {
+      "year": 1990,
+      "title": "Margaret Thatcher resigned as Prime Minister of the UK.",
+      "category": "Politics"
+    },
+    {
+      "year": 1991,
+      "title": "Boris Yeltsin decreed the Communist Party illegal in Russia.",
+      "category": "Politics"
+    },
+    {
+      "year": 1998,
+      "title": "Tony Blair became the first serving British Prime Minister to address the Irish Parliament.",
+      "category": "Politics"
+    },
+    {
+      "year": 2003,
+      "title": "Concorde made its final flight.",
+      "category": "Technology"
+    },
+    {
+      "year": 2008,
+      "title": "Terrorist attacks in Mumbai, India began.",
+      "category": "Other"
+    },
+    {
+      "year": 2011,
+      "title": "NASA's Mars Science Laboratory (Curiosity rover) launched.",
+      "category": "Technology"
+    },
+    {
+      "year": 2019,
+      "title": "An earthquake struck Albania, killing dozens.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2024,
+      "title": "India successfully launched Chandrayaan-4, landing on the far side of the moon.",
+      "category": "Technology"
+    }
+  ]
+}
