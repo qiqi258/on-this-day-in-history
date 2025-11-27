@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "旧金山市长乔治·莫斯科尼遇刺身亡",
+      "category": "政治"
+    },
+    {
+      "year": 1985,
+      "title": "美国首次成功发射AT&T通信卫星",
+      "category": "科技"
+    },
+    {
+      "year": 1990,
+      "title": "约翰·麦克唐纳，加拿大首任总理逝世",
+      "category": "其他"
+    },
+    {
+      "year": 1992,
+      "title": "英国宣布女王伊丽莎白二世自愿纳税",
+      "category": "政治"
+    },
+    {
+      "year": 1997,
+      "title": "比尔·盖茨向宾夕法尼亚大学捐款2500万美元",
+      "category": "经济"
+    },
+    {
+      "year": 2002,
+      "title": "印度尼西亚发生里氏7.4级地震",
+      "category": "灾害"
+    },
+    {
+      "year": 2005,
+      "title": "法国宣布进入紧急状态应对郊区骚乱",
+      "category": "政治"
+    },
+    {
+      "year": 2011,
+      "title": "也门总统萨利赫同意下台",
+      "category": "政治"
+    },
+    {
+      "year": 2016,
+      "title": "菲德尔·卡斯特罗逝世",
+      "category": "政治"
+    },
+    {
+      "year": 2022,
+      "title": "毛伊岛山火造成重大伤亡",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Dan White guilty of manslaughter in Harvey Milk's death",
+      "category": "Politics"
+    },
+    {
+      "year": 1980,
+      "title": "Iranian Parliament approves conditions for release of US hostages",
+      "category": "Politics"
+    },
+    {
+      "year": 1983,
+      "title": "Avianca Flight 011 crashes near Madrid, killing 181",
+      "category": "Disaster"
+    },
+    {
+      "year": 1985,
+      "title": "U.S.S.R. acknowledges Chernobyl nuclear accident",
+      "category": "Other"
+    },
+    {
+      "year": 1990,
+      "title": "John Major succeeds Margaret Thatcher as UK Prime Minister",
+      "category": "Politics"
+    },
+    {
+      "year": 1992,
+      "title": "The Computer Fraud and Abuse Act is amended in the USA",
+      "category": "Technology"
+    },
+    {
+      "year": 1998,
+      "title": "Exxon and Mobil announce a $73.7 billion merger.",
+      "category": "Economy"
+    },
+    {
+      "year": 2002,
+      "title": "NATO invites Bulgaria, Estonia, Latvia, Lithuania, Romania, Slovakia, and Slovenia to join.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "France: Riots spread across France for the third week.",
+      "category": "Other"
+    },
+    {
+      "year": 2011,
+      "title": "Yemen's President Saleh agrees to step down after months of protests.",
+      "category": "Politics"
+    }
+  ]
+}
