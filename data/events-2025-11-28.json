@@ -1,0 +1,106 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "新西兰航空901号班机在南极洲撞山",
+      "category": "灾害"
+    },
+    {
+      "year": 1987,
+      "title": "大韩航空858号班机爆炸，115人遇难",
+      "category": "其他"
+    },
+    {
+      "year": 1990,
+      "title": "玛格丽特·撒切尔辞去英国首相职务",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "南奥塞梯宣布独立，格鲁吉亚内战爆发",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "挪威选民公投否决加入欧盟",
+      "category": "政治"
+    },
+    {
+      "year": 1999,
+      "title": "马来西亚举行第10届全国大选",
+      "category": "政治"
+    },
+    {
+      "year": 2002,
+      "title": "肯尼亚蒙巴萨天堂酒店遭恐怖袭击",
+      "category": "其他"
+    },
+    {
+      "year": 2005,
+      "title": "法国实施紧急状态应对郊区骚乱",
+      "category": "政治"
+    },
+    {
+      "year": 2016,
+      "title": "沙佩科恩斯足球队遭遇空难",
+      "category": "体育"
+    },
+    {
+      "year": 2022,
+      "title": "中国神舟十五号载人飞船发射成功",
+      "category": "科技"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Air New Zealand Flight 901 crashed into Mount Erebus, Antarctica.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1983,
+      "title": "Pope John Paul II began his visit to Thailand.",
+      "category": "Other"
+    },
+    {
+      "year": 1986,
+      "title": "Comedian Bill Cosby's \"The Cosby Show\" was a ratings hit.",
+      "category": "Culture"
+    },
+    {
+      "year": 1990,
+      "title": "Margaret Thatcher resigned as Prime Minister of the UK.",
+      "category": "Politics"
+    },
+    {
+      "year": 1994,
+      "title": "Norwegian voters rejected EU membership in a referendum.",
+      "category": "Politics"
+    },
+    {
+      "year": 2002,
+      "title": "Al-Qaeda claimed responsibility for the Mombasa attacks.",
+      "category": "Other"
+    },
+    {
+      "year": 2005,
+      "title": "Ellen MacArthur broke the world record for solo circumnavigation.",
+      "category": "Sports"
+    },
+    {
+      "year": 2009,
+      "title": "Swiss voters approved a ban on minarets.",
+      "category": "Politics"
+    },
+    {
+      "year": 2011,
+      "title": "Real Madrid defeated Atletico Madrid 4-1.",
+      "category": "Sports"
+    },
+    {
+      "year": 2016,
+      "title": "Cuban leader Fidel Castro died at age 90.",
+      "category": "Politics"
+    }
+  ]
+}
