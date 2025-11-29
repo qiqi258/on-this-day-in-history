@@ -1,0 +1,91 @@
+{
+  "zh": [
+    {
+      "year": 1975,
+      "title": "世界卫生组织宣布天花病毒被根除",
+      "category": "科技"
+    },
+    {
+      "year": 1987,
+      "title": "大韩航空858号班机爆炸事件",
+      "category": "灾害"
+    },
+    {
+      "year": 1990,
+      "title": "联合国安理会通过第678号决议，授权对伊拉克动武",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "德国联邦议院通过《基因技术法》",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "比尔·盖茨发布《未来之路》一书，预测互联网时代",
+      "category": "科技"
+    },
+    {
+      "year": 2005,
+      "title": "安吉拉·默克尔就任德国首位女总理",
+      "category": "政治"
+    },
+    {
+      "year": 2012,
+      "title": "联合国大会通过决议，承认巴勒斯坦为观察员国",
+      "category": "政治"
+    },
+    {
+      "year": 2016,
+      "title": "古巴革命领袖菲德尔·卡斯特罗逝世",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1975,
+      "title": "Bill Gates used the name \"Microsoft\" for the first time.",
+      "category": "Technology"
+    },
+    {
+      "year": 1982,
+      "title": "United Nations Convention on Law of the Sea adopted.",
+      "category": "Politics"
+    },
+    {
+      "year": 1986,
+      "title": "Wayne Gretzky scores his 500th NHL goal.",
+      "category": "Sports"
+    },
+    {
+      "year": 1990,
+      "title": "Gulf War: UN Security Council authorizes use of force if Iraq doesn't withdraw from Kuwait.",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "Elias James Corey wins Nobel Prize in Chemistry.",
+      "category": "Other"
+    },
+    {
+      "year": 2001,
+      "title": "George Harrison, lead guitarist of The Beatles, dies.",
+      "category": "Culture"
+    },
+    {
+      "year": 2010,
+      "title": "The United Nations Climate Change Conference begins in Cancun.",
+      "category": "Politics"
+    },
+    {
+      "year": 2016,
+      "title": "Chapecoense plane crash in Colombia kills 71 people.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2021,
+      "title": "Barbados becomes a parliamentary republic, replacing Queen Elizabeth as head of state.",
+      "category": "Politics"
+    }
+  ]
+}
