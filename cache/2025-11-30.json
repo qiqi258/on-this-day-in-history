@@ -1,0 +1,86 @@
+{
+  "zh": [
+    {
+      "year": 1979,
+      "title": "Pink Floyd乐队发行专辑《The Wall》",
+      "category": "文化"
+    },
+    {
+      "year": 1982,
+      "title": "迈克尔·杰克逊发行专辑《Thriller》",
+      "category": "文化"
+    },
+    {
+      "year": 1993,
+      "title": "德国议会决定迁都柏林",
+      "category": "政治"
+    },
+    {
+      "year": 1994,
+      "title": "挪威全民公投否决加入欧盟",
+      "category": "政治"
+    },
+    {
+      "year": 1999,
+      "title": "埃克森美孚正式合并",
+      "category": "经济"
+    },
+    {
+      "year": 2002,
+      "title": "土耳其对库尔德工人党实施大赦",
+      "category": "政治"
+    },
+    {
+      "year": 2009,
+      "title": "欧盟里斯本条约正式生效",
+      "category": "政治"
+    },
+    {
+      "year": 2018,
+      "title": "乔治·H·W·布什总统逝世",
+      "category": "其他"
+    }
+  ],
+  "en": [
+    {
+      "year": 1979,
+      "title": "Pink Floyd's \"The Wall\" album released.",
+      "category": "Culture"
+    },
+    {
+      "year": 1982,
+      "title": "Michael Jackson's \"Thriller\" album released.",
+      "category": "Culture"
+    },
+    {
+      "year": 1989,
+      "title": "René Moawad, Lebanon's president, assassinated.",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "Brady Bill, US gun control legislation, signed into law.",
+      "category": "Politics"
+    },
+    {
+      "year": 2001,
+      "title": "Enron collapsed, marking a major corporate scandal.",
+      "category": "Economy"
+    },
+    {
+      "year": 2005,
+      "title": "John Sentamu became the first black Archbishop of York.",
+      "category": "Other"
+    },
+    {
+      "year": 2008,
+      "title": "Mumbai Terror Attacks concluded after four days.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2018,
+      "title": "George H.W. Bush's state funeral held in Washington D.C.",
+      "category": "Other"
+    }
+  ]
+}
