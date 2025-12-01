@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1988,
+      "title": "世界艾滋病日设立，提高公众意识",
+      "category": "其他"
+    },
+    {
+      "year": 1990,
+      "title": "英法海底隧道贯通，连接欧洲大陆",
+      "category": "科技"
+    },
+    {
+      "year": 1991,
+      "title": "乌克兰全民公投宣布独立",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "欧洲经济区正式成立，促进贸易自由化",
+      "category": "经济"
+    },
+    {
+      "year": 1994,
+      "title": "墨西哥比索危机爆发，引发金融动荡",
+      "category": "经济"
+    },
+    {
+      "year": 2001,
+      "title": "《辛普森一家》成为美国电视史上最长动画",
+      "category": "文化"
+    },
+    {
+      "year": 2009,
+      "title": "葡萄牙正式批准《里斯本条约》生效",
+      "category": "政治"
+    },
+    {
+      "year": 2019,
+      "title": "中国武汉发现首例不明原因肺炎病例",
+      "category": "灾害"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Angola joined the United Nations.",
+      "category": "Politics"
+    },
+    {
+      "year": 1982,
+      "title": "Michael Jackson's Thriller was released.",
+      "category": "Culture"
+    },
+    {
+      "year": 1988,
+      "title": "World AIDS Day was first observed.",
+      "category": "Other"
+    },
+    {
+      "year": 1990,
+      "title": "Channel Tunnel construction breakthrough.",
+      "category": "Technology"
+    },
+    {
+      "year": 1991,
+      "title": "Ukraine voted for independence in a referendum.",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "NAFTA was ratified by the US House of Representatives.",
+      "category": "Economy"
+    },
+    {
+      "year": 1994,
+      "title": "PlayStation was released in Japan.",
+      "category": "Technology"
+    },
+    {
+      "year": 2001,
+      "title": "Enron filed for bankruptcy.",
+      "category": "Economy"
+    },
+    {
+      "year": 2004,
+      "title": "The World Bank launched the Stolen Asset Recovery Initiative (StAR).",
+      "category": "Politics"
+    },
+    {
+      "year": 2009,
+      "title": "Lisbon Treaty came into force in the European Union.",
+      "category": "Politics"
+    }
+  ]
+}
