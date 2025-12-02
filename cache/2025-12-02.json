@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "菲德尔·卡斯特罗就任古巴国务委员会主席",
+      "category": "政治"
+    },
+    {
+      "year": 1982,
+      "title": "巴尼·克拉克植入人工心脏",
+      "category": "科技"
+    },
+    {
+      "year": 1990,
+      "title": "东西德统一后首次大选",
+      "category": "政治"
+    },
+    {
+      "year": 1993,
+      "title": "哥伦比亚毒枭埃斯科巴被击毙",
+      "category": "其他"
+    },
+    {
+      "year": 1999,
+      "title": "《联合国气候变化框架公约》京都议定书生效",
+      "category": "政治"
+    },
+    {
+      "year": 2001,
+      "title": "美国能源巨头安然公司破产",
+      "category": "经济"
+    },
+    {
+      "year": 2005,
+      "title": "微软发布Xbox 360游戏机",
+      "category": "科技"
+    },
+    {
+      "year": 2014,
+      "title": "尼日利亚博尔诺州发生严重恐怖袭击",
+      "category": "其他"
+    }
+  ],
+  "en": [
+    {
+      "year": 1976,
+      "title": "Fidel Castro becomes President of Cuba.",
+      "category": "Politics"
+    },
+    {
+      "year": 1982,
+      "title": "Barney Clark receives the first permanent artificial heart.",
+      "category": "Technology"
+    },
+    {
+      "year": 1988,
+      "title": "Benazir Bhutto sworn in as Pakistan's Prime Minister.",
+      "category": "Politics"
+    },
+    {
+      "year": 1993,
+      "title": "Space Shuttle Endeavour launches on STS-61, repairing Hubble.",
+      "category": "Technology"
+    },
+    {
+      "year": 2000,
+      "title": "George W. Bush declared winner of the US presidential election.",
+      "category": "Politics"
+    },
+    {
+      "year": 2004,
+      "title": "The last Oldsmobile is produced by General Motors.",
+      "category": "Economy"
+    },
+    {
+      "year": 2009,
+      "title": "UN Climate Change Conference (Copenhagen) begins.",
+      "category": "Politics"
+    },
+    {
+      "year": 2010,
+      "title": "FIFA announces Russia as host of the 2018 World Cup.",
+      "category": "Sports"
+    },
+    {
+      "year": 2012,
+      "title": "Gangnam Style by Psy surpasses 1 billion views on YouTube.",
+      "category": "Culture"
+    },
+    {
+      "year": 2015,
+      "title": "San Bernardino, California shooting kills 14.",
+      "category": "Other"
+    }
+  ]
+}
