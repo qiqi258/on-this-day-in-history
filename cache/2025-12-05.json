@@ -1,0 +1,96 @@
+{
+  "zh": [
+    {
+      "year": 1976,
+      "title": "安哥拉正式加入联合国",
+      "category": "政治"
+    },
+    {
+      "year": 1984,
+      "title": "印度博帕尔毒气泄漏事故发生",
+      "category": "灾害"
+    },
+    {
+      "year": 1990,
+      "title": "苏联总统制度确立",
+      "category": "政治"
+    },
+    {
+      "year": 1991,
+      "title": "《欧洲联盟条约》草案通过",
+      "category": "政治"
+    },
+    {
+      "year": 1995,
+      "title": "动画电影《玩具总动员》上映",
+      "category": "文化"
+    },
+    {
+      "year": 2005,
+      "title": "英国民事伴侣关系法生效",
+      "category": "政治"
+    },
+    {
+      "year": 2012,
+      "title": "中国神舟十号载人飞船发射",
+      "category": "科技"
+    },
+    {
+      "year": 2013,
+      "title": "纳尔逊·曼德拉逝世",
+      "category": "其他"
+    },
+    {
+      "year": 2017,
+      "title": "国际奥委会禁止俄罗斯参加平昌冬奥会",
+      "category": "体育"
+    },
+    {
+      "year": 2021,
+      "title": "德国正式实施疫苗强制接种",
+      "category": "政治"
+    }
+  ],
+  "en": [
+    {
+      "year": 1977,
+      "title": "Egypt severed diplomatic ties with Syria, Libya, Algeria, Iraq, and South Yemen.",
+      "category": "Politics"
+    },
+    {
+      "year": 1984,
+      "title": "Space Shuttle Discovery deployed two communications satellites.",
+      "category": "Technology"
+    },
+    {
+      "year": 1991,
+      "title": "Last Soviet troops left Czechoslovakia, ending decades of presence.",
+      "category": "Politics"
+    },
+    {
+      "year": 1995,
+      "title": "OJ Simpson testified in his civil trial",
+      "category": "Other"
+    },
+    {
+      "year": 2001,
+      "title": "Enron Corp. stock was delisted from the New York Stock Exchange.",
+      "category": "Economy"
+    },
+    {
+      "year": 2005,
+      "title": "Birgitta Trotzig, Swedish author, died.",
+      "category": "Culture"
+    },
+    {
+      "year": 2013,
+      "title": "Nelson Mandela, anti-apartheid revolutionary and former South African President, died.",
+      "category": "Politics"
+    },
+    {
+      "year": 2017,
+      "title": "The International Olympic Committee banned Russia from the 2018 Winter Olympics.",
+      "category": "Sports"
+    }
+  ]
+}
