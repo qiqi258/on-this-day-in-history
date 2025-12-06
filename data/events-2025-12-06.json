@@ -1,0 +1,76 @@
+{
+  "zh": [
+    {
+      "year": 1978,
+      "title": "西班牙通过新宪法，走向民主",
+      "category": "政治"
+    },
+    {
+      "year": 1989,
+      "title": "柏林墙部分开放，东西德统一加速",
+      "category": "政治"
+    },
+    {
+      "year": 1992,
+      "title": "印度巴布里清真寺被毁，引发冲突",
+      "category": "其他"
+    },
+    {
+      "year": 1998,
+      "title": "委内瑞拉总统查韦斯当选",
+      "category": "政治"
+    },
+    {
+      "year": 2005,
+      "title": "伊朗空军C-130运输机坠毁，百余人遇难",
+      "category": "灾害"
+    },
+    {
+      "year": 2017,
+      "title": "美国承认耶路撒冷为以色列首都",
+      "category": "政治"
+    },
+    {
+      "year": 2023,
+      "title": "阿根廷经济危机加剧，通货膨胀严重",
+      "category": "经济"
+    }
+  ],
+  "en": [
+    {
+      "year": 1978,
+      "title": "Spain approves its new constitution by referendum.",
+      "category": "Politics"
+    },
+    {
+      "year": 1989,
+      "title": "The Montreal Massacre: 14 women killed at École Polytechnique.",
+      "category": "Disaster"
+    },
+    {
+      "year": 1992,
+      "title": "Hindus destroy the Babri Masjid mosque in Ayodhya, India.",
+      "category": "Other"
+    },
+    {
+      "year": 1998,
+      "title": "Hugo Chávez is elected President of Venezuela.",
+      "category": "Politics"
+    },
+    {
+      "year": 2005,
+      "title": "Iran plane crash kills 116 in Tehran.",
+      "category": "Disaster"
+    },
+    {
+      "year": 2017,
+      "title": "Trump officially recognizes Jerusalem as Israel's capital.",
+      "category": "Politics"
+    },
+    {
+      "year": 2021,
+      "title": "Austria's Chancellor Alexander Schallenberg resigns.",
+      "category": "Politics"
+    }
+  ]
+}
